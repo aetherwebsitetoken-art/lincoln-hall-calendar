@@ -1,9 +1,9 @@
-# Lincoln Hall Sports Calendar — auto-updating setup
+# Lincoln Hall Sports Calendar
 
 This folder contains everything needed to host a Lincoln Hall athletics
 calendar that **updates itself automatically**, including picking up brand
-new teams/sports the moment QuickScores creates a schedule for them (e.g. a
-Boys Volleyball team after tryouts) — with no manual editing required.
+new teams/sports the moment QuickScores creates a schedule for them (ex. a
+Boys Volleyball team after tryouts) with no manual editing required.
 
 ## How it works
 
