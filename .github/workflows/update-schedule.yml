@@ -2,11 +2,8 @@ name: Update Lincoln Hall schedule
 
 on:
   schedule:
-    # Runs at 11:00, 15:00, and 20:00 UTC every day (roughly 6am, 10am, 3pm
-    # Central). Edit these however often you want fresh data -- QuickScores
-    # is a small conference site, so a few times a day is plenty polite.
     - cron: "0 11,15,20 * * *"
-  workflow_dispatch: {}   # lets you click "Run workflow" manually any time
+  workflow_dispatch: {}   
 
 permissions:
   contents: write
@@ -28,8 +25,6 @@ jobs:
         run: pip install beautifulsoup4 playwright
 
       - name: Install headless browser
-        # QuickScores renders its schedule with JavaScript, so the scraper
-        # uses a real (headless) browser instead of a plain HTTP request.
         run: playwright install --with-deps chromium
 
       - name: Run scraper
@@ -51,10 +46,6 @@ jobs:
           fi
 
       - name: Refresh jsDelivr CDN cache
-        # Only needed if you're serving this site through jsDelivr (see
-        # README) -- harmless no-op otherwise. jsDelivr caches GitHub files
-        # for a while; this tells it to fetch the new version immediately
-        # instead of waiting for the cache to expire on its own.
         if: steps.commit.outputs.changed == 'true'
         run: |
           REPO="${GITHUB_REPOSITORY}"
