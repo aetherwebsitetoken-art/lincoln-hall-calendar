@@ -1,0 +1,4186 @@
+{
+  "generated_at": "2026-09-15T23:17:22.392989+00:00",
+  "team": "Lincoln Hall",
+  "events": {
+    "2023-09-05": [
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "5-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Niles West",
+        "time": "5:15 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Niles West",
+        "time": "6:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-06": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "4-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "7-0 (Win)",
+        "ref": "LoVerde Sports Center",
+        "type": "soccer"
+      }
+    ],
+    "2023-09-08": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "6-2 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-1 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-12": [
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "4-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Rieger",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rieger",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-13": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "4-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "4-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-09-14": [
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-18": [
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-19": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "8-5 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "3-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-09-20": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "1-3 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-22": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "5-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-09-25": [
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "6-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-09-28": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-4 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Mak",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Mak",
+        "type": "volleyball"
+      }
+    ],
+    "2023-09-29": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "1-3 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "3-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-10-02": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "2-3 (Loss)",
+        "ref": "LoVerde Sports Center",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Boes",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Boes",
+        "type": "volleyball"
+      }
+    ],
+    "2023-10-03": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "1-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "5-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-10-04": [
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "6-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-10-07": [
+      {
+        "sport": "Boy's Varsity Soccer",
+        "match": "VSoc Tourney N.N. & O.O. 8:30 & 10:15 a.m. Boy's VSoc Finals @ N.N. & N.W. 5:30 or 6:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2023-10-11": [
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "5-3 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2023-10-12": [
+      {
+        "sport": "Boy's J.V. Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2023-10-14": [
+      {
+        "sport": "Girl's Varsity Volleyball",
+        "match": "Girl's VVB Tournament @ Niles North, 8:30 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Jr. Varsity Volleyball",
+        "match": "Girl's VVB Tournament @ Lincoln &/or P.V., 8:00 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2023-10-30": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "22-33 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-01": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "10-26 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-02": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "15-21 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-06": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "13-15 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-07": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "40-4 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-08": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "9-25 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-09": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "9-22 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-13": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "21-11 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-15": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "22-8 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-17": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "28-49 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-28": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "15-17 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-11-30": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "12-20 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-01": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "32-15 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-04": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "32-21 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-05": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "22-12 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-06": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "32-28 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-07": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "17-22 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-08": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Niles West",
+        "time": "4:00 PM",
+        "note": "20-15 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-12": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "18-19 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-13": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "17-22 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-18": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Tournament Rd. 1 & 2 @ FV or Lincoln 4:15 & 5:30",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Tournament Rd. 1 & 2 O.O. or P.V. @ 4:15 & 5:30",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2023-12-20": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Final Tournament Game @ Niles West 5:45 or 6:45",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Final Rd. @ Niles North @ 5:45 or 6:45",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-01-22": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "31-26 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-01-24": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "22-30 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-01-25": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "24-32 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-01-26": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "45-43 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-01-29": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "25-32 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-01": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "52-19 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "24-28 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-02": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "53-35 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-06": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "17-34 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-07": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "48-19 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-08": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "22-27 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-12": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "37-24 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-13": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "36-40 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-20": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "23-31 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-21": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "29-40 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-22": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "51-24 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-26": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "59-28 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "25-28 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-27": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "32-30 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-02-28": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "26-25 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-03-05": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Tournament Rd. 1 & 2 @ E.P./McC or O.O., 4:15 & 5:30",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Tournament Rd. 1 & 2 @ FV or P.V.., 4:15 & 5:30 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-03-06": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Tournament Final Rd. @ Niles North 6:45 or 7:45",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Tournament Final Rd. @ Niles West, 6:45 or 7:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-04-03": [
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-04": [
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-09": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "4-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Nathan",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Nathan",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-11": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "1-1 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-04-12": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "3-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-15": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "4-4 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-04-17": [
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "1-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-19": [
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-3 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-04-22": [
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-23": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-04-24": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-04-25": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      }
+    ],
+    "2024-04-29": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "2-7 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Nathan",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Nathan",
+        "type": "volleyball"
+      }
+    ],
+    "2024-05-02": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "4-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-05-03": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-05-06": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "0-3 (Loss)",
+        "ref": "Forfeit",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2024-05-08": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "1-1 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-05-09": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-05-10": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-05-11": [
+      {
+        "sport": "Girl's Varsity Soccer",
+        "match": "Little 9 VSoc Tourney Rd. 1 & Rd. 2 @ North or West 8:30 &10:15 a.m. 5/14 or 5/15 Little 9 Final VSoc Final Game @ North or West",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boy's Varsity Volleyball",
+        "match": "Little 9 VB Tournament @ Niles West 8:30 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boy's J.V. Volleyball",
+        "match": "Little 9 VB Tournament @ Niles North 8:30 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2024-05-14": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-05-16": [
+      {
+        "sport": "Girl's J.V. Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-09-05": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "6-3 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-1 (Win)",
+        "ref": "Vergara",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Vergara",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-06": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "2-3 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-09-09": [
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Niles West",
+        "time": "4:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Boes",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Niles West",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Boes",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-10": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "7-2 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-09-11": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-09-12": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-09-13": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "6-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-16": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "6-3 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-09-17": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "5-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "15-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-18": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "8-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "Boes",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Boes",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-19": [
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Mak",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Mak",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-23": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "5-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-24": [
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      }
+    ],
+    "2024-09-27": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "3-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-01": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "6-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "Vergara",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Vergara",
+        "type": "volleyball"
+      }
+    ],
+    "2024-10-02": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "3-3 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      }
+    ],
+    "2024-10-03": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-04": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "5-2 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-05": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Tournament Rd. 1 & 2, Niles North or Old Orchard 8:30 & 10:15 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-07": [
+      {
+        "sport": "Girls Varsity Volleyball",
+        "match": "Play in Game - Steil Tournament 10/8 O.O. & P.V. 4:15 & 5:15, 10/9 @ Niles West, 4:30 & 5:30",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2024-10-08": [
+      {
+        "sport": "Varsity Boys Soccer",
+        "match": "Tournament Finals, Niles North or West Stadiums 6:30 or 7:30 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "5-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-09": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-4 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-10": [
+      {
+        "sport": "J.V. Boys Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "4-3 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2024-10-29": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "9-15 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-10-30": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "44-14 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-01": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "21-4 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-04": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "12-10 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-06": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "27-8 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-07": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "8-13 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-08": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "26-23 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-11": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "23-20 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-12": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "22-5 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-15": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "17-16 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-18": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "8-28 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-20": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "17-15 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "18-20 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-11-22": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "34-27 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "15-9 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-12-02": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "31-9 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-12-04": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "32-5 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-12-09": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "34-14 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-12-11": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "18-23 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-12-16": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Tournament Rds. 1 & 2 @ Lincoln or P.V., 4:15 & 5:30",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Tournament Rds. 1 & 2 @ Culver or Old Orchard 4:15 & 5:30 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2024-12-18": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Tournament Final Rd. @ Niles West 5:45 or 6:45",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Tournament Finals @ Niles North 5:45 or 6:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-01-22": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "42-39 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-01-23": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "37-30 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-01-28": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "39-25 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-01-29": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "30-27 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-01-30": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "36-43 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-01-31": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "38-51 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "25-24 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-04": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "40-28 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-06": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "47-26 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-07": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "43-45 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-10": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "31-15 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-13": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "40-17 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-18": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "30-17 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "36-30 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-19": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "28-18 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-20": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "31-43 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "25-23 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-24": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "36-28 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-25": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "43-2 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "39-27 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-02-27": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Tournament Rds. 1 & 2 @ Lincoln or O.O. 4:15 & 5:30",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Tournament Rds. 1 & 2 Culver, EPS or McCracken",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-03-04": [
+      {
+        "sport": "Boys Jr. Varsity Basketball",
+        "match": "Tournament Finals @ Niles West 6:45 or 7:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-03-05": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Tournament Finals @ Niles North 6:45 or 7:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-04-02": [
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-04": [
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-09": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "2-2 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-1 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-10": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "5-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-11": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "1-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-04-15": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "1-1 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-16": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-17": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "2-3 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-04-22": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "1-1 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-04-23": [
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "4-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-24": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-04-28": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Anderson",
+        "type": "volleyball"
+      }
+    ],
+    "2025-04-29": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-01": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-2 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-02": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-05": [
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-2 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-05-06": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-0 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-07": [
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-05-08": [
+      {
+        "sport": "Boys Jr. Varsity Volleyball",
+        "match": "JV Tournament @ Niles North 4:15 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-10": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Tournament Rds. 1 & 2 N.N. or N.W., 8:30 & 10:15 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Tournament @ Niles West 8:30 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2025-05-13": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "0-1 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-14": [
+      {
+        "sport": "Varsity Girls Soccer",
+        "match": "Tournament Finals @ N.N. or N.W., 5:30 or 6:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-05-15": [
+      {
+        "sport": "Girls Jr Varsity Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "0-0 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-09-09": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "8-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Niles West",
+        "time": "4:15 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Preuss",
+        "type": "volleyball"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Niles West",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Preuss",
+        "type": "volleyball"
+      }
+    ],
+    "2025-09-10": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "0-0 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-09-11": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "5-2 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Moy",
+        "type": "volleyball"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Moy",
+        "type": "volleyball"
+      }
+    ],
+    "2025-09-12": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "0-0 (Tie)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-09-15": [
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Rydz",
+        "type": "volleyball"
+      }
+    ],
+    "2025-09-16": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "9-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-09-17": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "7-2 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      }
+    ],
+    "2025-09-18": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "3-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "1-7 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-09-23": [
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2025-09-24": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "3-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "0-5 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "5:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-09-26": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "3-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "4-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-09-29": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "11-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-10-01": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "5-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-10-03": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "7-2 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-10-06": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "6-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Szewczyk",
+        "type": "volleyball"
+      }
+    ],
+    "2025-10-07": [
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "2-0 (Win)",
+        "ref": "O'Malley",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "0-2 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "0-2 (Loss)",
+        "ref": "O'Malley",
+        "type": "volleyball"
+      }
+    ],
+    "2025-10-08": [
+      {
+        "sport": "Boys Varsity Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "5-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-10-09": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-10-10": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "2-3 (Loss)",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Varsity Girls Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "2-1 (Win)",
+        "ref": "Steil",
+        "type": "volleyball"
+      },
+      {
+        "sport": "J.V. Girls Volleyball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "1-2 (Loss)",
+        "ref": "Steil",
+        "type": "volleyball"
+      }
+    ],
+    "2025-10-16": [
+      {
+        "sport": "Boys Jr Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "7-1 (Win)",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2025-11-03": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "14-17 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-04": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "10-27 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-05": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "33-11 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-06": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "11-20 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-11": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "8-12 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-12": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "38-7 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-13": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "10-28 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-17": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "35-12 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-11-19": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "27-17 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "6-8 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-01": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "13-10 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 AM",
+        "note": "31-16 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-02": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "9-5 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-05": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "33-23 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "10-23 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-08": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "10-13 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-09": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "36-31 (Win)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-10": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "31-21 (Win)",
+        "ref": "",
+        "type": "basketball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "16-22 (Loss)",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-11": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Play in game Tournament 12/12 @ L or P.V. & 12/15 @ Sender sites, 4:15 or 5:15",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-17": [
+      {
+        "sport": "Girls Varsity Basketball",
+        "match": "Tournament Final Rd. @ Niles West, 5:45 or 6:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2025-12-18": [
+      {
+        "sport": "Girls Jr. Varsity Basketball",
+        "match": "Tournament Final Rd. @ Niles North 5:45 or 6:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-19": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-20": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-21": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-22": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-26": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-27": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-28": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-01-29": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-02": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-03": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-05": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-09": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-10": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-11": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-16": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-17": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-18": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-19": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-23": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-02-24": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-03-02": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "BB Tourney Rd. 1 & 2 @ E.P./McC or FV/L.H. @ 4:15 or 5:45 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-03-03": [
+      {
+        "sport": "Boys Varsity Basketball",
+        "match": "Final Rd. @ Niles West 6 or 7:15 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-03-04": [
+      {
+        "sport": "Boys Jr. Varsity basketball",
+        "match": "Final Rd. @ Niles North 6:15 or 7:15 p.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "basketball"
+      }
+    ],
+    "2027-03-30": [
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-01": [
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-05": [
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-06": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-07": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Lincoln Hall vs East Prairie",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-08": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-09": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-12": [
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-13": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-14": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Park View vs Lincoln Hall",
+        "loc": "Park View",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-15": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-16": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "East Prairie vs Lincoln Hall",
+        "loc": "East Prairie",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-20": [
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln vs Lincoln Hall",
+        "loc": "Lincoln",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-21": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Lincoln Hall vs Golf",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-04-22": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-23": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-27": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-28": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Culver vs Lincoln Hall",
+        "loc": "Culver",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-04-29": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Lincoln Hall vs Fairview",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Lincoln Hall vs McCracken",
+        "loc": "Lincoln Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-05-03": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Lincoln Hall vs Park View",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Jr.Varsity Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "Golf vs Lincoln Hall",
+        "loc": "Golf",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-05-04": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "McCracken vs Lincoln Hall",
+        "loc": "McCracken",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln Hall vs Old Orchard",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-05-06": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln Hall vs Culver",
+        "loc": "Lincoln Hall",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-05-08": [
+      {
+        "sport": "Girls Varsity Soccer",
+        "match": "Tournament Rd. 1 & 2, N.N./Lawler or N.W. 8:30 & 10:15 a.m. Final Tournament Game TBD",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "soccer"
+      },
+      {
+        "sport": "Boys Varsity Volleyball",
+        "match": "VVB Tournament @ Niles West, 8:30 a.m.",
+        "loc": "",
+        "time": "",
+        "note": "Tournament/placeholder - confirm details on QuickScores",
+        "ref": "",
+        "type": "volleyball"
+      }
+    ],
+    "2027-05-11": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Fairview vs Lincoln Hall",
+        "loc": "Fairview",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ],
+    "2027-05-13": [
+      {
+        "sport": "Girls Jr. Varsity Soccer",
+        "match": "Lincoln Hall vs Lincoln",
+        "loc": "Lincoln Hall",
+        "time": "4:15 PM",
+        "note": "",
+        "ref": "",
+        "type": "soccer"
+      }
+    ]
+  }
+}
