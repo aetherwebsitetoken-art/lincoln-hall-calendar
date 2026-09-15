@@ -1,0 +1,75 @@
+name: Update Lincoln Hall schedule
+
+on:
+  schedule:
+    # Runs at 11:00, 15:00, and 20:00 UTC every day (roughly 6am, 10am, 3pm
+    # Central). Edit these however often you want fresh data -- QuickScores
+    # is a small conference site, so a few times a day is plenty polite.
+    - cron: "0 11,15,20 * * *"
+  workflow_dispatch: {}   # lets you click "Run workflow" manually any time
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4 playwright
+
+      - name: Install headless browser
+        # QuickScores renders its schedule with JavaScript, so the scraper
+        # uses a real (headless) browser instead of a plain HTTP request.
+        run: playwright install --with-deps chromium
+
+      - name: Run scraper
+        run: python3 scrape_schedule.py
+
+      - name: Commit updated events.json (if it changed)
+        id: commit
+        run: |
+          git config user.name "schedule-bot"
+          git config user.email "schedule-bot@users.noreply.github.com"
+          git add events.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes"
+          else
+            git commit -m "Auto-update schedule"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh jsDelivr CDN cache
+        # Only needed if you're serving this site through jsDelivr (see
+        # README) -- harmless no-op otherwise. jsDelivr caches GitHub files
+        # for a while; this tells it to fetch the new version immediately
+        # instead of waiting for the cache to expire on its own.
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/events.json" || true
+          curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/index.html" || true
+
+      - name: Deploy to Firebase Hosting
+        # OFF by default -- this step only runs once you've set the
+        # FIREBASE_PROJECT_ID repository variable (see README "Option B").
+        # Until then this step is skipped entirely and can't break anything.
+        if: vars.FIREBASE_PROJECT_ID != ''
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: "${{ vars.FIREBASE_PROJECT_ID }}"
+          channelId: live
+
