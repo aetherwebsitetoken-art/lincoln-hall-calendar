@@ -1,42 +1,3 @@
-#!/usr/bin/env python3
-"""
-Lincoln Hall Athletics -- QuickScores auto-scraper
-====================================================
-
-What this does
----------------
-1. Fetches the Little Nine Conference "Schedules List" page on QuickScores,
-   which lists EVERY current league (every sport, every season, every level)
-   -- not a hardcoded set of 4 leagues. This is what makes new teams (like a
-   Boys Volleyball squad that appears after tryouts) show up automatically
-   the moment QuickScores creates a league page for them.
-2. Visits every one of those league pages and pulls out every game.
-3. Keeps only the games (and tournament/playoff notices) that involve
-   Lincoln Hall.
-4. Writes everything to events.json in this same folder.
-
-This script is meant to be run automatically by the GitHub Action in
-.github/workflows/update-schedule.yml, but you can also run it yourself:
-
-    pip install requests beautifulsoup4
-    python3 scrape_schedule.py
-
-Notes / honest limitations
----------------------------
-- This works by reading the *visible text* of QuickScores' public pages, in
-  order, and pattern-matching it (dates, times, team-name links, scores,
-  officials). It is not using a private/undocumented API, and it respects
-  QuickScores' robots.txt (the /Orgs/ pages used here are not disallowed).
-- If QuickScores redesigns their page layout, this script may need small
-  tweaks. It's written defensively (it logs what it finds, and skips
-  anything it can't confidently parse rather than guessing), so a layout
-  change should show up as "0 events found" in the Action log rather than
-  silently producing garbage.
-- One known gap: a schedule note that isn't attached to a specific weekday
-  date (e.g. a vague "opponent still TBD" tournament blurb with no date of
-  its own) won't be picked up. Anything with an actual date will be.
-"""
-
 import json
 import os
 import re
@@ -47,19 +8,17 @@ from datetime import date, datetime, timezone
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
-# --- Configuration -----------------------------------------------------
 
 ORG = "little9"
 BASE = "https://www.quickscores.com"
 SCHEDULES_URL = f"{BASE}/Orgs/Schedules.php?OrgDir={ORG}"
-TEAM_NAME = "Lincoln Hall"      # exact team-name text as QuickScores shows it
-TEAM_ABBREV = "L.H."            # sometimes used in free-text notes
+TEAM_NAME = "Lincoln Hall"      
+TEAM_ABBREV = "L.H."            
 HEADERS = {
     "User-Agent": "LincolnHallCalendarBot/1.0 (parent-run schedule sync)"
 }
-REQUEST_DELAY_SECONDS = 1.5     # be polite -- don't hammer their server
+REQUEST_DELAY_SECONDS = 1.5    
 
-# --- Regex helpers -------------------------------------------------------
 
 MONTHS = {m: i for i, m in enumerate(
     ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -99,14 +58,6 @@ def normalize_time(raw):
     return f"{m.group(1)}:{m.group(2)} {m.group(3).upper()}M"
 
 
-# --- Fetching & flattening ------------------------------------------------
-#
-# QuickScores loads its schedule tables with client-side JavaScript -- a
-# plain HTTP GET (e.g. via the `requests` library) only ever sees the empty
-# page shell before that JavaScript runs, which is why the first version of
-# this script found team names (static) but zero actual game dates
-# (rendered later, by JS). A headless browser runs that JavaScript first,
-# then we read the fully-rendered result.
 
 def fetch_all(page, url):
     page.goto(url, wait_until="networkidle", timeout=45000)
@@ -129,7 +80,6 @@ def html_to_lines(html):
     return [ln.strip() for ln in text.split("\n") if ln.strip()]
 
 
-# --- League discovery -----------------------------------------------------
 
 def discover_leagues(lines):
     """Walk the Schedules List page and return every league found, each
@@ -151,7 +101,6 @@ def discover_leagues(lines):
     return leagues
 
 
-# --- Date resolution --------------------------------------------------
 
 def season_years(season_label):
     m = re.search(r'(\d{4})(?:-(\d{2}))?', season_label or "")
@@ -169,8 +118,6 @@ def resolve_date(mon_token, day, season_label):
     month = MONTHS.get(key)
     if month is None:
         return None
-    # Winter seasons like "2026-27" span two calendar years: Aug-Dec use the
-    # first year, Jan-Jun use the second.
     year = y1 if (y1 == y2 or month >= 7) else y2
     try:
         return date(year, month, int(day))
@@ -189,7 +136,6 @@ def sport_type(league_name):
     return "other"
 
 
-# --- Game/event parsing --------------------------------------------------
 
 def _team_link_match(line, league_id):
     """Match a team-link line, but only if it points at THIS league. Some
@@ -285,7 +231,7 @@ def parse_league_games(lines, league_name, league_id, season_label):
             diag["lh_link_lines"] += 1
 
         if STOP_RE.search(ln):
-            break  # everything after this is stats/footer, not schedule data
+            break  
 
         if WEEK_RE.match(ln):
             i += 1
@@ -310,7 +256,6 @@ def parse_league_games(lines, league_name, league_id, season_label):
     return events, diag
 
 
-# --- Main -----------------------------------------------------------------
 
 def main():
     all_events = []
