@@ -44,7 +44,7 @@ import sys
 import time
 from datetime import date, datetime, timezone
 
-import requests
+from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
 # --- Configuration -----------------------------------------------------
@@ -100,11 +100,17 @@ def normalize_time(raw):
 
 
 # --- Fetching & flattening ------------------------------------------------
+#
+# QuickScores loads its schedule tables with client-side JavaScript -- a
+# plain HTTP GET (e.g. via the `requests` library) only ever sees the empty
+# page shell before that JavaScript runs, which is why the first version of
+# this script found team names (static) but zero actual game dates
+# (rendered later, by JS). A headless browser runs that JavaScript first,
+# then we read the fully-rendered result.
 
-def fetch(url):
-    resp = requests.get(url, headers=HEADERS, timeout=20)
-    resp.raise_for_status()
-    return resp.text
+def fetch_all(page, url):
+    page.goto(url, wait_until="networkidle", timeout=45000)
+    return page.content()
 
 
 def html_to_lines(html):
@@ -185,7 +191,18 @@ def sport_type(league_name):
 
 # --- Game/event parsing --------------------------------------------------
 
-def _process_block(current_date, block, league_name):
+def _team_link_match(line, league_id):
+    """Match a team-link line, but only if it points at THIS league. Some
+    QuickScores pages include a static team directory/navigation block that
+    links to every team across every league -- without this check, that
+    directory gets miscounted as if it were part of the actual schedule."""
+    m = TEAM_LINK_RE.match(line)
+    if m and m.group(3) == str(league_id):
+        return m
+    return None
+
+
+def _process_block(current_date, block, league_name, league_id):
     """Turn the lines belonging to a single date into 0+ event dicts."""
     if not block:
         return []
@@ -201,7 +218,7 @@ def _process_block(current_date, block, league_name):
         loc_name = lm.group(1) if lm else rest
         remaining = block[1:]
 
-    team_matches = [TEAM_LINK_RE.match(bl) for bl in remaining]
+    team_matches = [_team_link_match(bl, league_id) for bl in remaining]
     team_matches = [tm for tm in team_matches if tm]
 
     events = []
@@ -214,7 +231,7 @@ def _process_block(current_date, block, league_name):
             away_score = scores[1] if len(scores) > 1 else ""
             ref = ""
             for bl in reversed(remaining):
-                if bl and not TEAM_LINK_RE.match(bl) and not SCORE_RE.match(bl) and _looks_like_ref_name(bl):
+                if bl and not _team_link_match(bl, league_id) and not SCORE_RE.match(bl) and _looks_like_ref_name(bl):
                     ref = bl
                     break
             note = ""
@@ -238,7 +255,8 @@ def _process_block(current_date, block, league_name):
                 "ref": ref,
             })
     elif not team_matches:
-        free_text = " ".join(remaining).strip()
+        non_link_lines = [bl for bl in remaining if not TEAM_LINK_RE.match(bl)]
+        free_text = " ".join(non_link_lines).strip()
         mention_lh = (TEAM_NAME in free_text) or (TEAM_ABBREV in free_text)
         is_tournament = re.search(r'tournament|playoff|final', free_text, re.IGNORECASE)
         if free_text and (mention_lh or is_tournament):
@@ -255,7 +273,7 @@ def _process_block(current_date, block, league_name):
     return events
 
 
-def parse_league_games(lines, league_name, season_label):
+def parse_league_games(lines, league_name, league_id, season_label):
     events = []
     diag = {"date_lines": 0, "lh_link_lines": 0}
     i = 0
@@ -263,7 +281,7 @@ def parse_league_games(lines, league_name, season_label):
     while i < n:
         ln = lines[i]
 
-        if TEAM_LINK_RE.match(ln) and TEAM_NAME in ln:
+        if _team_link_match(ln, league_id) and TEAM_NAME in ln:
             diag["lh_link_lines"] += 1
 
         if STOP_RE.search(ln):
@@ -280,12 +298,12 @@ def parse_league_games(lines, league_name, season_label):
             i += 1
             block = []
             while i < n and not DATE_RE.match(lines[i]) and not WEEK_RE.match(lines[i]) and not STOP_RE.search(lines[i]):
-                if TEAM_LINK_RE.match(lines[i]) and TEAM_NAME in lines[i]:
+                if _team_link_match(lines[i], league_id) and TEAM_NAME in lines[i]:
                     diag["lh_link_lines"] += 1
                 block.append(lines[i])
                 i += 1
             if current_date:
-                events.extend(_process_block(current_date, block, league_name))
+                events.extend(_process_block(current_date, block, league_name, league_id))
             continue
 
         i += 1
@@ -295,33 +313,43 @@ def parse_league_games(lines, league_name, season_label):
 # --- Main -----------------------------------------------------------------
 
 def main():
-    print(f"Fetching schedules list: {SCHEDULES_URL}")
-    schedules_html = fetch(SCHEDULES_URL)
-    lines = html_to_lines(schedules_html)
-    leagues = discover_leagues(lines)
-    print(f"Discovered {len(leagues)} league(s)")
-
     all_events = []
     total_date_lines = 0
     total_lh_link_lines = 0
-    for lg in leagues:
-        url = f"{BASE}/Orgs/ResultsDisplay.php?OrgDir={ORG}&LeagueID={lg['league_id']}"
-        print(f"  -> {lg['season']} / {lg['name']}  ({url})")
-        try:
-            html = fetch(url)
-        except Exception as e:
-            print(f"     ERROR fetching league {lg['league_id']}: {e}", file=sys.stderr)
-            time.sleep(REQUEST_DELAY_SECONDS)
-            continue
+    first_league_dump = None
 
-        page_lines = html_to_lines(html)
-        events, diag = parse_league_games(page_lines, lg["name"], lg["season"])
-        print(f"     found {len(events)} Lincoln Hall event(s)  "
-              f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines)")
-        all_events.extend(events)
-        total_date_lines += diag["date_lines"]
-        total_lh_link_lines += diag["lh_link_lines"]
-        time.sleep(REQUEST_DELAY_SECONDS)
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page(user_agent=HEADERS["User-Agent"])
+
+        print(f"Fetching schedules list: {SCHEDULES_URL}")
+        schedules_html = fetch_all(page, SCHEDULES_URL)
+        lines = html_to_lines(schedules_html)
+        leagues = discover_leagues(lines)
+        print(f"Discovered {len(leagues)} league(s)")
+
+        for lg in leagues:
+            url = f"{BASE}/Orgs/ResultsDisplay.php?OrgDir={ORG}&LeagueID={lg['league_id']}"
+            print(f"  -> {lg['season']} / {lg['name']}  ({url})")
+            try:
+                html = fetch_all(page, url)
+            except Exception as e:
+                print(f"     ERROR fetching league {lg['league_id']}: {e}", file=sys.stderr)
+                time.sleep(REQUEST_DELAY_SECONDS)
+                continue
+
+            page_lines = html_to_lines(html)
+            if first_league_dump is None:
+                first_league_dump = page_lines[:150]
+            events, diag = parse_league_games(page_lines, lg["name"], lg["league_id"], lg["season"])
+            print(f"     found {len(events)} Lincoln Hall event(s)  "
+                  f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines)")
+            all_events.extend(events)
+            total_date_lines += diag["date_lines"]
+            total_lh_link_lines += diag["lh_link_lines"]
+            time.sleep(REQUEST_DELAY_SECONDS)
+
+        browser.close()
 
     all_events.sort(key=lambda e: (e["date"], e["time"]))
 
@@ -339,9 +367,15 @@ def main():
               file=sys.stderr)
         if total_lh_link_lines > 0 and total_date_lines == 0:
             print("DIAGNOSIS: Lincoln Hall team links were found, but not a single date "
-                  "header matched -- this means QuickScores is formatting dates "
-                  "differently than DATE_RE expects. Copy this log and give it to "
-                  "Claude to fix the regex.", file=sys.stderr)
+                  "header matched. Here are the first 150 lines the parser actually saw "
+                  "for the first league page, so this can be diagnosed precisely:",
+                  file=sys.stderr)
+            print("--- DIAGNOSTIC DUMP START ---", file=sys.stderr)
+            for idx, ln in enumerate(first_league_dump or []):
+                print(f"{idx:4}: {ln}", file=sys.stderr)
+            print("--- DIAGNOSTIC DUMP END ---", file=sys.stderr)
+            print("Copy everything between DUMP START and DUMP END (plus this message) "
+                  "and give it to Claude.", file=sys.stderr)
         if os.path.exists("events.json"):
             print("Leaving the existing events.json untouched rather than overwriting "
                   "it with an empty result.", file=sys.stderr)
