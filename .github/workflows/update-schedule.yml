@@ -14,6 +14,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
@@ -24,14 +25,38 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install beautifulsoup4 playwright
+
+      - name: Install headless browser
+        # QuickScores renders its schedule with JavaScript, so the scraper
+        # uses a real (headless) browser instead of a plain HTTP request.
+        run: playwright install --with-deps chromium
 
       - name: Run scraper
         run: python3 scrape_schedule.py
 
       - name: Commit updated events.json (if it changed)
+        id: commit
         run: |
           git config user.name "schedule-bot"
           git config user.email "schedule-bot@users.noreply.github.com"
           git add events.json
-          git diff --cached --quiet && echo "No changes" || (git commit -m "Auto-update schedule" && git push)
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes"
+          else
+            git commit -m "Auto-update schedule"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Refresh jsDelivr CDN cache
+        # Only needed if you're serving this site through jsDelivr (see
+        # README) -- harmless no-op otherwise. jsDelivr caches GitHub files
+        # for a while; this tells it to fetch the new version immediately
+        # instead of waiting for the cache to expire on its own.
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          REPO="${GITHUB_REPOSITORY}"
+          curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/events.json" || true
+          curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/index.html" || true
