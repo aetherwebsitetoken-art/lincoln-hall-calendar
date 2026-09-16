@@ -340,6 +340,8 @@ def main():
     first_league_dump = None
     league_summaries = []   # (season, name, league_id, event_count_or_None, error_or_None)
     failed_leagues = []
+    suspicious_dumps_printed = 0
+    MAX_SUSPICIOUS_DUMPS = 3
 
     print(f"Fetching schedules list: {SCHEDULES_URL}")
     schedules_html = fetch(SCHEDULES_URL)
@@ -370,6 +372,23 @@ def main():
 
         print(f"     found {len(events)} Lincoln Hall event(s)  "
               f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines)")
+
+        # This league clearly HAS Lincoln Hall as a participating team (we
+        # saw team-link lines naming them), but somehow zero actual games
+        # were parsed out for them. That combination -- present as a team,
+        # absent from the schedule -- means this specific league's page is
+        # formatted in a way this parser doesn't handle, and it's worth
+        # seeing exactly what that page looks like rather than guessing.
+        if diag["lh_link_lines"] > 0 and len(events) == 0 and suspicious_dumps_printed < MAX_SUSPICIOUS_DUMPS:
+            suspicious_dumps_printed += 1
+            print(f"     SUSPICIOUS: Lincoln Hall appears as a team here but 0 games were "
+                  f"parsed. Dumping this league's page content for diagnosis:", file=sys.stderr)
+            print(f"--- SUSPICIOUS LEAGUE DUMP START ({lg['season']} / {lg['name']}, "
+                  f"LeagueID={lg['league_id']}) ---", file=sys.stderr)
+            for idx, ln in enumerate(page_lines[:200]):
+                print(f"{idx:4}: {ln}", file=sys.stderr)
+            print("--- SUSPICIOUS LEAGUE DUMP END ---", file=sys.stderr)
+
         all_events.extend(events)
         total_date_lines += diag["date_lines"]
         total_lh_link_lines += diag["lh_link_lines"]
