@@ -30,11 +30,21 @@ Notes / honest limitations
 - QuickScores prints each game's date as two separate lines (the weekday,
   then "Mon Day, Year" on the line below it) -- the parser is built around
   that exact shape, confirmed against real page output.
-- If QuickScores changes this layout, the script may need small tweaks.
-  It's written defensively (it logs what it finds, and skips anything it
-  can't confidently parse rather than guessing), and if it ever finds zero
-  events again it automatically prints a raw dump of what it actually saw,
-  so a layout change can be diagnosed directly from the Action log.
+- Fetching uses a plain HTTP request, not a headless browser. QuickScores
+  is a plain server-rendered site (the game data is present in the raw
+  HTML), so a browser was never actually needed -- an earlier version of
+  this script used one anyway "just in case," and that turned out to
+  actively cause a real bug: heavier, mid-season pages could time out
+  waiting for the browser's "network idle" signal and get silently
+  skipped, which is why games from an active season could go missing while
+  a lighter, not-yet-started season's games showed up fine. Plain requests
+  don't have that failure mode.
+- If QuickScores changes their layout, the script may need small tweaks.
+  It's written defensively (it logs what it finds per league, and skips
+  anything it can't confidently parse rather than guessing), and if it
+  ever finds zero events overall it automatically prints a raw dump of
+  what it actually saw, so a layout change can be diagnosed directly from
+  the Action log.
 - One known gap: a schedule note that isn't attached to a specific date
   (e.g. a vague "opponent still TBD" tournament blurb with no date of its
   own) won't be picked up. Anything with an actual date will be.
@@ -47,7 +57,7 @@ import sys
 import time
 from datetime import date, datetime, timezone
 
-from playwright.sync_api import sync_playwright
+import requests
 from bs4 import BeautifulSoup
 
 # --- Configuration -----------------------------------------------------
@@ -105,15 +115,11 @@ def normalize_time(raw):
 
 
 # --- Fetching & flattening ------------------------------------------------
-#
-# Uses a real (headless) browser to load each page rather than a plain HTTP
-# request. This turned out not to be the fix for the original "0 events"
-# bug (that was a date-format mismatch -- see above), but it's a safe,
-# proven-working way to fetch these pages, so it's kept as-is.
 
-def fetch_all(page, url):
-    page.goto(url, wait_until="networkidle", timeout=45000)
-    return page.content()
+def fetch(url):
+    resp = requests.get(url, headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    return resp.text
 
 
 def html_to_lines(html):
@@ -332,39 +338,43 @@ def main():
     total_date_lines = 0
     total_lh_link_lines = 0
     first_league_dump = None
+    league_summaries = []   # (season, name, league_id, event_count_or_None, error_or_None)
+    failed_leagues = []
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch()
-        page = browser.new_page(user_agent=HEADERS["User-Agent"])
+    print(f"Fetching schedules list: {SCHEDULES_URL}")
+    schedules_html = fetch(SCHEDULES_URL)
+    lines = html_to_lines(schedules_html)
+    leagues = discover_leagues(lines)
+    print(f"Discovered {len(leagues)} league(s)")
 
-        print(f"Fetching schedules list: {SCHEDULES_URL}")
-        schedules_html = fetch_all(page, SCHEDULES_URL)
-        lines = html_to_lines(schedules_html)
-        leagues = discover_leagues(lines)
-        print(f"Discovered {len(leagues)} league(s)")
-
-        for lg in leagues:
-            url = f"{BASE}/Orgs/ResultsDisplay.php?OrgDir={ORG}&LeagueID={lg['league_id']}"
-            print(f"  -> {lg['season']} / {lg['name']}  ({url})")
-            try:
-                html = fetch_all(page, url)
-            except Exception as e:
-                print(f"     ERROR fetching league {lg['league_id']}: {e}", file=sys.stderr)
-                time.sleep(REQUEST_DELAY_SECONDS)
-                continue
-
+    for lg in leagues:
+        url = f"{BASE}/Orgs/ResultsDisplay.php?OrgDir={ORG}&LeagueID={lg['league_id']}"
+        print(f"  -> {lg['season']} / {lg['name']}  ({url})")
+        try:
+            html = fetch(url)
             page_lines = html_to_lines(html)
             if first_league_dump is None:
                 first_league_dump = page_lines[:150]
             events, diag = parse_league_games(page_lines, lg["name"], lg["league_id"], lg["season"])
-            print(f"     found {len(events)} Lincoln Hall event(s)  "
-                  f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines)")
-            all_events.extend(events)
-            total_date_lines += diag["date_lines"]
-            total_lh_link_lines += diag["lh_link_lines"]
+        except Exception as e:
+            # Wrapping fetch+parse together (not just fetch) means a problem
+            # anywhere in processing this one league gets caught, logged, and
+            # skipped -- rather than either crashing the whole run, or
+            # (worse) silently missing that league's games with no trace of
+            # why in the log.
+            print(f"     ERROR processing this league, skipping it: {e}", file=sys.stderr)
+            failed_leagues.append(f"{lg['season']} / {lg['name']} (LeagueID={lg['league_id']})")
+            league_summaries.append((lg["season"], lg["name"], lg["league_id"], None, str(e)))
             time.sleep(REQUEST_DELAY_SECONDS)
+            continue
 
-        browser.close()
+        print(f"     found {len(events)} Lincoln Hall event(s)  "
+              f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines)")
+        all_events.extend(events)
+        total_date_lines += diag["date_lines"]
+        total_lh_link_lines += diag["lh_link_lines"]
+        league_summaries.append((lg["season"], lg["name"], lg["league_id"], len(events), None))
+        time.sleep(REQUEST_DELAY_SECONDS)
 
     all_events.sort(key=lambda e: (e["date"], e["time"]))
 
@@ -376,7 +386,21 @@ def main():
             "type": ev["type"],
         })
 
+    # Print a compact, easy-to-scan roll call of every league and how many
+    # Lincoln Hall events it produced -- this is what would have made the
+    # "Fall 2026 is missing" problem obvious immediately, instead of only
+    # showing up as a gap on the rendered calendar.
+    print("\n--- Per-league summary ---")
+    for season, name, lid, count, err in league_summaries:
+        if err is not None:
+            print(f"  FAILED    {season} / {name} (LeagueID={lid}): {err}")
+        else:
+            print(f"  {count:>3} event(s)  {season} / {name} (LeagueID={lid})")
+
+    problem = False
+
     if len(all_events) == 0:
+        problem = True
         print(f"\nWARNING: found 0 events overall (saw {total_date_lines} date headers "
               f"and {total_lh_link_lines} Lincoln Hall team-link lines across all leagues).",
               file=sys.stderr)
@@ -391,13 +415,35 @@ def main():
             print("--- DIAGNOSTIC DUMP END ---", file=sys.stderr)
             print("Copy everything between DUMP START and DUMP END (plus this message) "
                   "and give it to Claude.", file=sys.stderr)
-        if os.path.exists("events.json"):
-            print("Leaving the existing events.json untouched rather than overwriting "
-                  "it with an empty result.", file=sys.stderr)
-            sys.exit(1)
-        else:
-            print("No existing events.json to preserve -- writing an empty one so the "
-                  "site at least has valid JSON to load.", file=sys.stderr)
+
+    # A handful of isolated failures (one league timing out, say) is treated
+    # as tolerable -- it'll very likely succeed on the next scheduled run a
+    # few hours later, so publishing the rest of the fresh data now is
+    # better than freezing the whole calendar over one hiccup. But a LARGE
+    # share of leagues failing suggests something systemic (the site being
+    # down, a bug affecting many pages at once) -- in that case, publishing
+    # would risk exactly the "looks complete but is missing a season"
+    # problem this update is meant to fix, so the existing good data is
+    # protected instead.
+    fail_threshold = max(3, len(leagues) * 0.10)
+    if failed_leagues:
+        print(f"\nWARNING: {len(failed_leagues)} of {len(leagues)} league(s) failed and "
+              f"were skipped -- if any of them are Lincoln Hall's, their games are "
+              f"missing from this run:", file=sys.stderr)
+        for fl in failed_leagues:
+            print(f"  - {fl}", file=sys.stderr)
+        if len(failed_leagues) >= fail_threshold:
+            problem = True
+            print("This is a large enough share of leagues that something systemic may "
+                  "be wrong (rather than an isolated hiccup).", file=sys.stderr)
+
+    if problem and os.path.exists("events.json"):
+        print("\nLeaving the existing events.json untouched rather than publishing a "
+              "possibly-incomplete result.", file=sys.stderr)
+        sys.exit(1)
+    elif problem:
+        print("\nNo existing events.json to preserve -- writing this result anyway so "
+              "the site has something to show, but it may be incomplete.", file=sys.stderr)
 
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
