@@ -14,23 +14,18 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - name: Check out repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install beautifulsoup4 playwright
-
-      - name: Install headless browser
-        # QuickScores renders its schedule with JavaScript, so the scraper
-        # uses a real (headless) browser instead of a plain HTTP request.
-        run: playwright install --with-deps chromium
+        run: pip install requests beautifulsoup4
 
       - name: Run scraper
         run: python3 scrape_schedule.py
