@@ -70,7 +70,9 @@ TEAM_ABBREV = "L.H."            # sometimes used in free-text notes
 HEADERS = {
     "User-Agent": "LincolnHallCalendarBot/1.0 (parent-run schedule sync)"
 }
-REQUEST_DELAY_SECONDS = 1.5     # be polite -- don't hammer their server
+REQUEST_DELAY_SECONDS = 2       # be polite -- don't hammer their server
+REQUEST_TIMEOUT_SECONDS = 15    # per-attempt timeout for a single page
+MAX_FETCH_ATTEMPTS = 3          # retry a slow/failed request before giving up on that league
 
 # --- Regex helpers -------------------------------------------------------
 
@@ -117,9 +119,23 @@ def normalize_time(raw):
 # --- Fetching & flattening ------------------------------------------------
 
 def fetch(url):
-    resp = requests.get(url, headers=HEADERS, timeout=20)
-    resp.raise_for_status()
-    return resp.text
+    """Fetch a page, retrying a couple of times on a timeout or transient
+    network error before giving up. QuickScores appears to respond slowly
+    or inconsistently to automated requests sometimes -- without retries, a
+    single slow response drops that whole league's games for this run, even
+    though the page is fine and would have loaded a few seconds later."""
+    last_error = None
+    for attempt in range(1, MAX_FETCH_ATTEMPTS + 1):
+        try:
+            resp = requests.get(url, headers=HEADERS, timeout=REQUEST_TIMEOUT_SECONDS)
+            resp.raise_for_status()
+            return resp.text
+        except requests.exceptions.RequestException as e:
+            last_error = e
+            if attempt < MAX_FETCH_ATTEMPTS:
+                print(f"     (attempt {attempt} failed: {e} -- retrying)", file=sys.stderr)
+                time.sleep(REQUEST_DELAY_SECONDS)
+    raise last_error
 
 
 def html_to_lines(html):
