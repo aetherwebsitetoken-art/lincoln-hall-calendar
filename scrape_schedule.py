@@ -27,9 +27,14 @@ Notes / honest limitations
   order, and pattern-matching it (dates, times, team-name links, scores,
   officials). It is not using a private/undocumented API, and it respects
   QuickScores' robots.txt (the /Orgs/ pages used here are not disallowed).
-- QuickScores prints each game's date as two separate lines (the weekday,
-  then "Mon Day, Year" on the line below it) -- the parser is built around
-  that exact shape, confirmed against real page output.
+- QuickScores prints each game's date as two separate lines: the weekday,
+  then the date below it. Crucially, the year appears ONLY when it isn't the
+  current year -- this year's games render as a bare "Sep 8", while other
+  years render as "Apr 6, 2027". An earlier version of this script required
+  the year, which silently dropped every game in the current season while
+  past and future seasons parsed fine. Both forms are handled now, and a
+  missing year is filled in from the season header on the page itself (so a
+  "Winter 2026-27" league puts November in 2026 and January in 2027).
 - Fetching uses a plain HTTP request, not a headless browser. QuickScores
   is a plain server-rendered site (the game data is present in the raw
   HTML), so a browser was never actually needed -- an earlier version of
@@ -81,7 +86,14 @@ MONTHS = {m: i for i, m in enumerate(
      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], start=1)}
 
 WEEKDAY_RE = re.compile(r'^(Mon|Tue|Wed|Thu|Fri|Sat|Sun)[a-z]*\.?,?$', re.IGNORECASE)
+# QuickScores prints a game's date on the line after the weekday. It includes
+# the year ONLY when that year isn't the current one -- this year's games show
+# as just "Sep 8", while other years show as "Apr 6, 2027". Both forms must be
+# handled, or every game in the current season silently disappears.
 FULLDATE_RE = re.compile(r'^([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,\s*(\d{4})$', re.IGNORECASE)
+NOYEAR_DATE_RE = re.compile(r'^([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?$', re.IGNORECASE)
+# The season header shown on each league page, e.g. "Fall 2026  -  Soccer".
+PAGE_SEASON_RE = re.compile(r'^(Spring|Summer|Fall|Winter)\s+(\d{4})(?:-(\d{2}))?\s*-?\s*(.*)$', re.IGNORECASE)
 WEEK_RE = re.compile(r'^Week\s*\d+\s*:?$', re.IGNORECASE)
 STOP_RE = re.compile(r'Show Schedule Analysis|Schedule Analysis|Time Slot Distribution', re.IGNORECASE)
 SEASON_HEADER_RE = re.compile(r'^(Spring|Summer|Fall|Winter)\s+(\d{4})(?:-(\d{2}))?\s*-?\s*(.+)$', re.IGNORECASE)
@@ -179,9 +191,26 @@ def discover_leagues(lines):
 # --- Date resolution --------------------------------------------------
 #
 # QuickScores prints each game's date as TWO separate lines -- the weekday
-# abbreviation alone ("Tue"), then the full date with year right below it
-# ("Apr 6, 2027"). The year is included explicitly, so there's no need to
-# infer it from a season label anymore.
+# abbreviation alone ("Tue"), then the date below it. The year is included
+# only when it differs from the current year, so both "Apr 6, 2027" and a
+# bare "Sep 8" must be handled.
+
+def _is_month_token(token):
+    return token[:3].title() in MONTHS
+
+
+def find_page_season_years(lines):
+    """Read the season header off a league page (e.g. "Fall 2026  -  Soccer")
+    and return the calendar year(s) it spans. Used to fill in the year for
+    dates that QuickScores printed without one."""
+    for ln in lines[:80]:
+        m = PAGE_SEASON_RE.match(ln)
+        if m:
+            y1 = int(m.group(2))
+            y2 = int(str(y1)[:2] + m.group(3)) if m.group(3) else y1
+            return y1, y2
+    return None
+
 
 def resolve_explicit_date(month_token, day_str, year_str):
     month = MONTHS.get(month_token[:3].title())
@@ -189,6 +218,25 @@ def resolve_explicit_date(month_token, day_str, year_str):
         return None
     try:
         return date(int(year_str), month, int(day_str))
+    except ValueError:
+        return None
+
+
+def resolve_undated_year(month_token, day_str, season_years):
+    """Work out the year for a date QuickScores printed without one. Prefer
+    the page's own season header (so a "Winter 2026-27" league puts November
+    in 2026 and January in 2027); fall back to the current year, which is
+    what an omitted year means by QuickScores' own convention."""
+    month = MONTHS.get(month_token[:3].title())
+    if month is None:
+        return None
+    if season_years:
+        y1, y2 = season_years
+        year = y1 if (y1 == y2 or month >= 7) else y2
+    else:
+        year = date.today().year
+    try:
+        return date(year, month, int(day_str))
     except ValueError:
         return None
 
@@ -204,12 +252,25 @@ def sport_type(league_name):
     return "other"
 
 
+def _date_line_match(line):
+    """Return (month_token, day, year_or_None) if this line is a game date."""
+    m = FULLDATE_RE.match(line)
+    if m and _is_month_token(m.group(1)):
+        return m.group(1), m.group(2), m.group(3)
+    m = NOYEAR_DATE_RE.match(line)
+    if m and _is_month_token(m.group(1)):
+        # The month check matters: without it, lines like "Week 1" match this
+        # pattern's shape and would be mistaken for dates.
+        return m.group(1), m.group(2), None
+    return None
+
+
 def _is_game_header(lines, i):
-    """True when lines[i] is a weekday line immediately followed by a full
-    month/day/year date line -- this marks the start of a new game entry."""
+    """True when lines[i] is a weekday line immediately followed by a date
+    line -- this marks the start of a new game entry."""
     if i + 1 >= len(lines):
         return False
-    return bool(WEEKDAY_RE.match(lines[i])) and bool(FULLDATE_RE.match(lines[i + 1]))
+    return bool(WEEKDAY_RE.match(lines[i])) and _date_line_match(lines[i + 1]) is not None
 
 
 # --- Game/event parsing --------------------------------------------------
@@ -312,7 +373,8 @@ def _process_block(current_date, block, league_name, league_id):
 
 def parse_league_games(lines, league_name, league_id, season_label=""):
     events = []
-    diag = {"date_lines": 0, "lh_link_lines": 0}
+    diag = {"date_lines": 0, "lh_link_lines": 0, "undated_years_inferred": 0}
+    season_years = find_page_season_years(lines)
     i = 0
     n = len(lines)
     while i < n:
@@ -330,8 +392,12 @@ def parse_league_games(lines, league_name, league_id, season_label=""):
 
         if _is_game_header(lines, i):
             diag["date_lines"] += 1
-            fd_m = FULLDATE_RE.match(lines[i + 1])
-            current_date = resolve_explicit_date(fd_m.group(1), fd_m.group(2), fd_m.group(3))
+            month_token, day_str, year_str = _date_line_match(lines[i + 1])
+            if year_str is not None:
+                current_date = resolve_explicit_date(month_token, day_str, year_str)
+            else:
+                current_date = resolve_undated_year(month_token, day_str, season_years)
+                diag["undated_years_inferred"] += 1
             i += 2
             block = []
             while i < n and not _is_game_header(lines, i) and not WEEK_RE.match(lines[i]) and not STOP_RE.search(lines[i]):
@@ -387,7 +453,8 @@ def main():
             continue
 
         print(f"     found {len(events)} Lincoln Hall event(s)  "
-              f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines)")
+              f"(saw {diag['date_lines']} date headers, {diag['lh_link_lines']} Lincoln Hall team-link lines, "
+              f"{diag['undated_years_inferred']} dates with the year inferred)")
 
         # This league clearly HAS Lincoln Hall as a participating team (we
         # saw team-link lines naming them), but somehow zero actual games
