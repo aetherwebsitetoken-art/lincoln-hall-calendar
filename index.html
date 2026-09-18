@@ -44,11 +44,13 @@
   .brand p{margin:3px 0 0;font-size:11px;color:#b8bbc3;font-weight:500}
 
   .nav{display:flex;align-items:center;gap:8px;margin-left:auto}
-  .nav button{width:32px;height:32px;border:none;border-radius:50%;cursor:pointer;
-    background:rgba(255,255,255,.08);color:#fff;font-size:18px;line-height:1;
+  /* Circle styling applies to the ‹ › arrows only -- the Today button is a
+     pill and must not be forced into a 32px circle. */
+  .nav button.arrow{width:32px;height:32px;border:none;border-radius:50%;cursor:pointer;
+    background:rgba(255,255,255,.08);color:#fff;font-size:18px;line-height:1;flex-shrink:0;
     display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
-  .nav button:hover{background:var(--red)}
-  .nav button:active{transform:scale(.88)}
+  .nav button.arrow:hover{background:var(--red)}
+  .nav button.arrow:active{transform:scale(.88)}
   .mlabel{text-align:center;min-width:150px;overflow:hidden}
   .mlabel h2{font-family:var(--display);font-weight:400;font-size:18px;margin:0;color:#fff;
     white-space:nowrap;display:inline-block}
@@ -56,8 +58,11 @@
   @keyframes flip{0%{opacity:0;transform:translateY(6px)}100%{opacity:1;transform:none}}
   .status{font-size:10px;color:#989aa6;margin:2px 0 0;min-height:12px}
   .today-btn{border:none;background:rgba(255,255,255,.08);color:#d7d9df;cursor:pointer;
-    font-size:12px;font-weight:600;padding:7px 12px;border-radius:7px;transition:background .15s,color .15s}
+    font-size:12px;font-weight:600;padding:7px 13px;border-radius:999px;flex-shrink:0;
+    width:auto;height:auto;line-height:1.1;white-space:nowrap;
+    transition:background .15s,color .15s,transform .15s}
   .today-btn:hover{background:var(--red);color:#fff}
+  .today-btn:active{transform:scale(.94)}
 
   .views{display:flex;background:rgba(255,255,255,.08);border-radius:8px;padding:3px;flex-shrink:0}
   .views button{border:none;background:transparent;color:#c5c7cf;cursor:pointer;font-size:13px;
@@ -176,6 +181,7 @@
     .mlabel{min-width:104px}
     .mlabel h2{font-size:15px}
     .views{order:3;width:100%;justify-content:center}
+    .today-btn{padding:6px 10px;font-size:11px}
     .grid{grid-auto-rows:minmax(62px,1fr)}
     .pill{display:none}
     .dots{display:flex}
@@ -196,9 +202,9 @@
         <div><h1>Lincoln Hall</h1><p>Athletics</p></div>
       </div>
       <div class="nav">
-        <button id="prev" aria-label="Previous month">‹</button>
+        <button id="prev" class="arrow" aria-label="Previous month">‹</button>
         <div class="mlabel"><h2 id="month"></h2><p class="status" id="status">&nbsp;</p></div>
-        <button id="next" aria-label="Next month">›</button>
+        <button id="next" class="arrow" aria-label="Next month">›</button>
         <button class="today-btn" id="todayBtn">Today</button>
       </div>
       <div class="views" role="tablist" aria-label="View">
@@ -248,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Embed code), change it to the full jsDelivr URL, e.g.
   // 'https://cdn.jsdelivr.net/gh/YOUR-USERNAME/lincoln-hall-calendar@main/events.json'
   // ─────────────────────────────────────────────────────────────────
-  const EVENTS_JSON_URL = 'events.json';
+  const EVENTS_JSON_URL = /*URL_START*/'events.json'/*URL_END*/;
 
   // Sport styling. Palette is strictly red / white / black; sports
   // alternate red vs black accents, with the icon carrying the rest.
@@ -262,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Offline fallback: real Fall 2026 games, used only if the live fetch
   // fails so the page is never blank. Status line says which is showing.
-  const FALLBACK = {
+  const FALLBACK = /*FALLBACK_START*/{
     "2026-09-08":[{sport:"Girls Varsity Volleyball",match:"Lincoln Hall vs Park View",loc:"Niles West",time:"4:15 PM",note:"2-0 (Win)",ref:"Moy",type:"volleyball"},
                   {sport:"Boys JV Soccer",match:"Golf vs Lincoln Hall",loc:"Golf",time:"4:00 PM",note:"4-0 (Win)",ref:"",type:"soccer"}],
     "2026-09-09":[{sport:"Boys Varsity Soccer",match:"Fairview vs Lincoln Hall",loc:"Fairview",time:"4:00 PM",note:"5-3 (Win)",ref:"",type:"soccer"}],
@@ -275,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "2026-09-29":[{sport:"Boys Varsity Soccer",match:"Lincoln Hall vs Golf",loc:"Lincoln Hall",time:"4:00 PM",note:"",ref:"",type:"soccer"}],
     "2026-10-05":[{sport:"Girls Varsity Volleyball",match:"Park View vs Lincoln Hall",loc:"Park View",time:"5:00 PM",note:"",ref:"",type:"volleyball"}],
     "2026-10-07":[{sport:"Boys Varsity Soccer",match:"Old Orchard vs Lincoln Hall",loc:"Old Orchard",time:"4:00 PM",note:"",ref:"",type:"soccer"}]
-  };
+  }/*FALLBACK_END*/;
 
   // ── State ──────────────────────────────────────────────────────────
   let DATA = {};                 // { "YYYY-MM-DD": [event, ...] }
@@ -539,10 +545,16 @@ document.addEventListener('DOMContentLoaded', () => {
       DATA = evs;
       const when = fmtWhen(data.generated_at);
       statusEl.textContent = when ? `Updated ${when}` : 'Live schedule';
+      statusEl.title = 'Loaded live from ' + EVENTS_JSON_URL;
     }catch(err){
       console.warn('Live schedule unavailable, using saved copy:', err);
       DATA = FALLBACK;
-      statusEl.textContent = 'Showing saved schedule';
+      const n = Object.keys(FALLBACK).length;
+      statusEl.textContent = n ? 'Saved schedule' : 'Schedule unavailable';
+      // Hovering the status shows the actual reason, which makes this
+      // diagnosable without opening the browser console.
+      statusEl.title = 'Could not load live schedule (' + (err && err.message ? err.message : err)
+                     + '). Showing the copy saved with this page.';
     }
     agendaScrolled=false;
     pickMonth();
