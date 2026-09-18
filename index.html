@@ -8,788 +8,548 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  /* ---------- Reset & tokens ---------- */
-  * { box-sizing: border-box; }
+  *,*::before,*::after { box-sizing: border-box; }
   :root {
-    --ink: #0d0d0f;
-    --ink-soft: #55565c;
-    --ink-faint: #9a9aa0;
-    --paper: #ffffff;
-    --seam: #f2f2f2;
-    --seam-strong: #e2e2e2;
-    --red: #d81324;
-    --red-dark: #a30d1c;
-    --font-display: 'Anton', 'Arial Narrow', sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    --ease: cubic-bezier(.4,0,.2,1);
+    --ink:#0d0d0f; --ink-soft:#54565c; --ink-faint:#93959c;
+    --paper:#fff; --seam:#f2f2f2; --seam-2:#e3e3e3;
+    --red:#d81324; --red-dark:#a00d1b;
+    --display:'Anton','Arial Narrow',sans-serif;
+    --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    --ease:cubic-bezier(.4,0,.2,1);
   }
-  html, body {
-    margin: 0; padding: 0; width: 100%; height: 100%;
-    overflow: hidden; background: var(--paper); color: var(--ink);
-    font-family: var(--font-body); -webkit-text-size-adjust: 100%;
-  }
-  button { font-family: inherit; }
+  html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;
+    background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-text-size-adjust:100%;}
+  button{font-family:inherit;}
+  ::-webkit-scrollbar{width:8px;height:8px}
+  ::-webkit-scrollbar-track{background:var(--seam)}
+  ::-webkit-scrollbar-thumb{background:var(--seam-2);border-radius:4px}
+  ::-webkit-scrollbar-thumb:hover{background:var(--ink-faint)}
+  button:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--red);outline-offset:2px}
 
-  ::-webkit-scrollbar { width: 8px; height: 8px; }
-  ::-webkit-scrollbar-track { background: var(--seam); }
-  ::-webkit-scrollbar-thumb { background: var(--seam-strong); border-radius: 4px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--ink-faint); }
+  .page{display:flex;flex-direction:column;width:100%;height:100%;opacity:0;animation:fade .45s var(--ease) forwards}
+  @keyframes fade{to{opacity:1}}
 
-  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
-    outline: 3px solid var(--red); outline-offset: 2px;
-  }
+  /* Header */
+  .top{flex-shrink:0;background:var(--ink);color:#fff;border-bottom:4px solid var(--red);
+    opacity:0;transform:translateY(-8px);animation:drop .45s var(--ease) .05s forwards}
+  @keyframes drop{to{opacity:1;transform:none}}
+  .top-in{max-width:1600px;margin:0 auto;width:100%;padding:10px 16px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+  .mark{width:38px;height:38px;border-radius:7px;flex-shrink:0;
+    background:repeating-linear-gradient(135deg,var(--red) 0 7px,var(--ink) 7px 14px);
+    border:1px solid rgba(255,255,255,.16);transition:transform .35s var(--ease)}
+  .brand:hover .mark{transform:rotate(8deg) scale(1.06)}
+  .brand h1{font-family:var(--display);font-weight:400;font-size:20px;line-height:1;margin:0;letter-spacing:.3px}
+  .brand p{margin:3px 0 0;font-size:11px;color:#b8bbc3;font-weight:500}
 
-  /* ---------- Page shell ---------- */
-  .page { display: flex; flex-direction: column; width: 100%; height: 100%; opacity: 0; animation: pageIn .5s var(--ease) forwards; }
-  @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+  .nav{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .nav button{width:32px;height:32px;border:none;border-radius:50%;cursor:pointer;
+    background:rgba(255,255,255,.08);color:#fff;font-size:18px;line-height:1;
+    display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+  .nav button:hover{background:var(--red)}
+  .nav button:active{transform:scale(.88)}
+  .mlabel{text-align:center;min-width:150px;overflow:hidden}
+  .mlabel h2{font-family:var(--display);font-weight:400;font-size:18px;margin:0;color:#fff;
+    white-space:nowrap;display:inline-block}
+  .mlabel h2.flip{animation:flip .3s var(--ease)}
+  @keyframes flip{0%{opacity:0;transform:translateY(6px)}100%{opacity:1;transform:none}}
+  .status{font-size:10px;color:#989aa6;margin:2px 0 0;min-height:12px}
+  .today-btn{border:none;background:rgba(255,255,255,.08);color:#d7d9df;cursor:pointer;
+    font-size:12px;font-weight:600;padding:7px 12px;border-radius:7px;transition:background .15s,color .15s}
+  .today-btn:hover{background:var(--red);color:#fff}
 
-  /* ---------- Header ---------- */
-  .site-header {
-    flex-shrink: 0; background: var(--ink); color: #fff; border-bottom: 4px solid var(--red);
-    opacity: 0; transform: translateY(-8px); animation: dropIn .5s var(--ease) .05s forwards;
-  }
-  @keyframes dropIn { to { opacity: 1; transform: translateY(0); } }
-  .header-inner {
-    max-width: 1600px; margin: 0 auto; width: 100%;
-    padding: 10px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-  }
-  .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-  .brand-mark {
-    width: 38px; height: 38px; border-radius: 7px; flex-shrink: 0;
-    background: repeating-linear-gradient(135deg, var(--red) 0 7px, var(--ink) 7px 14px);
-    border: 1px solid rgba(255,255,255,0.15);
-    transition: transform .35s var(--ease);
-  }
-  .brand:hover .brand-mark { transform: rotate(8deg) scale(1.06); }
-  .brand-name {
-    font-family: var(--font-display); font-weight: 400; letter-spacing: 0.3px;
-    font-size: 20px; line-height: 1; margin: 0;
-  }
-  .brand-sub { font-size: 11px; color: #b9bcc4; margin: 3px 0 0; font-weight: 500; }
+  .views{display:flex;background:rgba(255,255,255,.08);border-radius:8px;padding:3px;flex-shrink:0}
+  .views button{border:none;background:transparent;color:#c5c7cf;cursor:pointer;font-size:13px;
+    font-weight:600;padding:6px 14px;border-radius:6px;transition:background .2s,color .2s}
+  .views button.on{background:var(--red);color:#fff}
 
-  .month-nav { display: flex; align-items: center; gap: 10px; margin-left: auto; }
-  .nav-btn {
-    width: 32px; height: 32px; border-radius: 50%; border: none; cursor: pointer;
-    background: rgba(255,255,255,0.08); color: #fff; font-size: 18px; line-height: 1;
-    display: flex; align-items: center; justify-content: center;
-    transition: background .15s var(--ease), transform .15s var(--ease);
-  }
-  .nav-btn:hover { background: var(--red); }
-  .nav-btn:active { transform: scale(0.88); }
-  .month-label-wrap { text-align: center; min-width: 150px; overflow: hidden; }
-  .month-label {
-    font-family: var(--font-display); font-weight: 400; font-size: 18px;
-    color: #fff; margin: 0; letter-spacing: 0.3px; white-space: nowrap;
-    display: inline-block;
-  }
-  .month-label.flip { animation: monthFlip .35s var(--ease); }
-  @keyframes monthFlip {
-    0%   { opacity: 0; transform: translateY(6px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .sync-status { font-size: 10px; color: #9a9dab; margin: 2px 0 0; min-height: 12px; }
+  /* Filters + next up */
+  .strip{flex-shrink:0;background:var(--seam);border-bottom:1px solid var(--seam-2);
+    opacity:0;transform:translateY(-6px);animation:drop .45s var(--ease) .12s forwards}
+  .strip-in{max-width:1600px;margin:0 auto;width:100%;padding:9px 16px;
+    display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap}
+  .next{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;flex:1;min-width:0}
+  .next .lab{font-size:12px;color:var(--ink-soft);font-weight:600;flex-shrink:0}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--red);flex-shrink:0;
+    align-self:center;animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(216,19,36,.45)}50%{box-shadow:0 0 0 6px rgba(216,19,36,0)}}
+  .next .m{font-weight:700;font-size:14px}
+  .next .d{font-size:13px;color:var(--ink-soft)}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{border:1px solid var(--seam-2);background:var(--paper);color:var(--ink-soft);
+    font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;cursor:pointer;
+    transition:background .15s,color .15s,border-color .15s}
+  .chip:hover{border-color:var(--ink-faint)}
+  .chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+  .chip.on.red{background:var(--red);border-color:var(--red)}
 
-  .view-toggle { display: flex; background: rgba(255,255,255,0.08); border-radius: 8px; padding: 3px; flex-shrink: 0; }
-  .toggle-btn {
-    border: none; background: transparent; color: #c7c9d1; cursor: pointer;
-    font-size: 13px; font-weight: 600; padding: 6px 14px; border-radius: 6px;
-    transition: background .2s var(--ease), color .2s var(--ease);
-  }
-  .toggle-btn.active { background: var(--red); color: #fff; }
-  .toggle-btn:active { transform: scale(0.95); }
+  main{flex:1;min-height:0;width:100%;position:relative}
+  .panel{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;
+    pointer-events:none;transition:opacity .28s var(--ease)}
+  .panel.on{opacity:1;pointer-events:auto}
+  .wrap{max-width:1600px;margin:0 auto;width:100%;height:100%;display:flex;flex-direction:column}
 
-  /* ---------- Next up banner ---------- */
-  .next-up {
-    flex-shrink: 0; background: var(--seam); border-bottom: 1px solid var(--seam-strong);
-    opacity: 0; transform: translateY(-6px); animation: dropIn .5s var(--ease) .15s forwards;
-  }
-  .next-up-inner {
-    max-width: 1600px; margin: 0 auto; width: 100%; padding: 10px 16px;
-    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-  }
-  .next-up-label { font-size: 12px; color: var(--ink-soft); font-weight: 500; flex-shrink: 0; }
-  .next-up-body { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; flex: 1; min-width: 0; }
-  .next-up-dot {
-    width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; background: var(--red);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(216,19,36,0.4); }
-    50%      { box-shadow: 0 0 0 6px rgba(216,19,36,0); }
-  }
-  .next-up-match { font-weight: 700; font-size: 14px; color: var(--ink); }
-  .next-up-meta { font-size: 13px; color: var(--ink-soft); }
-  .next-up-empty { font-size: 13px; color: var(--ink-soft); }
+  /* Month grid */
+  .dow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));flex-shrink:0;
+    border-bottom:1px solid var(--seam-2)}
+  .dow div{padding:8px 4px;text-align:center;font-size:11px;font-weight:700;
+    color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px}
+  .grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));
+    grid-auto-rows:minmax(96px,1fr);gap:1px;background:var(--seam);flex:1;overflow-y:auto}
+  .cell{background:var(--paper);padding:6px;overflow:hidden;display:flex;flex-direction:column;
+    position:relative;transition:transform .15s var(--ease),box-shadow .15s,background .15s;
+    opacity:0;animation:cin .3s var(--ease) forwards}
+  @keyframes cin{to{opacity:1}}
+  .cell.has{cursor:pointer}
+  .cell.has:hover{background:#fff;transform:scale(1.035);box-shadow:0 4px 16px rgba(0,0,0,.14);z-index:2}
+  .cell.pad{background:var(--seam)}
+  .num{font-size:13px;font-weight:600;color:var(--ink-soft);width:22px;height:22px;flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;border-radius:50%;margin-bottom:3px}
+  .cell.today .num{background:var(--red);color:#fff}
+  .pills{display:flex;flex-direction:column;gap:2px;overflow:hidden;flex:1}
+  .pill{font-size:10px;line-height:1.3;padding:2px 4px;border-left:3px solid var(--c,var(--ink));
+    background:var(--seam);border-radius:0 3px 3px 0;white-space:nowrap;overflow:hidden;
+    text-overflow:ellipsis;transition:background .15s}
+  .cell:hover .pill{background:#fff}
+  .more{font-size:10px;color:var(--ink-soft);font-weight:700;padding-left:4px}
+  .dots{display:flex;gap:3px;margin-top:auto;padding-top:2px}
+  .dots i{width:6px;height:6px;border-radius:50%;background:var(--c,var(--ink))}
 
-  /* ---------- Main area ---------- */
-  main { flex: 1; min-height: 0; width: 100%; position: relative; }
-  .view-panel {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    display: flex; flex-direction: column; opacity: 0; pointer-events: none;
-    transition: opacity .3s var(--ease);
-  }
-  .view-panel.is-active { opacity: 1; pointer-events: auto; }
-  .view-inner { max-width: 1600px; margin: 0 auto; width: 100%; height: 100%; display: flex; flex-direction: column; }
+  /* Agenda */
+  .agenda{flex:1;overflow-y:auto;padding:14px 16px 48px}
+  .grp{margin-bottom:18px}
+  .grp.past{opacity:.48}
+  .grp h3{font-size:13px;font-weight:700;margin:0 0 8px;padding-bottom:6px;
+    border-bottom:1px solid var(--seam-2)}
+  .divider{display:flex;align-items:center;gap:10px;margin:4px 0 20px;color:var(--red)}
+  .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--red);opacity:.35}
+  .divider span{font-size:12px;font-weight:700;letter-spacing:.3px}
 
-  /* ---------- Month grid ---------- */
-  .weekday-row {
-    display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
-    background: var(--paper); border-bottom: 1px solid var(--seam-strong); flex-shrink: 0;
-  }
-  .weekday-row div {
-    padding: 8px 4px; text-align: center; font-size: 11px; font-weight: 600;
-    color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.4px;
-  }
-  .calendar-grid {
-    display: grid; grid-template-columns: repeat(7, minmax(0, 1fr));
-    grid-auto-rows: minmax(96px, 1fr); gap: 1px; background: var(--seam);
-    flex: 1; overflow-y: auto;
-  }
-  .day-cell {
-    background: var(--paper); padding: 6px; cursor: pointer; overflow: hidden;
-    display: flex; flex-direction: column; position: relative;
-    transition: transform .15s var(--ease), box-shadow .15s var(--ease), background .15s var(--ease);
-    opacity: 0; animation: cellIn .3s var(--ease) forwards;
-  }
-  @keyframes cellIn { to { opacity: 1; } }
-  .day-cell.has-events:hover {
-    background: #fff; transform: scale(1.035); box-shadow: 0 4px 16px rgba(0,0,0,0.14); z-index: 2;
-  }
-  .day-cell.empty { background: var(--seam); cursor: default; }
-  .day-num {
-    font-size: 13px; font-weight: 600; color: var(--ink-soft); margin-bottom: 3px;
-    width: 22px; height: 22px; display: flex; align-items: center; justify-content: center;
-    border-radius: 50%; flex-shrink: 0; transition: background .2s var(--ease), color .2s var(--ease);
-  }
-  .day-cell.is-today .day-num { background: var(--red); color: #fff; }
-  .day-events { display: flex; flex-direction: column; gap: 2px; overflow: hidden; flex: 1; }
-  .ticket-mini {
-    font-size: 10px; line-height: 1.3; padding: 2px 4px; border-left: 3px solid var(--sport-color, var(--ink));
-    background: var(--seam); color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    border-radius: 0 3px 3px 0; transition: background .15s var(--ease);
-  }
-  .day-cell:hover .ticket-mini { background: #ffffff; }
-  .ticket-mini-more { font-size: 10px; color: var(--ink-soft); font-weight: 600; padding-left: 4px; }
-  .day-dots { display: flex; gap: 3px; margin-top: auto; padding-top: 2px; }
-  .day-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sport-color, var(--ink)); }
+  .card{display:flex;gap:12px;padding:10px 12px;margin-bottom:6px;background:var(--paper);
+    border-left:4px solid var(--c,var(--ink));border-radius:0 8px 8px 0;
+    box-shadow:0 1px 2px rgba(0,0,0,.05);opacity:0;transform:translateX(-6px);
+    animation:cardin .32s var(--ease) forwards;transition:box-shadow .2s,transform .2s}
+  .card:hover{box-shadow:0 6px 18px rgba(0,0,0,.1);transform:translateX(2px)}
+  @keyframes cardin{to{opacity:1;transform:none}}
+  .card .ico{font-size:20px;flex-shrink:0;line-height:1.3}
+  .card .bd{flex:1;min-width:0}
+  .card .sp{font-size:11px;font-weight:700;color:var(--c,var(--ink))}
+  .card .mt{font-size:15px;font-weight:700;margin:2px 0 4px}
+  .meta{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--ink-soft)}
+  .meta b{color:var(--ink);font-weight:600}
+  .note{display:inline-block;margin-top:4px;font-size:12px;font-weight:600;
+    background:var(--seam);padding:2px 8px;border-radius:4px}
 
-  /* ---------- Agenda ---------- */
-  .agenda-scroll { flex: 1; overflow-y: auto; padding: 14px 16px 40px; }
-  .agenda-date-group { margin-bottom: 18px; }
-  .agenda-date-group.is-past { opacity: 0.5; }
-  .agenda-date-heading {
-    font-size: 13px; font-weight: 700; color: var(--ink); margin: 0 0 8px;
-    padding-bottom: 6px; border-bottom: 1px solid var(--seam-strong);
-  }
-  .today-divider { display: flex; align-items: center; gap: 10px; margin: 4px 0 20px; color: var(--red); }
-  .today-divider::before, .today-divider::after { content: ''; flex: 1; height: 1px; background: var(--red); opacity: 0.35; }
-  .today-divider span { font-size: 12px; font-weight: 700; letter-spacing: 0.3px; }
-  .agenda-empty { padding: 40px 20px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+  .empty{padding:44px 20px;text-align:center;color:var(--ink-soft);font-size:14px;line-height:1.6}
+  .empty b{display:block;color:var(--ink);font-size:15px;margin-bottom:6px}
+  .retry{margin-top:14px;background:var(--ink);color:#fff;border:none;padding:9px 18px;
+    border-radius:8px;font-weight:600;font-size:13px;cursor:pointer}
+  .retry:hover{background:var(--red)}
 
-  /* ---------- Ticket rows (agenda + modal) ---------- */
-  .ticket-full {
-    display: flex; gap: 12px; padding: 10px 12px; margin-bottom: 6px;
-    border-left: 4px solid var(--sport-color, var(--ink)); background: var(--paper);
-    border-radius: 0 8px 8px 0; box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    opacity: 0; transform: translateX(-6px); animation: ticketIn .35s var(--ease) forwards;
-    transition: box-shadow .2s var(--ease), transform .2s var(--ease);
-  }
-  .ticket-full:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.1); transform: translateX(2px); }
-  @keyframes ticketIn { to { opacity: 1; transform: translateX(0); } }
-  .ticket-icon { font-size: 20px; flex-shrink: 0; line-height: 1.3; }
-  .ticket-body { flex: 1; min-width: 0; }
-  .ticket-sport { font-size: 11px; font-weight: 700; color: var(--sport-color, var(--ink)); }
-  .ticket-match { font-size: 15px; font-weight: 700; color: var(--ink); margin: 2px 0 4px; }
-  .ticket-details { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--ink-soft); }
-  .ticket-details strong { color: var(--ink); font-weight: 600; }
-  .ticket-note {
-    display: inline-block; margin-top: 4px; font-size: 12px; font-weight: 600;
-    background: var(--seam); padding: 2px 8px; border-radius: 4px; color: var(--ink);
-  }
+  /* Modal */
+  .back{position:fixed;inset:0;background:rgba(13,13,15,.62);backdrop-filter:blur(2px);
+    display:none;align-items:center;justify-content:center;padding:16px;z-index:50;
+    opacity:0;transition:opacity .2s}
+  .back.on{display:flex;opacity:1}
+  .box{background:var(--paper);width:100%;max-width:560px;border-radius:14px;overflow:hidden;
+    display:flex;flex-direction:column;max-height:88vh;box-shadow:0 20px 50px rgba(0,0,0,.3);
+    transform:scale(.94) translateY(10px);opacity:0;transition:transform .25s var(--ease),opacity .25s}
+  .back.on .box{transform:none;opacity:1}
+  .box .hd{background:var(--ink);color:#fff;padding:15px 18px;display:flex;
+    justify-content:space-between;align-items:center;flex-shrink:0}
+  .box .hd h3{font-family:var(--display);font-weight:400;font-size:18px;margin:0;letter-spacing:.3px}
+  .x{background:rgba(255,255,255,.1);border:none;color:#fff;width:30px;height:30px;border-radius:50%;
+    cursor:pointer;font-size:15px;flex-shrink:0;transition:background .15s,transform .2s}
+  .x:hover{background:var(--red);transform:rotate(90deg)}
+  .box .bdy{padding:14px 16px;overflow-y:auto;background:var(--seam);flex:1}
+  .box .ft{padding:12px 16px;border-top:1px solid var(--seam-2);display:flex;justify-content:flex-end}
+  .close{background:var(--ink);color:#fff;border:none;padding:9px 20px;border-radius:8px;
+    font-weight:600;font-size:13.5px;cursor:pointer;transition:background .15s,transform .1s}
+  .close:hover{background:var(--red)}
+  .close:active{transform:scale(.96)}
 
-  /* ---------- Modal ---------- */
-  .modal-backdrop {
-    position: fixed; inset: 0; background: rgba(13,13,15,0.6); backdrop-filter: blur(2px);
-    display: none; align-items: center; justify-content: center; padding: 16px; z-index: 50;
-    opacity: 0; transition: opacity .2s var(--ease);
+  @media (max-width:640px){
+    .top-in{padding:8px 12px;gap:8px}
+    .brand p{display:none}
+    .brand h1{font-size:17px}
+    .mlabel{min-width:104px}
+    .mlabel h2{font-size:15px}
+    .views{order:3;width:100%;justify-content:center}
+    .grid{grid-auto-rows:minmax(62px,1fr)}
+    .pill{display:none}
+    .dots{display:flex}
   }
-  .modal-backdrop.is-open { display: flex; opacity: 1; }
-  .modal-box {
-    background: var(--paper); width: 100%; max-width: 560px; border-radius: 14px;
-    overflow: hidden; display: flex; flex-direction: column; max-height: 88vh;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-    transform: scale(0.94) translateY(10px); opacity: 0;
-    transition: transform .25s var(--ease), opacity .25s var(--ease);
-  }
-  .modal-backdrop.is-open .modal-box { transform: scale(1) translateY(0); opacity: 1; }
-  .modal-head {
-    background: var(--ink); color: #fff; padding: 16px 18px;
-    display: flex; justify-content: space-between; align-items: center; flex-shrink: 0;
-  }
-  .modal-head h3 { font-family: var(--font-display); font-weight: 400; font-size: 18px; margin: 0; letter-spacing: 0.3px; }
-  .modal-close {
-    background: rgba(255,255,255,0.1); border: none; color: #fff; width: 30px; height: 30px;
-    border-radius: 50%; cursor: pointer; font-size: 16px; flex-shrink: 0; transition: background .15s var(--ease), transform .15s var(--ease);
-  }
-  .modal-close:hover { background: var(--red); transform: rotate(90deg); }
-  .modal-body { padding: 14px 16px; overflow-y: auto; background: var(--seam); flex: 1; }
-  .modal-foot { padding: 12px 16px; border-top: 1px solid var(--seam-strong); display: flex; justify-content: flex-end; flex-shrink: 0; }
-  .btn-dark {
-    background: var(--ink); color: #fff; border: none; padding: 9px 20px; border-radius: 8px;
-    cursor: pointer; font-weight: 600; font-size: 13.5px; transition: background .15s var(--ease), transform .1s var(--ease);
-  }
-  .btn-dark:hover { background: var(--red); }
-  .btn-dark:active { transform: scale(0.96); }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 640px) {
-    .header-inner { padding: 8px 12px; gap: 10px; }
-    .brand-sub { display: none; }
-    .brand-name { font-size: 17px; }
-    .month-label { font-size: 15px; }
-    .month-label-wrap { min-width: 110px; }
-    .view-toggle { order: 3; width: 100%; justify-content: center; }
-    .calendar-grid { grid-auto-rows: minmax(64px, 1fr); }
-    .ticket-mini { display: none; }
-    .day-dots { display: flex; }
-  }
-  @media (min-width: 641px) { .day-dots { display: none; } }
-
-  /* ---------- Reduced motion ---------- */
-  @media (prefers-reduced-motion: reduce) {
-    * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-    .page, .site-header, .next-up, .day-cell, .ticket-full { opacity: 1 !important; transform: none !important; }
+  @media (min-width:641px){.dots{display:none}}
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+    .page,.top,.strip,.cell,.card{opacity:1!important;transform:none!important}
   }
 </style>
 </head>
 <body>
-
 <div class="page">
-  <header class="site-header">
-    <div class="header-inner">
+  <header class="top">
+    <div class="top-in">
       <div class="brand">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div>
-          <h1 class="brand-name">Lincoln Hall</h1>
-          <p class="brand-sub">Athletics</p>
-        </div>
+        <div class="mark" aria-hidden="true"></div>
+        <div><h1>Lincoln Hall</h1><p>Athletics</p></div>
       </div>
-
-      <div class="month-nav">
-        <button id="prev-month" class="nav-btn" aria-label="Previous month">‹</button>
-        <div class="month-label-wrap">
-          <h2 id="current-month-year" class="month-label"></h2>
-          <p id="sync-status" class="sync-status">&nbsp;</p>
-        </div>
-        <button id="next-month" class="nav-btn" aria-label="Next month">›</button>
+      <div class="nav">
+        <button id="prev" aria-label="Previous month">‹</button>
+        <div class="mlabel"><h2 id="month"></h2><p class="status" id="status">&nbsp;</p></div>
+        <button id="next" aria-label="Next month">›</button>
+        <button class="today-btn" id="todayBtn">Today</button>
       </div>
-
-      <div class="view-toggle" role="tablist" aria-label="Calendar view">
-        <button id="view-month-btn" class="toggle-btn active" role="tab" aria-selected="true">Month</button>
-        <button id="view-agenda-btn" class="toggle-btn" role="tab" aria-selected="false">Agenda</button>
+      <div class="views" role="tablist" aria-label="View">
+        <button id="vMonth" class="on" role="tab" aria-selected="true">Month</button>
+        <button id="vAgenda" role="tab" aria-selected="false">Agenda</button>
       </div>
     </div>
   </header>
 
-  <section class="next-up" id="next-up-section">
-    <div class="next-up-inner" id="next-up-inner">
-      <span class="next-up-label">Next up</span>
-      <span class="next-up-empty">Loading schedule…</span>
+  <section class="strip">
+    <div class="strip-in">
+      <div class="next" id="next-up"><span class="lab">Loading schedule…</span></div>
+      <div class="chips" id="chips"></div>
     </div>
   </section>
 
   <main>
-    <div id="month-view" class="view-panel is-active">
-      <div class="view-inner">
-        <div class="weekday-row">
-          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-        </div>
-        <div id="calendar-grid" class="calendar-grid"></div>
+    <div class="panel on" id="pMonth">
+      <div class="wrap">
+        <div class="dow"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div>
+        <div class="grid" id="grid"></div>
       </div>
     </div>
-
-    <div id="agenda-view" class="view-panel">
-      <div class="view-inner">
-        <div id="agenda-scroll" class="agenda-scroll"></div>
-      </div>
-    </div>
+    <div class="panel" id="pAgenda"><div class="wrap"><div class="agenda" id="agenda"></div></div></div>
   </main>
 </div>
 
-<div id="event-modal" class="modal-backdrop">
-  <div class="modal-box">
-    <div class="modal-head">
-      <h3 id="modal-date-title"></h3>
-      <button id="close-modal" class="modal-close" aria-label="Close">✕</button>
-    </div>
-    <div id="modal-events-list" class="modal-body"></div>
-    <div class="modal-foot">
-      <button id="close-modal-btn" class="btn-dark">Close</button>
-    </div>
+<div class="back" id="modal">
+  <div class="box">
+    <div class="hd"><h3 id="mTitle"></h3><button class="x" id="mX" aria-label="Close">✕</button></div>
+    <div class="bdy" id="mBody"></div>
+    <div class="ft"><button class="close" id="mClose">Close</button></div>
   </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-  // ---------- Where to check for live schedule updates ----------
-  // Leave this as 'events.json' (a relative path) if this file is hosted
-  // as its own page (GitHub Pages, jsDelivr, Firebase, etc).
+  // ─────────────────────────────────────────────────────────────────
+  // WHERE THE LIVE SCHEDULE COMES FROM
   //
-  // If you instead PASTE this whole file's code directly into Google Sites
-  // (Insert -> Embed -> Embed code), change this to the full, absolute
-  // jsDelivr URL for your repo's events.json, e.g.:
-  //   'https://cdn.jsdelivr.net/gh/YOUR-USERNAME/lincoln-hall-calendar@main/events.json'
-  // A relative path won't work when the code is pasted directly, since
-  // there's no actual events.json file sitting next to it in that context
-  // -- an absolute URL tells the browser exactly where to check instead,
-  // while everything else about the page still works the same either way.
-  const EVENTS_JSON_URL = 'https://cdn.jsdelivr.net/gh/aetherwebsitetoken-art/lincoln-hall-calendar@main/events.json';
+  // Leave as 'events.json' if this file is hosted as its own page
+  // (GitHub Pages / jsDelivr / Firebase).
+  //
+  // If you PASTE this whole file into Google Sites (Insert → Embed →
+  // Embed code), change it to the full jsDelivr URL, e.g.
+  // 'https://cdn.jsdelivr.net/gh/YOUR-USERNAME/lincoln-hall-calendar@main/events.json'
+  // ─────────────────────────────────────────────────────────────────
+  const EVENTS_JSON_URL = 'events.json';
 
-  // ---------- Sport metadata (red/black/white palette only -- color just
-  // alternates per sport so concurrent sports are easy to tell apart; the
-  // icon carries the rest of the distinction) ----------
-  const SPORT_META = {
-    soccer:     { color: 'var(--ink)', icon: '⚽' },
-    volleyball: { color: 'var(--red)', icon: '🏐' },
-    basketball: { color: 'var(--red)', icon: '🏀' },
-    other:      { color: 'var(--ink)', icon: '🏅' },
+  // Sport styling. Palette is strictly red / white / black; sports
+  // alternate red vs black accents, with the icon carrying the rest.
+  const SPORTS = {
+    soccer:     {c:'var(--ink)', i:'⚽', label:'Soccer'},
+    volleyball: {c:'var(--red)', i:'🏐', label:'Volleyball'},
+    basketball: {c:'var(--ink)', i:'🏀', label:'Basketball'},
+    other:      {c:'var(--red)', i:'🏅', label:'Other'}
   };
-  const sportMeta = (type) => SPORT_META[type] || SPORT_META.other;
+  const meta = t => SPORTS[t] || SPORTS.other;
 
-  // ---------- Fallback data ----------
-  // Used only if events.json (written by the GitHub Action / scrape_schedule.py)
-  // can't be loaded, OR comes back with zero events (e.g. a temporary scraper
-  // hiccup) -- see loadEvents() near the bottom, which never lets an empty
-  // live result blank out this working schedule.
-  let eventsData = {
-    "2026-09-08": [
-      { sport: 'Boys JV Soccer', match: 'Golf vs Lincoln Hall', loc: 'Golf', time: '4:00 PM', note: '4-0 (Win)', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Lincoln Hall vs Park View', loc: 'Niles West', time: '4:15 PM', note: '2-0 (Win)', ref: 'Moy', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Lincoln Hall vs Park View', loc: 'Niles West', time: '5:15 PM', note: '1-2 (Loss)', ref: 'Moy', type: 'volleyball' }
-    ],
-    "2026-09-09": [
-      { sport: 'Boys Varsity Soccer', match: 'Fairview vs Lincoln Hall', loc: 'Fairview', time: '4:00 PM', note: '5-3 (Win)', ref: '', type: 'soccer' }
-    ],
-    "2026-09-10": [
-      { sport: 'Boys JV Soccer', match: 'Old Orchard vs Lincoln Hall', loc: 'Old Orchard', time: '4:00 PM', note: '0-0 (Tie)', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Lincoln Hall vs Golf', loc: 'Lincoln Hall', time: '4:00 PM', note: '2-1 (Win)', ref: 'Moy', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Lincoln Hall vs Golf', loc: 'Lincoln Hall', time: '5:00 PM', note: '0-2 (Loss)', ref: 'Moy', type: 'volleyball' }
-    ],
-    "2026-09-11": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln vs Lincoln Hall', loc: 'Lincoln', time: '4:15 PM', note: '5-1 (Win)', ref: '', type: 'soccer' }
-    ],
-    "2026-09-14": [
-      { sport: 'Girls Varsity Volleyball', match: 'Lincoln vs Lincoln Hall', loc: 'Lincoln', time: '4:15 PM', note: '', ref: 'Szewczyk', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Lincoln vs Lincoln Hall', loc: 'Lincoln', time: '5:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' }
-    ],
-    "2026-09-15": [
-      { sport: 'Boys JV Soccer', match: 'Culver vs Lincoln Hall', loc: 'Culver', time: '4:00 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-09-16": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln Hall vs Old Orchard', loc: 'Lincoln Hall', time: '4:15 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-09-17": [
-      { sport: 'Boys Varsity Soccer', match: 'Park View vs Lincoln Hall', loc: 'Park View', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Boys JV Soccer', match: 'Lincoln Hall vs McCracken', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Lincoln Hall vs East Prairie', loc: 'Lincoln Hall', time: '4:15 PM', note: '', ref: 'Moy', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Lincoln Hall vs East Prairie', loc: 'Lincoln Hall', time: '5:00 PM', note: '', ref: 'Moy', type: 'volleyball' }
-    ],
-    "2026-09-22": [
-      { sport: 'Boys JV Soccer', match: 'Lincoln Hall vs Lincoln', loc: 'Lincoln Hall', time: '4:15 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Lincoln Hall vs Old Orchard', loc: 'Lincoln Hall', time: '4:15 PM', note: '', ref: 'Moy', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Lincoln Hall vs Old Orchard', loc: 'Lincoln Hall', time: '5:00 PM', note: '', ref: 'Nathan', type: 'volleyball' }
-    ],
-    "2026-09-23": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln Hall vs Culver', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Boys JV Soccer', match: 'Lincoln Hall vs Fairview', loc: 'Lincoln Hall', time: '4:15 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-09-25": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln Hall vs McCracken', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Fairview vs Lincoln Hall', loc: 'Fairview', time: '4:00 PM', note: '', ref: 'Moy', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Fairview vs Lincoln Hall', loc: 'Fairview', time: '5:00 PM', note: '', ref: 'Moy', type: 'volleyball' }
-    ],
-    "2026-09-28": [
-      { sport: 'Girls Varsity Volleyball', match: 'Lincoln Hall vs McCracken', loc: 'Lincoln Hall', time: '5:00 PM', note: '', ref: 'Steil', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Lincoln Hall vs McCracken', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: 'Steil', type: 'volleyball' }
-    ],
-    "2026-09-29": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln Hall vs Golf', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Boys JV Soccer', match: 'Park View vs Lincoln Hall', loc: 'Park View', time: '4:00 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-09-30": [
-      { sport: 'Boys Varsity Soccer', match: 'East Prairie vs Lincoln Hall', loc: 'East Prairie', time: '4:00 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-10-02": [
-      { sport: 'Boys JV Soccer', match: 'Lincoln Hall vs Golf', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-10-05": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln Hall vs Lincoln', loc: 'Lincoln Hall', time: '4:15 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Park View vs Lincoln Hall', loc: 'Park View', time: '5:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Park View vs Lincoln Hall', loc: 'Park View', time: '4:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' }
-    ],
-    "2026-10-07": [
-      { sport: 'Boys Varsity Soccer', match: 'Old Orchard vs Lincoln Hall', loc: 'Old Orchard', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Golf vs Lincoln Hall', loc: 'Golf', time: '5:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Golf vs Lincoln Hall', loc: 'Golf', time: '4:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' }
-    ],
-    "2026-10-08": [
-      { sport: 'Boys JV Soccer', match: 'Lincoln Hall vs Culver', loc: 'Lincoln Hall', time: '4:00 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-10-10": [
-      { sport: 'Boys Varsity Soccer', match: 'Lincoln Hall Playoff Tournament', loc: 'TBD', time: 'TBD', note: 'Opponent TBD - tournament also continues 10/13 or 10/14', ref: '', type: 'soccer' }
-    ],
-    "2026-10-14": [
-      { sport: 'Boys JV Soccer', match: 'McCracken vs Lincoln Hall', loc: 'McCracken', time: '4:00 PM', note: '', ref: '', type: 'soccer' },
-      { sport: 'Girls Varsity Volleyball', match: 'Culver vs Lincoln Hall', loc: 'Culver', time: '5:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' },
-      { sport: 'Girls JV Volleyball', match: 'Culver vs Lincoln Hall', loc: 'Culver', time: '4:00 PM', note: '', ref: 'Szewczyk', type: 'volleyball' }
-    ],
-    "2026-10-15": [
-      { sport: 'Boys JV Soccer', match: 'Fairview vs Lincoln Hall', loc: 'Fairview', time: '4:00 PM', note: '', ref: '', type: 'soccer' }
-    ],
-    "2026-10-16": [
-      { sport: 'Girls JV Volleyball', match: 'JV VB Tournament', loc: 'Niles North', time: '4:15 PM', note: 'Multiple games at 4:15, 5:15 & 6:15 PM', ref: 'Tournament Officials', type: 'volleyball' }
-    ],
-    "2026-10-17": [
-      { sport: 'Girls Varsity Volleyball', match: 'Varsity VB Tournament', loc: 'Niles West', time: '8:30 AM', note: 'Multiple games at 8:30, 9:30 & 10:30 AM', ref: 'Tournament Officials', type: 'volleyball' }
-    ]
+  // Offline fallback: real Fall 2026 games, used only if the live fetch
+  // fails so the page is never blank. Status line says which is showing.
+  const FALLBACK = {
+    "2026-09-08":[{sport:"Girls Varsity Volleyball",match:"Lincoln Hall vs Park View",loc:"Niles West",time:"4:15 PM",note:"2-0 (Win)",ref:"Moy",type:"volleyball"},
+                  {sport:"Boys JV Soccer",match:"Golf vs Lincoln Hall",loc:"Golf",time:"4:00 PM",note:"4-0 (Win)",ref:"",type:"soccer"}],
+    "2026-09-09":[{sport:"Boys Varsity Soccer",match:"Fairview vs Lincoln Hall",loc:"Fairview",time:"4:00 PM",note:"5-3 (Win)",ref:"",type:"soccer"}],
+    "2026-09-10":[{sport:"Girls Varsity Volleyball",match:"Lincoln Hall vs Golf",loc:"Lincoln Hall",time:"4:00 PM",note:"2-1 (Win)",ref:"Moy",type:"volleyball"}],
+    "2026-09-11":[{sport:"Boys Varsity Soccer",match:"Lincoln vs Lincoln Hall",loc:"Lincoln",time:"4:15 PM",note:"5-1 (Win)",ref:"",type:"soccer"}],
+    "2026-09-17":[{sport:"Boys Varsity Soccer",match:"Park View vs Lincoln Hall",loc:"Park View",time:"4:00 PM",note:"",ref:"",type:"soccer"},
+                  {sport:"Girls Varsity Volleyball",match:"Lincoln Hall vs East Prairie",loc:"Lincoln Hall",time:"4:15 PM",note:"",ref:"Moy",type:"volleyball"}],
+    "2026-09-22":[{sport:"Girls Varsity Volleyball",match:"Lincoln Hall vs Old Orchard",loc:"Lincoln Hall",time:"4:15 PM",note:"",ref:"Moy",type:"volleyball"}],
+    "2026-09-25":[{sport:"Boys Varsity Soccer",match:"Lincoln Hall vs McCracken",loc:"Lincoln Hall",time:"4:00 PM",note:"",ref:"",type:"soccer"}],
+    "2026-09-29":[{sport:"Boys Varsity Soccer",match:"Lincoln Hall vs Golf",loc:"Lincoln Hall",time:"4:00 PM",note:"",ref:"",type:"soccer"}],
+    "2026-10-05":[{sport:"Girls Varsity Volleyball",match:"Park View vs Lincoln Hall",loc:"Park View",time:"5:00 PM",note:"",ref:"",type:"volleyball"}],
+    "2026-10-07":[{sport:"Boys Varsity Soccer",match:"Old Orchard vs Lincoln Hall",loc:"Old Orchard",time:"4:00 PM",note:"",ref:"",type:"soccer"}]
   };
 
-  // ---------- State ----------
-  let currentDate = new Date(2026, 8, 1);
-  let viewMode = window.innerWidth < 641 ? 'agenda' : 'month';
-  let agendaScrolledOnce = false;
+  // ── State ──────────────────────────────────────────────────────────
+  let DATA = {};                 // { "YYYY-MM-DD": [event, ...] }
+  let cursor = new Date();       // month being displayed
+  let view = window.innerWidth < 641 ? 'agenda' : 'month';
+  let activeSports = null;       // null = show all
+  let agendaScrolled = false;
 
-  // ---------- DOM refs ----------
-  const gridEl = document.getElementById('calendar-grid');
-  const monthYearEl = document.getElementById('current-month-year');
-  const syncStatusEl = document.getElementById('sync-status');
-  const prevBtn = document.getElementById('prev-month');
-  const nextBtn = document.getElementById('next-month');
-  const viewMonthBtn = document.getElementById('view-month-btn');
-  const viewAgendaBtn = document.getElementById('view-agenda-btn');
-  const monthPanel = document.getElementById('month-view');
-  const agendaPanel = document.getElementById('agenda-view');
-  const agendaScroll = document.getElementById('agenda-scroll');
-  const nextUpInner = document.getElementById('next-up-inner');
+  const $ = id => document.getElementById(id);
+  const grid=$('grid'), agenda=$('agenda'), monthEl=$('month'), statusEl=$('status'),
+        nextUp=$('next-up'), chips=$('chips'), modal=$('modal'),
+        mTitle=$('mTitle'), mBody=$('mBody');
 
-  const modalEl = document.getElementById('event-modal');
-  const modalDateTitle = document.getElementById('modal-date-title');
-  const modalEventsList = document.getElementById('modal-events-list');
-  const closeBtn = document.getElementById('close-modal');
-  const closeBtnFooter = document.getElementById('close-modal-btn');
+  const MONTHS = ["January","February","March","April","May","June","July",
+                  "August","September","October","November","December"];
 
-  const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const pad = n => n < 10 ? '0'+n : ''+n;
+  const key = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const fromKey = k => { const [y,m,d] = k.split('-').map(Number); return new Date(y,m-1,d); };
+  const TODAY = key(new Date());
+  const longDate  = k => fromKey(k).toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+  const shortDate = k => fromKey(k).toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric'});
 
-  // ---------- Date helpers ----------
-  function pad(n) { return n < 10 ? '0' + n : '' + n; }
-  function toKey(d) { return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`; }
-  function keyToDate(key) { const [y,m,d] = key.split('-').map(Number); return new Date(y, m-1, d); }
-  function formatLong(key) { return keyToDate(key).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }); }
-  function formatShort(key) { return keyToDate(key).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' }); }
-  const todayKey = toKey(new Date());
-
-  // ---------- Ticket row builder (used by agenda + modal) ----------
-  function buildTicketFull(ev, delayIndex) {
-    const meta = sportMeta(ev.type);
-    const card = document.createElement('div');
-    card.className = 'ticket-full';
-    card.style.setProperty('--sport-color', meta.color);
-    card.style.animationDelay = `${Math.min(delayIndex || 0, 8) * 40}ms`;
-
-    const icon = document.createElement('div');
-    icon.className = 'ticket-icon';
-    icon.textContent = meta.icon;
-
-    const body = document.createElement('div');
-    body.className = 'ticket-body';
-
-    const sportEl = document.createElement('div');
-    sportEl.className = 'ticket-sport';
-    sportEl.textContent = ev.sport;
-
-    const matchEl = document.createElement('div');
-    matchEl.className = 'ticket-match';
-    matchEl.textContent = ev.match;
-
-    const details = document.createElement('div');
-    details.className = 'ticket-details';
-    if (ev.time) details.appendChild(detailSpan('Time', ev.time));
-    if (ev.loc) details.appendChild(detailSpan('Location', ev.loc));
-    if (ev.ref) details.appendChild(detailSpan('Official', ev.ref));
-
-    body.appendChild(sportEl);
-    body.appendChild(matchEl);
-    body.appendChild(details);
-
-    if (ev.note) {
-      const noteEl = document.createElement('span');
-      noteEl.className = 'ticket-note';
-      noteEl.textContent = ev.note;
-      body.appendChild(noteEl);
-    }
-
-    card.appendChild(icon);
-    card.appendChild(body);
-    return card;
+  // Events on a date, after sport filtering.
+  function eventsOn(k){
+    const list = DATA[k] || [];
+    if (!activeSports || !activeSports.size) return list;
+    return list.filter(e => activeSports.has(e.type || 'other'));
+  }
+  function datesWithEvents(){
+    return Object.keys(DATA).filter(k => eventsOn(k).length).sort();
   }
 
-  function detailSpan(label, value) {
-    const s = document.createElement('span');
-    const strong = document.createElement('strong');
-    strong.textContent = label + ': ';
-    s.appendChild(strong);
-    s.appendChild(document.createTextNode(value));
-    return s;
+  // ── Event card (agenda + modal) ────────────────────────────────────
+  function card(ev, i){
+    const m = meta(ev.type);
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.style.setProperty('--c', m.c);
+    el.style.animationDelay = `${Math.min(i||0,8)*40}ms`;
+
+    const ico = document.createElement('div');
+    ico.className = 'ico'; ico.textContent = m.i;
+
+    const bd = document.createElement('div'); bd.className = 'bd';
+    const sp = document.createElement('div'); sp.className='sp'; sp.textContent = ev.sport || '';
+    const mt = document.createElement('div'); mt.className='mt'; mt.textContent = ev.match || 'Game';
+    const info = document.createElement('div'); info.className='meta';
+    const add = (label,val) => {
+      if(!val) return;
+      const s=document.createElement('span'); const b=document.createElement('b');
+      b.textContent=label+': '; s.appendChild(b); s.appendChild(document.createTextNode(val));
+      info.appendChild(s);
+    };
+    add('Time', ev.time); add('Location', ev.loc); add('Official', ev.ref);
+
+    bd.appendChild(sp); bd.appendChild(mt); bd.appendChild(info);
+    if (ev.note){ const n=document.createElement('span'); n.className='note'; n.textContent=ev.note; bd.appendChild(n); }
+    el.appendChild(ico); el.appendChild(bd);
+    return el;
   }
 
-  // ---------- Month grid ----------
-  function renderMonthGrid() {
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
+  // ── Month grid ─────────────────────────────────────────────────────
+  function renderMonth(){
+    const y = cursor.getFullYear(), mo = cursor.getMonth();
+    monthEl.textContent = `${MONTHS[mo]} ${y}`;
+    monthEl.classList.remove('flip'); void monthEl.offsetWidth; monthEl.classList.add('flip');
 
-    monthYearEl.textContent = `${monthNames[month]} ${year}`;
-    monthYearEl.classList.remove('flip');
-    void monthYearEl.offsetWidth; // restart animation
-    monthYearEl.classList.add('flip');
+    grid.innerHTML = '';
+    const first = new Date(y,mo,1).getDay();
+    const days  = new Date(y,mo+1,0).getDate();
 
-    gridEl.innerHTML = '';
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    let cellIndex = 0;
-
-    for (let i = 0; i < firstDay; i++) {
-      const cell = document.createElement('div');
-      cell.className = 'day-cell empty';
-      gridEl.appendChild(cell);
+    for(let i=0;i<first;i++){
+      const c=document.createElement('div'); c.className='cell pad'; grid.appendChild(c);
     }
+    for(let d=1; d<=days; d++){
+      const k = `${y}-${pad(mo+1)}-${pad(d)}`;
+      const evs = eventsOn(k);
+      const c = document.createElement('div');
+      c.className = 'cell' + (evs.length?' has':'') + (k===TODAY?' today':'');
+      c.style.animationDelay = `${Math.min(d,20)*12}ms`;
 
-    for (let day = 1; day <= daysInMonth; day++) {
-      const dateKey = `${year}-${pad(month+1)}-${pad(day)}`;
-      const dayEvents = eventsData[dateKey] || [];
+      const num=document.createElement('div'); num.className='num'; num.textContent=d;
+      c.appendChild(num);
 
-      const cell = document.createElement('div');
-      cell.className = 'day-cell' + (dayEvents.length ? ' has-events' : '') + (dateKey === todayKey ? ' is-today' : '');
-      cell.style.animationDelay = `${Math.min(cellIndex, 20) * 12}ms`;
-      cellIndex++;
-
-      const num = document.createElement('div');
-      num.className = 'day-num';
-      num.textContent = day;
-      cell.appendChild(num);
-
-      if (dayEvents.length) {
-        const list = document.createElement('div');
-        list.className = 'day-events';
-        const limit = 3;
-        dayEvents.slice(0, limit).forEach(ev => {
-          const meta = sportMeta(ev.type);
-          const mini = document.createElement('div');
-          mini.className = 'ticket-mini';
-          mini.style.setProperty('--sport-color', meta.color);
-          const shortSport = ev.sport
-            .replace('Boys Varsity', 'B.Var').replace('Boys JV', 'B.JV')
-            .replace('Girls Varsity', 'G.Var').replace('Girls JV', 'G.JV');
-          const shortTime = (ev.time || '').replace(':00', '').replace(' PM','p').replace(' AM','a');
-          mini.textContent = `${shortTime} ${shortSport}`.trim();
-          list.appendChild(mini);
+      if(evs.length){
+        const box=document.createElement('div'); box.className='pills';
+        evs.slice(0,3).forEach(ev=>{
+          const p=document.createElement('div'); p.className='pill';
+          p.style.setProperty('--c', meta(ev.type).c);
+          const t=(ev.time||'').replace(':00','').replace(' PM','p').replace(' AM','a');
+          const s=(ev.sport||'').replace('Boys Varsity','B.Var').replace('Boys JV','B.JV')
+                  .replace('Boys Jr. Varsity','B.JV').replace('Boys Jr.Varsity','B.JV')
+                  .replace('Girls Varsity','G.Var').replace('Girls JV','G.JV')
+                  .replace('Girls Jr. Varsity','G.JV');
+          p.textContent = `${t} ${s}`.trim();
+          box.appendChild(p);
         });
-        if (dayEvents.length > limit) {
-          const more = document.createElement('div');
-          more.className = 'ticket-mini-more';
-          more.textContent = `+${dayEvents.length - limit} more`;
-          list.appendChild(more);
+        if(evs.length>3){
+          const more=document.createElement('div'); more.className='more';
+          more.textContent=`+${evs.length-3} more`; box.appendChild(more);
         }
-        cell.appendChild(list);
+        c.appendChild(box);
 
-        const dots = document.createElement('div');
-        dots.className = 'day-dots';
-        dayEvents.slice(0, 4).forEach(ev => {
-          const dot = document.createElement('div');
-          dot.className = 'day-dot';
-          dot.style.setProperty('--sport-color', sportMeta(ev.type).color);
-          dots.appendChild(dot);
+        const dots=document.createElement('div'); dots.className='dots';
+        evs.slice(0,4).forEach(ev=>{
+          const i=document.createElement('i');
+          i.style.setProperty('--c', meta(ev.type).c); dots.appendChild(i);
         });
-        cell.appendChild(dots);
-
-        cell.addEventListener('click', () => openModal(dateKey, dayEvents));
+        c.appendChild(dots);
+        c.addEventListener('click',()=>openModal(k,evs));
       }
-
-      gridEl.appendChild(cell);
+      grid.appendChild(c);
     }
   }
 
-  // ---------- Agenda ----------
-  function renderAgenda() {
-    agendaScroll.innerHTML = '';
-    const keys = Object.keys(eventsData).sort();
+  // ── Agenda ─────────────────────────────────────────────────────────
+  function renderAgenda(){
+    agenda.innerHTML='';
+    const keys = datesWithEvents();
+    if(!keys.length){ agenda.appendChild(emptyState()); return; }
 
-    if (!keys.length) {
-      const empty = document.createElement('div');
-      empty.className = 'agenda-empty';
-      empty.textContent = 'No games on the schedule yet. New dates will appear here automatically once they\u2019re posted.';
-      agendaScroll.appendChild(empty);
-      return;
-    }
-
-    let dividerPlaced = false;
-    let dividerEl = null;
-    let ticketCounter = 0;
-
-    keys.forEach(key => {
-      if (!dividerPlaced && key >= todayKey) {
-        dividerEl = document.createElement('div');
-        dividerEl.className = 'today-divider';
-        dividerEl.innerHTML = '<span>Today</span>';
-        agendaScroll.appendChild(dividerEl);
-        dividerPlaced = true;
+    let placed=false, divider=null, n=0;
+    keys.forEach(k=>{
+      if(!placed && k>=TODAY){
+        divider=document.createElement('div'); divider.className='divider';
+        divider.innerHTML='<span>Today</span>'; agenda.appendChild(divider); placed=true;
       }
-
-      const group = document.createElement('div');
-      group.className = 'agenda-date-group' + (key < todayKey ? ' is-past' : '');
-
-      const heading = document.createElement('div');
-      heading.className = 'agenda-date-heading';
-      heading.textContent = formatLong(key);
-      group.appendChild(heading);
-
-      eventsData[key].forEach(ev => {
-        group.appendChild(buildTicketFull(ev, ticketCounter));
-        ticketCounter++;
-      });
-      agendaScroll.appendChild(group);
+      const g=document.createElement('div');
+      g.className='grp'+(k<TODAY?' past':'');
+      const h=document.createElement('h3'); h.textContent=longDate(k); g.appendChild(h);
+      eventsOn(k).forEach(ev=>{ g.appendChild(card(ev,n)); n++; });
+      agenda.appendChild(g);
     });
 
-    if (!agendaScrolledOnce) {
-      agendaScrolledOnce = true;
-      requestAnimationFrame(() => {
-        const target = dividerEl || agendaScroll.lastElementChild;
-        if (target) agendaScroll.scrollTop = Math.max(0, target.offsetTop - 8);
+    if(!agendaScrolled){
+      agendaScrolled=true;
+      requestAnimationFrame(()=>{
+        const t = divider || agenda.lastElementChild;
+        if(t) agenda.scrollTop = Math.max(0, t.offsetTop-8);
       });
     }
   }
 
-  // ---------- Next up banner ----------
-  function renderNextUp() {
-    const keys = Object.keys(eventsData).sort();
-    const upcomingKey = keys.find(k => k >= todayKey);
-
-    if (!upcomingKey) {
-      nextUpInner.innerHTML = '<span class="next-up-label">Next up</span><span class="next-up-empty">No upcoming games scheduled yet</span>';
-      return;
+  function emptyState(){
+    const d=document.createElement('div'); d.className='empty';
+    const b=document.createElement('b');
+    b.textContent = Object.keys(DATA).length ? 'No games match this filter'
+                                             : 'Schedule unavailable';
+    d.appendChild(b);
+    d.appendChild(document.createTextNode(
+      Object.keys(DATA).length
+        ? 'Try turning a sport filter back on.'
+        : "Couldn't load the schedule right now. It updates automatically a few times a day."
+    ));
+    if(!Object.keys(DATA).length){
+      const r=document.createElement('button'); r.className='retry'; r.textContent='Try again';
+      r.addEventListener('click',load); d.appendChild(document.createElement('br')); d.appendChild(r);
     }
-
-    const dayEvents = eventsData[upcomingKey];
-    const ev = dayEvents[0];
-    const meta = sportMeta(ev.type);
-    const extra = dayEvents.length > 1 ? ` (+${dayEvents.length - 1} more that day)` : '';
-    const when = upcomingKey === todayKey ? 'Today' : formatShort(upcomingKey);
-
-    nextUpInner.innerHTML = '';
-    const label = document.createElement('span');
-    label.className = 'next-up-label';
-    label.textContent = 'Next up';
-
-    const body = document.createElement('div');
-    body.className = 'next-up-body';
-    const dot = document.createElement('span');
-    dot.className = 'next-up-dot';
-    dot.style.background = meta.color;
-    const match = document.createElement('span');
-    match.className = 'next-up-match';
-    match.textContent = ev.match;
-    const metaText = document.createElement('span');
-    metaText.className = 'next-up-meta';
-    metaText.textContent = `${ev.sport}, ${when} at ${ev.time}${ev.loc ? ', ' + ev.loc : ''}${extra}`;
-
-    body.appendChild(dot);
-    body.appendChild(match);
-    body.appendChild(metaText);
-    nextUpInner.appendChild(label);
-    nextUpInner.appendChild(body);
+    return d;
   }
 
-  function renderAll() {
-    renderMonthGrid();
-    renderAgenda();
-    renderNextUp();
+  // ── Next-up banner ─────────────────────────────────────────────────
+  function renderNext(){
+    const keys = datesWithEvents();
+    const k = keys.find(x => x >= TODAY);
+    nextUp.innerHTML='';
+    const lab=document.createElement('span'); lab.className='lab'; lab.textContent='Next up';
+    if(!k){
+      lab.textContent = keys.length ? 'No upcoming games scheduled' : 'No games loaded';
+      nextUp.appendChild(lab); return;
+    }
+    const evs=eventsOn(k), ev=evs[0], extra = evs.length>1 ? ` (+${evs.length-1} more that day)` : '';
+    const dot=document.createElement('span'); dot.className='dot'; dot.style.background=meta(ev.type).c;
+    const m=document.createElement('span'); m.className='m'; m.textContent=ev.match||'Game';
+    const d=document.createElement('span'); d.className='d';
+    d.textContent = `${ev.sport||''}, ${k===TODAY?'Today':shortDate(k)}`
+                  + (ev.time?` at ${ev.time}`:'') + (ev.loc?`, ${ev.loc}`:'') + extra;
+    nextUp.append(lab,dot,m,d);
   }
 
-  // ---------- Modal ----------
-  function openModal(dateKey, dayEvents) {
-    modalDateTitle.textContent = formatLong(dateKey);
-    modalEventsList.innerHTML = '';
-    dayEvents.forEach((ev, idx) => modalEventsList.appendChild(buildTicketFull(ev, idx)));
-    modalEl.classList.add('is-open');
-  }
-  function closeModal() { modalEl.classList.remove('is-open'); }
-
-  // ---------- View toggle ----------
-  function setView(mode) {
-    viewMode = mode;
-    const isMonth = mode === 'month';
-    monthPanel.classList.toggle('is-active', isMonth);
-    agendaPanel.classList.toggle('is-active', !isMonth);
-    viewMonthBtn.classList.toggle('active', isMonth);
-    viewAgendaBtn.classList.toggle('active', !isMonth);
-    viewMonthBtn.setAttribute('aria-selected', String(isMonth));
-    viewAgendaBtn.setAttribute('aria-selected', String(!isMonth));
-  }
-  viewMonthBtn.addEventListener('click', () => setView('month'));
-  viewAgendaBtn.addEventListener('click', () => setView('agenda'));
-  setView(viewMode);
-
-  // ---------- Month navigation ----------
-  prevBtn.addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() - 1); renderMonthGrid(); });
-  nextBtn.addEventListener('click', () => { currentDate.setMonth(currentDate.getMonth() + 1); renderMonthGrid(); });
-
-  // ---------- Modal listeners ----------
-  closeBtn.addEventListener('click', closeModal);
-  closeBtnFooter.addEventListener('click', closeModal);
-  modalEl.addEventListener('click', (e) => { if (e.target === modalEl) closeModal(); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modalEl.classList.contains('is-open')) closeModal(); });
-
-  // ---------- Live data loading ----------
-  // Checks EVENTS_JSON_URL (configured above) for the latest schedule,
-  // written automatically by scrape_schedule.py via a GitHub Action a few
-  // times a day. If it's a relative path, this is same-origin and never
-  // touches quickscores.com at all; if it's an absolute CDN URL (for the
-  // "pasted directly into Google Sites" setup), it's still just a small
-  // background data check, not a full page load.
-  //
-  // Important: a *successful* fetch that comes back with zero events (e.g. a
-  // temporary scraper hiccup) is treated the same as a failed fetch -- it
-  // never overwrites the working fallback schedule above with an empty one.
-  function formatSyncTime(iso) {
-    try {
-      return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
-    } catch (e) { return null; }
+  // ── Sport filter chips ─────────────────────────────────────────────
+  function renderChips(){
+    const present=[...new Set(Object.values(DATA).flat().map(e=>e.type||'other'))];
+    chips.innerHTML='';
+    if(present.length<2) return;         // no point filtering a single sport
+    present.sort().forEach(t=>{
+      const b=document.createElement('button');
+      const on = !activeSports || activeSports.has(t);
+      b.className='chip'+(on?' on':'')+(meta(t).c==='var(--red)'?' red':'');
+      b.textContent=`${meta(t).i} ${meta(t).label}`;
+      b.addEventListener('click',()=>{
+        if(!activeSports) activeSports=new Set(present);
+        activeSports.has(t) ? activeSports.delete(t) : activeSports.add(t);
+        if(activeSports.size===present.length) activeSports=null;
+        agendaScrolled=false; renderAll();
+      });
+      chips.appendChild(b);
+    });
   }
 
-  async function loadEvents() {
-    try {
-      const res = await fetch(EVENTS_JSON_URL, { cache: 'no-store' });
-      if (!res.ok) throw new Error('HTTP ' + res.status);
+  function renderAll(){ renderChips(); renderMonth(); renderAgenda(); renderNext(); }
+
+  // ── Modal ──────────────────────────────────────────────────────────
+  function openModal(k,evs){
+    mTitle.textContent=longDate(k);
+    mBody.innerHTML='';
+    evs.forEach((e,i)=>mBody.appendChild(card(e,i)));
+    modal.classList.add('on');
+  }
+  const closeModal=()=>modal.classList.remove('on');
+  $('mX').addEventListener('click',closeModal);
+  $('mClose').addEventListener('click',closeModal);
+  modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&modal.classList.contains('on')) closeModal(); });
+
+  // ── Views + navigation ─────────────────────────────────────────────
+  function setView(v){
+    view=v; const isM = v==='month';
+    $('pMonth').classList.toggle('on',isM);
+    $('pAgenda').classList.toggle('on',!isM);
+    $('vMonth').classList.toggle('on',isM);
+    $('vAgenda').classList.toggle('on',!isM);
+    $('vMonth').setAttribute('aria-selected',String(isM));
+    $('vAgenda').setAttribute('aria-selected',String(!isM));
+  }
+  $('vMonth').addEventListener('click',()=>setView('month'));
+  $('vAgenda').addEventListener('click',()=>setView('agenda'));
+  $('prev').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()-1);renderMonth();});
+  $('next').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()+1);renderMonth();});
+  $('todayBtn').addEventListener('click',()=>{ cursor=new Date(); renderMonth(); });
+  setView(view);
+
+  // Open on the most useful month: the one holding the next upcoming
+  // game, else the most recent month that has games, else today.
+  function pickMonth(){
+    const keys=datesWithEvents();
+    if(!keys.length){ cursor=new Date(); return; }
+    const upcoming = keys.find(k=>k>=TODAY);
+    cursor = fromKey(upcoming || keys[keys.length-1]);
+    cursor.setDate(1);
+  }
+
+  // ── Load ───────────────────────────────────────────────────────────
+  function fmtWhen(iso){
+    try{ return new Date(iso).toLocaleString('en-US',
+      {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}); }
+    catch(e){ return null; }
+  }
+
+  async function load(){
+    statusEl.textContent='Loading…';
+    try{
+      const res = await fetch(EVENTS_JSON_URL, {cache:'no-store'});
+      if(!res.ok) throw new Error('HTTP '+res.status);
       const data = await res.json();
-      if (!data || typeof data.events !== 'object') throw new Error('Unexpected events.json shape');
-
-      const liveEventCount = Object.keys(data.events).length;
-      if (liveEventCount === 0) {
-        console.warn('events.json loaded but contained zero dates -- keeping the built-in fallback schedule instead.');
-        syncStatusEl.textContent = 'Showing saved schedule';
-      } else {
-        eventsData = data.events;
-        const when = formatSyncTime(data.generated_at);
-        syncStatusEl.textContent = when ? `Updated ${when}` : 'Live schedule loaded';
-      }
-    } catch (err) {
-      console.warn('Could not load events.json, showing built-in fallback schedule:', err);
-      syncStatusEl.textContent = 'Showing saved schedule';
+      const evs = data && data.events;
+      if(!evs || typeof evs!=='object') throw new Error('unexpected format');
+      const count = Object.keys(evs).length;
+      if(count === 0) throw new Error('feed contained no dates');
+      DATA = evs;
+      const when = fmtWhen(data.generated_at);
+      statusEl.textContent = when ? `Updated ${when}` : 'Live schedule';
+    }catch(err){
+      console.warn('Live schedule unavailable, using saved copy:', err);
+      DATA = FALLBACK;
+      statusEl.textContent = 'Showing saved schedule';
     }
+    agendaScrolled=false;
+    pickMonth();
     renderAll();
   }
 
-  loadEvents();
+  load();
 });
 </script>
 </body>
