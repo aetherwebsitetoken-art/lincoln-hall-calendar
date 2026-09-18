@@ -30,12 +30,14 @@ jobs:
       - name: Run scraper
         run: python3 scrape_schedule.py
 
-      - name: Commit updated events.json (if it changed)
+      - name: Commit updated schedule (if it changed)
         id: commit
         run: |
           git config user.name "schedule-bot"
           git config user.email "schedule-bot@users.noreply.github.com"
-          git add events.json
+          # index.html is included because the scraper refreshes the page's
+          # built-in "saved schedule" and its live-data URL on every run.
+          git add events.json index.html
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes"
