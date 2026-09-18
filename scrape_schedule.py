@@ -46,7 +46,7 @@ import os
 import re
 import sys
 import time
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 import requests
 from bs4 import BeautifulSoup
@@ -468,6 +468,73 @@ def games_from_html(league, diag):
     return events
 
 
+# --- Keeping index.html in sync -------------------------------------------
+#
+# The calendar page carries two things the scraper can fill in automatically,
+# so nothing has to be hand-edited after each run:
+#
+#   1. EVENTS_JSON_URL -- pointed at this repo's live events.json on jsDelivr,
+#      so a copy of index.html pasted straight into Google Sites still picks
+#      up live updates (a relative path has nothing to resolve against there).
+#   2. FALLBACK -- refreshed with the data just scraped, so the built-in
+#      "saved schedule" shown when the live fetch fails is current and
+#      complete (including sports added since, like basketball) rather than
+#      a stale hand-written snapshot.
+
+INDEX_FILE = "index.html"
+URL_REGION_RE = re.compile(r'(/\*URL_START\*/).*?(/\*URL_END\*/)', re.DOTALL)
+FALLBACK_REGION_RE = re.compile(r'(/\*FALLBACK_START\*/).*?(/\*FALLBACK_END\*/)', re.DOTALL)
+
+# How much history to bake into the offline copy. Everything upcoming is
+# always included; older games are trimmed so the file stays small enough to
+# paste comfortably into Google Sites.
+FALLBACK_HISTORY_DAYS = 120
+
+
+def build_fallback(by_date):
+    cutoff = (date.today() - timedelta(days=FALLBACK_HISTORY_DAYS)).isoformat()
+    return {d: evs for d, evs in sorted(by_date.items()) if d >= cutoff}
+
+
+def update_index_html(by_date):
+    """Write the fresh schedule and the live data URL into index.html."""
+    if not os.path.exists(INDEX_FILE):
+        print(f"(no {INDEX_FILE} beside the script -- skipping page sync)")
+        return
+
+    html = open(INDEX_FILE, encoding="utf-8").read()
+    original = html
+    notes = []
+
+    repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
+    if repo and URL_REGION_RE.search(html):
+        live_url = f"https://cdn.jsdelivr.net/gh/{repo}@main/events.json"
+        html = URL_REGION_RE.sub(
+            lambda m: f"{m.group(1)}'{live_url}'{m.group(2)}", html, count=1)
+        notes.append(f"data URL -> {live_url}")
+    elif not repo:
+        notes.append("data URL left alone (not running in GitHub Actions)")
+
+    if FALLBACK_REGION_RE.search(html):
+        fallback = build_fallback(by_date)
+        payload = json.dumps(fallback, indent=2, sort_keys=True)
+        # json.dumps output is valid JS object syntax, so it can be dropped
+        # straight in. Escape any "</" so it can't terminate the <script> tag.
+        payload = payload.replace("</", "<\\/")
+        html = FALLBACK_REGION_RE.sub(
+            lambda m: f"{m.group(1)}{payload}{m.group(2)}", html, count=1)
+        notes.append(f"saved schedule -> {len(fallback)} dates")
+    else:
+        notes.append("WARNING: no FALLBACK markers found in index.html")
+
+    if html != original:
+        with open(INDEX_FILE, "w", encoding="utf-8") as f:
+            f.write(html)
+        print("Updated index.html: " + "; ".join(notes))
+    else:
+        print("index.html unchanged: " + "; ".join(notes))
+
+
 # --- Main -----------------------------------------------------------------
 
 def main():
@@ -554,6 +621,8 @@ def main():
             "events": by_date,
         }, f, indent=2)
     print("\nWrote events.json")
+
+    update_index_html(by_date)
 
 
 if __name__ == "__main__":
