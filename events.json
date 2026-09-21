@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T00:29:51.149869+00:00",
+  "generated_at": "2026-09-21T05:34:14.957577+00:00",
   "team": "Lincoln Hall",
   "events": {
     "2023-09-05": [
@@ -2234,7 +2234,7 @@
         "date": "2025-01-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall FastBridge Testing",
+        "match": "Rutledge Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2245,7 +2245,7 @@
         "date": "2025-01-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP Testing",
+        "match": "Todd Hall FastBridge Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2298,7 +2298,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-01-21": [
@@ -2322,7 +2322,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-01-22": [
@@ -2559,7 +2559,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-02-17": [
@@ -2572,7 +2572,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-02-18": [
@@ -2753,7 +2753,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-03-04": [
@@ -2894,9 +2894,9 @@
       },
       {
         "date": "2025-03-21",
-        "sport": "District Event",
-        "type": "district",
-        "match": "SD74 Summer Adventures registration opens for out-of-district families",
+        "sport": "District Calendar",
+        "type": "halfday",
+        "match": "AM-Only Student Attendance Day",
         "loc": "",
         "time": "",
         "note": "",
@@ -2905,14 +2905,14 @@
       },
       {
         "date": "2025-03-21",
-        "sport": "District Calendar",
-        "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "District Event",
+        "type": "district",
+        "match": "SD74 Summer Adventures registration opens for out-of-district families",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-03-24": [
@@ -2925,7 +2925,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-03-25": [
@@ -2938,7 +2938,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-03-26": [
@@ -2951,7 +2951,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-03-27": [
@@ -2964,7 +2964,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-03-28": [
@@ -2977,7 +2977,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-04-02": [
@@ -3241,7 +3241,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-04-22": [
@@ -3596,17 +3596,6 @@
         "date": "2025-05-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall MAP Testing",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-13",
-        "sport": "District Event",
-        "type": "district",
         "match": "Todd Hall MAP Testing",
         "loc": "",
         "time": "",
@@ -3619,6 +3608,17 @@
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall FastBridge Testing",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-05-13",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Lincoln Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -3718,7 +3718,7 @@
         "date": "2025-05-20",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP Testing",
+        "match": "Todd Hall FastBridge Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -3729,7 +3729,7 @@
         "date": "2025-05-20",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall FastBridge Testing",
+        "match": "Rutledge Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -3797,7 +3797,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-06-05": [
@@ -3936,7 +3936,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-06-23": [
@@ -4020,20 +4020,20 @@
     "2025-07-04": [
       {
         "date": "2025-07-04",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Independence Day - District Closed",
+        "sport": "District Event",
+        "type": "district",
+        "match": "No SD74 Summer Adventures",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "date": "2025-07-04",
-        "sport": "District Event",
-        "type": "district",
-        "match": "No SD74 Summer Adventures",
+        "sport": "District Calendar",
+        "type": "noschool",
+        "match": "Independence Day - District Closed",
         "loc": "",
         "time": "",
         "note": "",
@@ -4153,7 +4153,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-08-26": [
@@ -4166,7 +4166,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-08-27": [
@@ -4214,7 +4214,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-08-29": [
@@ -4227,7 +4227,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-09-01": [
@@ -4240,7 +4240,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-09-03": [
@@ -4475,7 +4475,7 @@
         "date": "2025-09-16",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing at Lincoln Hall",
+        "match": "FastBridge Testing at Todd Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4497,7 +4497,7 @@
         "date": "2025-09-16",
         "sport": "District Event",
         "type": "district",
-        "match": "FastBridge Testing at Todd Hall",
+        "match": "MAP Testing at Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4532,7 +4532,7 @@
         "date": "2025-09-17",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing at Lincoln Hall",
+        "match": "MAP Testing at Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4543,7 +4543,7 @@
         "date": "2025-09-17",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing at Rutledge Hall",
+        "match": "MAP Testing at Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4607,7 +4607,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-09-22": [
@@ -4912,14 +4912,14 @@
       },
       {
         "date": "2025-10-10",
-        "sport": "District Event",
-        "type": "district",
+        "sport": "Athletics",
+        "type": "volleyball",
         "match": "RED OUT for girls volleyball",
         "loc": "Lincoln Hall",
         "time": "4:15 PM",
         "note": "",
         "ref": "",
-        "cat": "district"
+        "cat": "sports"
       }
     ],
     "2025-10-13": [
@@ -4932,7 +4932,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-10-14": [
@@ -4945,7 +4945,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-10-16": [
@@ -5084,20 +5084,20 @@
       },
       {
         "date": "2025-10-31",
-        "sport": "District Calendar",
-        "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Lincoln Hall Wellness Day",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "date": "2025-10-31",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall Wellness Day",
+        "sport": "District Calendar",
+        "type": "halfday",
+        "match": "AM-Only Student Attendance Day",
         "loc": "",
         "time": "",
         "note": "",
@@ -5313,8 +5313,8 @@
         "date": "2025-11-14",
         "sport": "District Event",
         "type": "district",
-        "match": "Sign-ups close for Parent-Teacher Conferences",
-        "loc": "",
+        "match": "Scholastic Book Fair - Lincoln Hall",
+        "loc": "Lincoln Hall Library",
         "time": "",
         "note": "",
         "ref": "",
@@ -5324,8 +5324,8 @@
         "date": "2025-11-14",
         "sport": "District Event",
         "type": "district",
-        "match": "Scholastic Book Fair - Lincoln Hall",
-        "loc": "Lincoln Hall Library",
+        "match": "Sign-ups close for Parent-Teacher Conferences",
+        "loc": "",
         "time": "",
         "note": "",
         "ref": "",
@@ -5427,7 +5427,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-11-25": [
@@ -5440,7 +5440,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-11-26": [
@@ -5453,7 +5453,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-11-27": [
@@ -5466,7 +5466,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-11-28": [
@@ -5479,7 +5479,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-01": [
@@ -5596,7 +5596,7 @@
         "date": "2025-12-08",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall FastBridge testing",
+        "match": "Todd Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5607,7 +5607,7 @@
         "date": "2025-12-08",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall MAP testing",
+        "match": "Rutledge Hall FastBridge testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5631,6 +5631,17 @@
         "date": "2025-12-09",
         "sport": "District Event",
         "type": "district",
+        "match": "Rutledge Hall MAP testing",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-12-09",
+        "sport": "District Event",
+        "type": "district",
         "match": "Lincoln Hall MAP testing",
         "loc": "",
         "time": "",
@@ -5643,17 +5654,6 @@
         "sport": "District Event",
         "type": "district",
         "match": "Todd Hall MAP testing",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-12-09",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Rutledge Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5699,7 +5699,7 @@
         "date": "2025-12-10",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall MAP testing",
+        "match": "Rutledge Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5710,7 +5710,7 @@
         "date": "2025-12-10",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP testing",
+        "match": "Lincoln Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5765,7 +5765,7 @@
         "time": "6:30 PM",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-17": [
@@ -5804,7 +5804,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-22": [
@@ -5817,7 +5817,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-23": [
@@ -5830,7 +5830,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-24": [
@@ -5843,7 +5843,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-25": [
@@ -5856,7 +5856,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-26": [
@@ -5869,7 +5869,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-29": [
@@ -5882,7 +5882,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-30": [
@@ -5895,7 +5895,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2025-12-31": [
@@ -5908,7 +5908,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-01-01": [
@@ -5921,7 +5921,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-01-02": [
@@ -5934,7 +5934,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-01-08": [
@@ -5984,7 +5984,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-01-20": [
@@ -6267,7 +6267,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-02-16": [
@@ -6280,7 +6280,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-02-17": [
@@ -6421,14 +6421,14 @@
       },
       {
         "date": "2026-02-27",
-        "sport": "District Event",
-        "type": "district",
+        "sport": "Athletics",
+        "type": "basketball",
         "match": "RED OUT for Boys Varsity Basketball",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "district"
+        "cat": "sports"
       }
     ],
     "2026-03-02": [
@@ -6463,7 +6463,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-03-09": [
@@ -6574,7 +6574,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-03-30": [
@@ -6587,7 +6587,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-03-31": [
@@ -6600,7 +6600,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-04-01": [
@@ -6613,7 +6613,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-04-02": [
@@ -6626,7 +6626,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-04-03": [
@@ -6639,7 +6639,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-04-07": [
@@ -6931,7 +6931,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-04-28": [
@@ -7575,7 +7575,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-05-26": [
@@ -7781,7 +7781,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-07-30": [
@@ -7881,7 +7881,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -7905,7 +7905,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -7924,7 +7924,7 @@
         "date": "2026-08-26",
         "sport": "District Event",
         "type": "district",
-        "match": "Kindergarten/Pre-K Meet and Greet",
+        "match": "First Day of 2026-2027 School Year - Grades 1-8",
         "loc": "",
         "time": "",
         "note": "",
@@ -7935,7 +7935,7 @@
         "date": "2026-08-26",
         "sport": "District Event",
         "type": "district",
-        "match": "First Day of 2026-2027 School Year - Grades 1-8",
+        "match": "Kindergarten/Pre-K Meet and Greet",
         "loc": "",
         "time": "",
         "note": "",
@@ -8025,7 +8025,18 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
+      },
+      {
+        "sport": "District Calendar",
+        "match": "Labor Day - District Closed",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "noschool",
+        "cat": "school",
+        "date": "2026-09-07"
       }
     ],
     "2026-09-08": [
@@ -8210,7 +8221,7 @@
         "date": "2026-09-16",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -8221,7 +8232,7 @@
         "date": "2026-09-16",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -8278,7 +8289,7 @@
         "date": "2026-09-17",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -8289,7 +8300,7 @@
         "date": "2026-09-17",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -8307,7 +8318,18 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
+      },
+      {
+        "sport": "District Calendar",
+        "match": "AM-Only Student Attendance Day",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "halfday",
+        "cat": "school",
+        "date": "2026-09-18"
       }
     ],
     "2026-09-21": [
@@ -8326,14 +8348,14 @@
     "2026-09-22": [
       {
         "date": "2026-09-22",
-        "sport": "District Event",
-        "type": "district",
+        "sport": "Athletics",
+        "type": "volleyball",
         "match": "RED OUT for Girls Varsity Volleyball",
         "loc": "",
         "time": "4:00 PM",
         "note": "",
         "ref": "",
-        "cat": "district"
+        "cat": "sports"
       },
       {
         "date": "2026-09-22",
@@ -8630,7 +8652,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -8654,7 +8676,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -8839,7 +8861,18 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
+      },
+      {
+        "sport": "District Calendar",
+        "match": "AM-Only Student Attendance Day",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "halfday",
+        "cat": "school",
+        "date": "2026-10-30"
       }
     ],
     "2026-11-03": [
@@ -8852,7 +8885,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9122,7 +9155,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9146,7 +9179,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9170,7 +9203,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9194,7 +9227,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9218,7 +9251,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9335,17 +9368,6 @@
         "date": "2026-12-08",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-12-08",
-        "sport": "District Event",
-        "type": "district",
         "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
@@ -9358,6 +9380,17 @@
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall PE Night",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-12-08",
+        "sport": "District Event",
+        "type": "district",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -9381,7 +9414,7 @@
         "date": "2026-12-09",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Todd Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -9403,7 +9436,7 @@
         "date": "2026-12-09",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Todd Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -9502,7 +9535,7 @@
         "time": "6:30 PM",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-16": [
@@ -9563,7 +9596,18 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
+      },
+      {
+        "sport": "District Calendar",
+        "match": "AM-Only Student Attendance Day",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "halfday",
+        "cat": "school",
+        "date": "2026-12-18"
       }
     ],
     "2026-12-21": [
@@ -9576,7 +9620,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9600,7 +9644,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9624,7 +9668,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9648,7 +9692,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9672,7 +9716,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9696,7 +9740,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-27": [
@@ -9709,7 +9753,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-28": [
@@ -9722,7 +9766,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9746,7 +9790,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9770,7 +9814,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9794,7 +9838,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9818,7 +9862,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -9868,7 +9912,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10153,7 +10197,18 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
+      },
+      {
+        "sport": "District Calendar",
+        "match": "AM-Only Student Attendance Day",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "halfday",
+        "cat": "school",
+        "date": "2027-02-12"
       }
     ],
     "2027-02-15": [
@@ -10166,7 +10221,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10325,7 +10380,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10442,7 +10497,7 @@
         "date": "2027-03-16",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Rutledge Hall",
+        "match": "IAR ELA Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10453,7 +10508,7 @@
         "date": "2027-03-16",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Lincoln Hall",
+        "match": "IAR ELA Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10466,7 +10521,7 @@
         "date": "2027-03-17",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Rutledge Hall",
+        "match": "IAR ELA Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10477,7 +10532,7 @@
         "date": "2027-03-17",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Lincoln Hall",
+        "match": "IAR ELA Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10521,7 +10576,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10545,7 +10600,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10569,7 +10624,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10593,7 +10648,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10617,7 +10672,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -10641,7 +10696,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -11088,7 +11143,18 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
+      },
+      {
+        "sport": "District Calendar",
+        "match": "AM-Only Student Attendance Day",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "type": "halfday",
+        "cat": "school",
+        "date": "2027-04-30"
       }
     ],
     "2027-05-03": [
@@ -11123,7 +11189,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -11227,7 +11293,7 @@
         "date": "2027-05-11",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11238,7 +11304,7 @@
         "date": "2027-05-11",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11251,7 +11317,7 @@
         "date": "2027-05-12",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11262,7 +11328,7 @@
         "date": "2027-05-12",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11404,7 +11470,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       },
       {
         "sport": "District Calendar",
@@ -11526,7 +11592,7 @@
         "time": "",
         "note": "",
         "ref": "",
-        "cat": "school"
+        "cat": "district"
       }
     ]
   }
