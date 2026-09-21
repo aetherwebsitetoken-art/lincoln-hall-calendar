@@ -359,19 +359,42 @@ DISTRICT_ICS_URL = (
 ACADEMIC_FILE = "academic_calendar.json"
 
 # Titles matching these are treated as no-school/half-day entries so the
-# page can colour and filter them differently from ordinary events.
+# page can show them with their own icon.
 NOSCHOOL_RE = re.compile(
     r'no school|district closed|holiday|break|institute day|non-attendance',
     re.IGNORECASE)
 HALFDAY_RE = re.compile(r'am[- ]only|half day|early dismissal|am only', re.IGNORECASE)
 
+# Some entries on the district feed are really athletics -- a "RED OUT for
+# Girls Varsity Volleyball" is a game, not a district event -- so they're
+# reclassified into the sport they belong to. The sport name in the title
+# wins; a spirit-day phrase alone still counts as sports but without a
+# specific sport.
+SPORT_IN_TITLE = (
+    ("volleyball", "volleyball"),
+    ("soccer", "soccer"),
+    ("basketball", "basketball"),
+)
+SPIRIT_RE = re.compile(
+    r'red\s*out|pink\s*out|white\s*out|black\s*out|blackout|'
+    r'senior night|homecoming', re.IGNORECASE)
+
 
 def classify_district(title):
+    """(type, category) for a district-feed entry."""
+    low = title.lower()
+    for word, sport in SPORT_IN_TITLE:
+        if word in low:
+            return sport, "sports"
+    if SPIRIT_RE.search(title):
+        return "other", "sports"
+    # Half days and no-school days live alongside district events; they just
+    # carry their own icon so they still stand out in the list.
     if HALFDAY_RE.search(title):
-        return "halfday"
+        return "halfday", "district"
     if NOSCHOOL_RE.search(title):
-        return "noschool"
-    return "district"
+        return "noschool", "district"
+    return "district", "district"
 
 
 def expand_span(ev):
@@ -410,18 +433,24 @@ def district_events():
         title = (ev.get("summary") or "").strip()
         if not title:
             continue
-        kind = classify_district(title)
+        kind, cat = classify_district(title)
+        if cat == "sports":
+            label = "Athletics"
+        elif kind == "district":
+            label = "District Event"
+        else:
+            label = "District Calendar"
         for day in expand_span(ev):
             out.append({
                 "date": day.isoformat(),
-                "sport": "District Event" if kind == "district" else "District Calendar",
+                "sport": label,
                 "type": kind,
                 "match": title,
                 "loc": ev.get("location", "") or "",
                 "time": ev.get("time", "") or "",
                 "note": "",
                 "ref": "",
-                "cat": "district" if kind == "district" else "school",
+                "cat": cat,
             })
     print(f"  {len(raw)} feed entries -> {len(out)} dated events")
     return out, len(raw)
