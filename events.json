@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T00:16:50.473890+00:00",
+  "generated_at": "2026-09-21T00:29:51.149869+00:00",
   "team": "Lincoln Hall",
   "events": {
     "2023-09-05": [
@@ -2197,7 +2197,7 @@
         "type": "district",
         "match": "District Admin Building Open",
         "loc": "",
-        "time": "2:00 PM",
+        "time": "8:00 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2210,20 +2210,20 @@
         "type": "district",
         "match": "District Admin Building Open",
         "loc": "",
-        "time": "2:00 PM",
+        "time": "12:00 AM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
-    "2025-01-10": [
+    "2025-01-09": [
       {
-        "date": "2025-01-10",
+        "date": "2025-01-09",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "1:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2234,7 +2234,7 @@
         "date": "2025-01-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP Testing",
+        "match": "Todd Hall FastBridge Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2245,7 +2245,7 @@
         "date": "2025-01-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall FastBridge Testing",
+        "match": "Rutledge Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2258,7 +2258,7 @@
         "date": "2025-01-15",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall FastBridge Testing",
+        "match": "Lincoln Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2269,7 +2269,7 @@
         "date": "2025-01-15",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall MAP Testing",
+        "match": "Rutledge Hall FastBridge Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2304,6 +2304,17 @@
     "2025-01-21": [
       {
         "date": "2025-01-21",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee meeting",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-01-21",
         "sport": "District Calendar",
         "type": "noschool",
         "match": "Teacher Institute Day - No Student Attendance",
@@ -2330,17 +2341,6 @@
         "date": "2025-01-22",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-01-22",
-        "sport": "District Event",
-        "type": "district",
         "match": "Young Creatives Art Show at Niles West",
         "loc": "",
         "time": "",
@@ -2360,6 +2360,17 @@
         "note": "37-30 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-01-23",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-01-24": [
@@ -2367,33 +2378,9 @@
         "date": "2025-01-24",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "12:30 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-01-24",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "2:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2025-01-25": [
-      {
-        "date": "2025-01-25",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Policy Committee meeting",
-        "loc": "",
-        "time": "2:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2473,6 +2460,17 @@
         "note": "40-28 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-02-04",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Beginner Band Concert",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-02-05": [
@@ -2480,26 +2478,15 @@
         "date": "2025-02-05",
         "sport": "District Event",
         "type": "district",
-        "match": "Beginner Band Concert",
+        "match": "Beginner Orchestra Concert",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2025-02-06": [
-      {
-        "date": "2025-02-06",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Beginner Orchestra Concert",
-        "loc": "",
-        "time": "12:30 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2025-02-06",
         "sport": "Boys Jr. Varsity Basketball",
@@ -2510,20 +2497,20 @@
         "note": "47-26 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-02-07": [
+      },
       {
-        "date": "2025-02-07",
+        "date": "2025-02-06",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "1:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-02-07": [
       {
         "date": "2025-02-07",
         "sport": "Boys Varsity Basketball",
@@ -2610,6 +2597,17 @@
         "note": "36-30 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-02-18",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee meeting",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-02-19": [
@@ -2623,17 +2621,6 @@
         "note": "28-18 (Win)",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2025-02-19",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2025-02-20": [
@@ -2658,6 +2645,17 @@
         "note": "25-23 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-02-20",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-02-21": [
@@ -2665,20 +2663,9 @@
         "date": "2025-02-21",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "12:30 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-02-21",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "2:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2719,16 +2706,14 @@
         "note": "39-27 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-02-26": [
+      },
       {
-        "date": "2025-02-26",
+        "date": "2025-02-25",
         "sport": "District Event",
         "type": "district",
         "match": "Scripps Spelling Bee",
         "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2797,27 +2782,27 @@
         "cat": "sports"
       }
     ],
-    "2025-03-07": [
+    "2025-03-06": [
       {
-        "date": "2025-03-07",
+        "date": "2025-03-06",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "Lincoln Hall Auditorium",
-        "time": "1:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
-    "2025-03-11": [
+    "2025-03-10": [
       {
-        "date": "2025-03-11",
+        "date": "2025-03-10",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting",
         "loc": "Rutledge Hall library",
-        "time": "",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2841,9 +2826,9 @@
         "date": "2025-03-18",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee meeting",
+        "match": "Parent-Teacher Conferences",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "3:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2852,44 +2837,20 @@
         "date": "2025-03-18",
         "sport": "District Event",
         "type": "district",
-        "match": "Parent-Teacher Conferences",
-        "loc": "",
-        "time": "8:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2025-03-19": [
-      {
-        "date": "2025-03-19",
-        "sport": "District Event",
-        "type": "district",
         "match": "Facilities Committee meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       },
       {
-        "date": "2025-03-19",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Parent-Teacher Conferences",
-        "loc": "",
-        "time": "8:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-03-19",
+        "date": "2025-03-18",
         "sport": "District Event",
         "type": "district",
         "match": "Committee of the Whole meeting",
         "loc": "Marvin Garlich Administration Building",
-        "time": "",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2900,9 +2861,9 @@
         "date": "2025-03-20",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
+        "match": "Parent-Teacher Conferences",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "3:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2911,9 +2872,9 @@
         "date": "2025-03-20",
         "sport": "District Event",
         "type": "district",
-        "match": "Parent-Teacher Conferences",
+        "match": "Finance Committee meeting",
         "loc": "",
-        "time": "8:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -2924,31 +2885,9 @@
         "date": "2025-03-21",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-03-21",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "1:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-03-21",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Parent-Teacher Conferences",
-        "loc": "",
-        "time": "8:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3065,18 +3004,20 @@
         "cat": "district"
       }
     ],
-    "2025-04-04": [
+    "2025-04-03": [
       {
-        "date": "2025-04-04",
+        "date": "2025-04-03",
         "sport": "District Event",
         "type": "district",
-        "match": "Family Bingo Night",
-        "loc": "Rutledge Hall gym",
-        "time": "11:00 PM",
+        "match": "Board of Education meeting",
+        "loc": "Lincoln Hall Auditorium",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-04-04": [
       {
         "date": "2025-04-04",
         "sport": "Boys Varsity Volleyball",
@@ -3092,22 +3033,9 @@
         "date": "2025-04-04",
         "sport": "District Event",
         "type": "district",
-        "match": "Board of Education meeting",
-        "loc": "Lincoln Hall Auditorium",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2025-04-05": [
-      {
-        "date": "2025-04-05",
-        "sport": "District Event",
-        "type": "district",
         "match": "Family Bingo Night",
         "loc": "Rutledge Hall gym",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3118,21 +3046,19 @@
         "date": "2025-04-07",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Testing",
-        "loc": "",
-        "time": "",
+        "match": "PALS meeting",
+        "loc": "Todd Hall library",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      }
-    ],
-    "2025-04-08": [
+      },
       {
-        "date": "2025-04-08",
+        "date": "2025-04-07",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting",
-        "loc": "Todd Hall library",
+        "match": "IAR Testing",
+        "loc": "",
         "time": "",
         "note": "",
         "ref": "",
@@ -3214,17 +3140,6 @@
     "2025-04-15": [
       {
         "date": "2025-04-15",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-04-15",
         "sport": "Girls Jr Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Golf",
@@ -3244,20 +3159,20 @@
         "note": "2-0 (Win)",
         "ref": "Rydz",
         "cat": "sports"
-      }
-    ],
-    "2025-04-16": [
+      },
       {
-        "date": "2025-04-16",
+        "date": "2025-04-15",
         "sport": "District Event",
         "type": "district",
         "match": "Facilities Committee meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-04-16": [
       {
         "date": "2025-04-16",
         "sport": "Varsity Girls Soccer",
@@ -3284,28 +3199,6 @@
     "2025-04-17": [
       {
         "date": "2025-04-17",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Cahill Scholarship Reception",
-        "loc": "Lincoln Hall Auditorium",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-04-17",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-04-17",
         "sport": "Girls Jr Varsity Soccer",
         "type": "soccer",
         "match": "McCracken vs Lincoln Hall",
@@ -3314,20 +3207,31 @@
         "note": "2-3 (Loss)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-04-18": [
+      },
       {
-        "date": "2025-04-18",
+        "date": "2025-04-17",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "11:30 PM",
+        "match": "Cahill Scholarship Reception",
+        "loc": "Lincoln Hall Auditorium",
+        "time": "5:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       },
+      {
+        "date": "2025-04-17",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      }
+    ],
+    "2025-04-18": [
       {
         "date": "2025-04-18",
         "sport": "District Calendar",
@@ -3367,17 +3271,6 @@
     "2025-04-23": [
       {
         "date": "2025-04-23",
-        "sport": "District Event",
-        "type": "district",
-        "match": "5th Grade Music and Art Show",
-        "loc": "Rutledge Hall MPR",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-04-23",
         "sport": "Boys Jr. Varsity Volleyball",
         "type": "volleyball",
         "match": "Lincoln Hall vs Park View",
@@ -3397,20 +3290,20 @@
         "note": "4-0 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-04-24": [
+      },
       {
-        "date": "2025-04-24",
+        "date": "2025-04-23",
         "sport": "District Event",
         "type": "district",
         "match": "5th Grade Music and Art Show",
         "loc": "Rutledge Hall MPR",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-04-24": [
       {
         "date": "2025-04-24",
         "sport": "Varsity Girls Soccer",
@@ -3478,35 +3371,13 @@
         "type": "district",
         "match": "Spring Chorale Concert",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2025-05-01": [
-      {
-        "date": "2025-05-01",
-        "sport": "District Event",
-        "type": "district",
-        "match": "District Art Show at Lincolnwood Village Hall",
-        "loc": "",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-01",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Chorale Concert",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2025-05-01",
         "sport": "Girls Jr Varsity Soccer",
@@ -3517,31 +3388,31 @@
         "note": "2-2 (Tie)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-05-02": [
+      },
       {
-        "date": "2025-05-02",
+        "date": "2025-05-01",
         "sport": "District Event",
         "type": "district",
         "match": "District Art Show at Lincolnwood Village Hall",
         "loc": "",
-        "time": "10:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       },
       {
-        "date": "2025-05-02",
+        "date": "2025-05-01",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-05-02": [
       {
         "date": "2025-05-02",
         "sport": "Varsity Girls Soccer",
@@ -3592,17 +3463,6 @@
     "2025-05-06": [
       {
         "date": "2025-05-06",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Orchestra Concert",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-06",
         "sport": "Girls Jr Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Culver",
@@ -3622,31 +3482,20 @@
         "note": "0-0 (Tie)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-05-07": [
-      {
-        "date": "2025-05-07",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Band Concert",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       },
       {
-        "date": "2025-05-07",
+        "date": "2025-05-06",
         "sport": "District Event",
         "type": "district",
         "match": "Spring Orchestra Concert",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-05-07": [
       {
         "date": "2025-05-07",
         "sport": "Boys Jr. Varsity Volleyball",
@@ -3657,20 +3506,20 @@
         "note": "1-2 (Loss)",
         "ref": "Steil",
         "cat": "sports"
-      }
-    ],
-    "2025-05-08": [
+      },
       {
-        "date": "2025-05-08",
+        "date": "2025-05-07",
         "sport": "District Event",
         "type": "district",
         "match": "Spring Band Concert",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-05-08": [
       {
         "date": "2025-05-08",
         "sport": "Girls Jr Varsity Soccer",
@@ -3701,7 +3550,7 @@
         "type": "district",
         "match": "Kindergarten Family Fitness Night",
         "loc": "",
-        "time": "10:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3784,7 +3633,7 @@
         "type": "district",
         "match": "3rd Grade Music Show",
         "loc": "Rutledge Hall MPR",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3804,17 +3653,6 @@
     "2025-05-15": [
       {
         "date": "2025-05-15",
-        "sport": "District Event",
-        "type": "district",
-        "match": "3rd Grade Music Show",
-        "loc": "Rutledge Hall MPR",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-15",
         "sport": "Girls Jr Varsity Soccer",
         "type": "soccer",
         "match": "Fairview vs Lincoln Hall",
@@ -3825,6 +3663,19 @@
         "cat": "sports"
       }
     ],
+    "2025-05-16": [
+      {
+        "date": "2025-05-16",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Lincoln Hall presents The Wizard of OZ",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      }
+    ],
     "2025-05-17": [
       {
         "date": "2025-05-17",
@@ -3832,20 +3683,20 @@
         "type": "district",
         "match": "Lincoln Hall presents The Wizard of Oz",
         "loc": "",
-        "time": "8:00 PM",
+        "time": "3:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
-    "2025-05-18": [
+    "2025-05-19": [
       {
-        "date": "2025-05-18",
+        "date": "2025-05-19",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall presents The Wizard of Oz",
-        "loc": "",
-        "time": "",
+        "match": "PALS meeting",
+        "loc": "Lincoln Hall library",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3858,18 +3709,7 @@
         "type": "district",
         "match": "Facilities Committee meeting",
         "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-20",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Todd Hall FastBridge Testing",
-        "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3889,8 +3729,8 @@
         "date": "2025-05-20",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting",
-        "loc": "Lincoln Hall library",
+        "match": "Todd Hall FastBridge Testing",
+        "loc": "",
         "time": "",
         "note": "",
         "ref": "",
@@ -3904,18 +3744,7 @@
         "type": "district",
         "match": "Kindergarten Orientation",
         "loc": "Todd Hall",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-21",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "11:00 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3928,7 +3757,7 @@
         "type": "district",
         "match": "Finance Committee meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3939,9 +3768,9 @@
         "date": "2025-05-23",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
+        "match": "Pre-K Music Show",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "10:15 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3952,18 +3781,7 @@
         "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "1:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-05-23",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Pre-K Music Show",
-        "loc": "",
-        "time": "3:15 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -3982,18 +3800,20 @@
         "cat": "school"
       }
     ],
-    "2025-06-06": [
+    "2025-06-05": [
       {
-        "date": "2025-06-06",
+        "date": "2025-06-05",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-06-06": [
       {
         "date": "2025-06-06",
         "sport": "District Event",
@@ -4006,6 +3826,19 @@
         "cat": "district"
       }
     ],
+    "2025-06-09": [
+      {
+        "date": "2025-06-09",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Lincoln Hall Graduation Ceremony",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      }
+    ],
     "2025-06-10": [
       {
         "date": "2025-06-10",
@@ -4013,35 +3846,13 @@
         "type": "district",
         "match": "Facilities Committee meeting",
         "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-06-10",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall Graduation Ceremony",
-        "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2025-06-11": [
-      {
-        "date": "2025-06-11",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2025-06-11",
         "sport": "District Event",
@@ -4061,18 +3872,7 @@
         "type": "district",
         "match": "Finance Committee meeting",
         "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-06-12",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Last Day of School for 1st-7th Graders",
-        "loc": "",
-        "time": "",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4087,6 +3887,17 @@
         "note": "",
         "ref": "",
         "cat": "district"
+      },
+      {
+        "date": "2025-06-12",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Last Day of School for 1st-7th Graders",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-06-13": [
@@ -4094,20 +3905,9 @@
         "date": "2025-06-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-06-13",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4120,7 +3920,7 @@
         "type": "district",
         "match": "SD74 Summer Adventures Parent/Student Meeting",
         "loc": "Lincoln Hall",
-        "time": "4:00 PM",
+        "time": "11:00 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4152,14 +3952,14 @@
         "cat": "district"
       }
     ],
-    "2025-06-27": [
+    "2025-06-26": [
       {
-        "date": "2025-06-27",
+        "date": "2025-06-26",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4248,7 +4048,7 @@
         "type": "district",
         "match": "Finance Committee meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4267,14 +4067,14 @@
         "cat": "district"
       }
     ],
-    "2025-08-08": [
+    "2025-08-07": [
       {
-        "date": "2025-08-08",
+        "date": "2025-08-07",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4287,7 +4087,7 @@
         "type": "district",
         "match": "Facilities Committee meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4300,7 +4100,7 @@
         "type": "district",
         "match": "Kindergarten Playdate",
         "loc": "Todd Hall",
-        "time": "10:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4311,9 +4111,9 @@
         "date": "2025-08-21",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
+        "match": "Pre-K Pop-In at Todd Hall",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "2:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4322,9 +4122,9 @@
         "date": "2025-08-21",
         "sport": "District Event",
         "type": "district",
-        "match": "Pre-K Pop-In at Todd Hall",
+        "match": "Finance Committee meeting",
         "loc": "",
-        "time": "7:00 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4337,7 +4137,7 @@
         "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4376,7 +4176,7 @@
         "type": "district",
         "match": "Pre-K and Kindergarten Meet and Greet",
         "loc": "Todd Hall",
-        "time": "1:45 PM",
+        "time": "8:45 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4400,7 +4200,7 @@
         "type": "district",
         "match": "Lincoln Hall Curriculum Night",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4418,17 +4218,6 @@
       }
     ],
     "2025-08-29": [
-      {
-        "date": "2025-08-29",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall Curriculum Night",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2025-08-29",
         "sport": "District Calendar",
@@ -4461,7 +4250,7 @@
         "type": "district",
         "match": "Rutledge Hall Curriculum Night",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4474,18 +4263,7 @@
         "type": "district",
         "match": "Todd Hall Curriculum Night",
         "loc": "",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-09-04",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Rutledge Hall Curriculum Night",
-        "loc": "",
-        "time": "11:00 PM",
+        "time": "5:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4496,7 +4274,7 @@
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4509,20 +4287,20 @@
         "type": "district",
         "match": "Ice Cream Social",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
-    "2025-09-06": [
+    "2025-09-08": [
       {
-        "date": "2025-09-06",
+        "date": "2025-09-08",
         "sport": "District Event",
         "type": "district",
-        "match": "Ice Cream Social",
+        "match": "PALS meeting at Todd Hall Library",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -4561,17 +4339,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "date": "2025-09-09",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS meeting at Todd Hall Library",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2025-09-10": [
@@ -4590,7 +4357,7 @@
         "date": "2025-09-10",
         "sport": "District Event",
         "type": "district",
-        "match": "FastBridge Testing at Rutledge Hall",
+        "match": "MAP Testing at Todd Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4601,7 +4368,7 @@
         "date": "2025-09-10",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing at Todd Hall",
+        "match": "FastBridge Testing at Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4660,6 +4427,17 @@
     "2025-09-15": [
       {
         "date": "2025-09-15",
+        "sport": "District Event",
+        "type": "district",
+        "match": "PALS restaurant fundraiser: Lou Malnati's",
+        "loc": "Lou Malnati's Pizzeria, 6649 Lincoln Ave, Lincolnwood, IL 60712, USA",
+        "time": "11:00 AM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-09-15",
         "sport": "Varsity Girls Volleyball",
         "type": "volleyball",
         "match": "McCracken vs Lincoln Hall",
@@ -4668,42 +4446,9 @@
         "note": "0-2 (Loss)",
         "ref": "Rydz",
         "cat": "sports"
-      },
-      {
-        "date": "2025-09-15",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS restaurant fundraiser: Lou Malnati's",
-        "loc": "Lou Malnati's Pizzeria, 6649 Lincoln Ave, Lincolnwood, IL 60712, USA",
-        "time": "4:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2025-09-16": [
-      {
-        "date": "2025-09-16",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-09-16",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS restaurant fundraiser: Lou Malnati's",
-        "loc": "Lou Malnati's Pizzeria, 6649 Lincoln Ave, Lincolnwood, IL 60712, USA",
-        "time": "4:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2025-09-16",
         "sport": "Boys Jr Varsity Soccer",
@@ -4714,6 +4459,17 @@
         "note": "9-0 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-09-16",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee meeting",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       },
       {
         "date": "2025-09-16",
@@ -4730,7 +4486,7 @@
         "date": "2025-09-16",
         "sport": "District Event",
         "type": "district",
-        "match": "FastBridge Testing at Todd Hall",
+        "match": "MAP Testing at Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4741,7 +4497,7 @@
         "date": "2025-09-16",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing at Rutledge Hall",
+        "match": "FastBridge Testing at Todd Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -4798,17 +4554,6 @@
     "2025-09-18": [
       {
         "date": "2025-09-18",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-09-18",
         "sport": "Boys Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Fairview",
@@ -4828,6 +4573,17 @@
         "note": "1-7 (Loss)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-09-18",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-09-19": [
@@ -4837,7 +4593,7 @@
         "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5068,6 +4824,17 @@
         "note": "2-0 (Win)",
         "ref": "Szewczyk",
         "cat": "sports"
+      },
+      {
+        "date": "2025-10-06",
+        "sport": "District Event",
+        "type": "district",
+        "match": "PALS meeting at Rutledge Hall Library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-10-07": [
@@ -5092,17 +4859,6 @@
         "note": "0-2 (Loss)",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2025-10-07",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS meeting at Rutledge Hall Library",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2025-10-08": [
@@ -5121,17 +4877,6 @@
     "2025-10-09": [
       {
         "date": "2025-10-09",
-        "sport": "District Event",
-        "type": "district",
-        "match": "First Grade STEM/Story Walk Night",
-        "loc": "Todd Hall",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-10-09",
         "sport": "Boys Jr Varsity Soccer",
         "type": "soccer",
         "match": "Fairview vs Lincoln Hall",
@@ -5140,6 +4885,17 @@
         "note": "2-1 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-10-09",
+        "sport": "District Event",
+        "type": "district",
+        "match": "First Grade STEM/Story Walk Night",
+        "loc": "Todd Hall",
+        "time": "5:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-10-10": [
@@ -5160,7 +4916,7 @@
         "type": "district",
         "match": "RED OUT for girls volleyball",
         "loc": "Lincoln Hall",
-        "time": "9:15 PM",
+        "time": "4:15 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5195,17 +4951,6 @@
     "2025-10-16": [
       {
         "date": "2025-10-16",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Pre-K Game Night",
-        "loc": "Todd Hall",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-10-16",
         "sport": "Boys Jr Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs McCracken",
@@ -5214,6 +4959,17 @@
         "note": "7-1 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-10-16",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Pre-K Game Night",
+        "loc": "Todd Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-10-18": [
@@ -5236,7 +4992,7 @@
         "type": "district",
         "match": "Facilities Committee meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5249,7 +5005,7 @@
         "type": "district",
         "match": "Rutledge Hall Art Installation",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5260,7 +5016,7 @@
         "type": "district",
         "match": "Finance Committee meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5282,20 +5038,9 @@
         "date": "2025-10-24",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall Art Installation",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-10-24",
-        "sport": "District Event",
-        "type": "district",
         "match": "Lincoln Hall Halloween Party",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5306,20 +5051,7 @@
         "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "1:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2025-10-25": [
-      {
-        "date": "2025-10-25",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall Halloween Party",
-        "loc": "",
-        "time": "11:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5332,37 +5064,13 @@
         "type": "district",
         "match": "Lincoln Hall Fall Music Concert",
         "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2025-10-30": [
-      {
-        "date": "2025-10-30",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall Fall Music Concert",
-        "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2025-10-31": [
-      {
-        "date": "2025-10-31",
-        "sport": "District Calendar",
-        "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "school"
-      },
       {
         "date": "2025-10-31",
         "sport": "District Event",
@@ -5373,6 +5081,17 @@
         "note": "",
         "ref": "",
         "cat": "district"
+      },
+      {
+        "date": "2025-10-31",
+        "sport": "District Calendar",
+        "type": "halfday",
+        "match": "AM-Only Student Attendance Day",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "school"
       },
       {
         "date": "2025-10-31",
@@ -5397,20 +5116,20 @@
         "note": "14-17 (Loss)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-11-04": [
+      },
       {
-        "date": "2025-11-04",
+        "date": "2025-11-03",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting at Lincoln Hall Library",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-11-04": [
       {
         "date": "2025-11-04",
         "sport": "Girls Jr. Varsity Basketball",
@@ -5437,17 +5156,6 @@
     "2025-11-05": [
       {
         "date": "2025-11-05",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Guest Baristas at Will's Place - SD74 Admin Team",
-        "loc": "Will's Place, 7927 Lincoln Ave, Skokie, IL 60077, USA",
-        "time": "3:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-11-05",
         "sport": "Girls Varsity Basketball",
         "type": "basketball",
         "match": "Golf vs Lincoln Hall",
@@ -5456,6 +5164,17 @@
         "note": "33-11 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-11-05",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Guest Baristas at Will's Place - SD74 Admin Team",
+        "loc": "Will's Place, 7927 Lincoln Ave, Skokie, IL 60077, USA",
+        "time": "9:00 AM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-11-06": [
@@ -5469,16 +5188,14 @@
         "note": "11-20 (Loss)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2025-11-07": [
+      },
       {
-        "date": "2025-11-07",
+        "date": "2025-11-06",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "1:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5491,7 +5208,7 @@
         "type": "district",
         "match": "Once Upon an Evening: A Family Night",
         "loc": "Rutledge Hall",
-        "time": "11:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5509,17 +5226,6 @@
       }
     ],
     "2025-11-11": [
-      {
-        "date": "2025-11-11",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Once Upon an Evening: A Family Night",
-        "loc": "Rutledge Hall",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2025-11-11",
         "sport": "Girls Jr. Varsity Basketball",
@@ -5598,18 +5304,7 @@
         "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "2:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-11-14",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Scholastic Book Fair - Lincoln Hall",
-        "loc": "Lincoln Hall Library",
-        "time": "",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5620,6 +5315,17 @@
         "type": "district",
         "match": "Sign-ups close for Parent-Teacher Conferences",
         "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-11-14",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Scholastic Book Fair - Lincoln Hall",
+        "loc": "Lincoln Hall Library",
         "time": "",
         "note": "",
         "ref": "",
@@ -5646,7 +5352,18 @@
         "type": "district",
         "match": "Fall Parent-Teacher Conferences",
         "loc": "",
-        "time": "9:30 PM",
+        "time": "3:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-11-18",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee meeting",
+        "loc": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5674,28 +5391,6 @@
         "note": "6-8 (Loss)",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2025-11-19",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Fall Parent-Teacher Conferences",
-        "loc": "",
-        "time": "9:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-11-19",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2025-11-20": [
@@ -5705,31 +5400,18 @@
         "type": "district",
         "match": "Fall Parent-Teacher Conferences",
         "loc": "",
-        "time": "9:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2025-11-21": [
-      {
-        "date": "2025-11-21",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "12:30 AM",
+        "time": "3:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       },
       {
-        "date": "2025-11-21",
+        "date": "2025-11-20",
         "sport": "District Event",
         "type": "district",
-        "match": "Fall Parent-Teacher Conferences",
+        "match": "Finance Committee meeting",
         "loc": "",
-        "time": "9:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -5850,18 +5532,20 @@
         "cat": "district"
       }
     ],
-    "2025-12-05": [
+    "2025-12-04": [
       {
-        "date": "2025-12-05",
+        "date": "2025-12-04",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2025-12-05": [
       {
         "date": "2025-12-05",
         "sport": "Girls Varsity Basketball",
@@ -5901,6 +5585,17 @@
         "date": "2025-12-08",
         "sport": "District Event",
         "type": "district",
+        "match": "PALS meeting at Todd Hall library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-12-08",
+        "sport": "District Event",
+        "type": "district",
         "match": "Rutledge Hall FastBridge testing",
         "loc": "",
         "time": "",
@@ -5923,17 +5618,6 @@
     "2025-12-09": [
       {
         "date": "2025-12-09",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS meeting at Todd Hall library",
-        "loc": "",
-        "time": "1:00 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-12-09",
         "sport": "Girls Varsity Basketball",
         "type": "basketball",
         "match": "Lincoln Hall vs Old Orchard",
@@ -5942,6 +5626,17 @@
         "note": "36-31 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2025-12-09",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Lincoln Hall MAP testing",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       },
       {
         "date": "2025-12-09",
@@ -5959,17 +5654,6 @@
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall MAP testing",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-12-09",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -6015,7 +5699,7 @@
         "date": "2025-12-10",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP testing",
+        "match": "Lincoln Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -6026,7 +5710,7 @@
         "date": "2025-12-10",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall MAP testing",
+        "match": "Rutledge Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -6035,6 +5719,17 @@
       }
     ],
     "2025-12-11": [
+      {
+        "date": "2025-12-11",
+        "sport": "District Event",
+        "type": "district",
+        "match": "2nd Grade Music Shows",
+        "loc": "Lincoln Hall Auditorium",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
       {
         "date": "2025-12-11",
         "sport": "Girls Jr. Varsity Basketball",
@@ -6054,35 +5749,26 @@
         "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "2:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-12-12",
-        "sport": "District Event",
-        "type": "district",
-        "match": "2nd Grade Music Shows",
-        "loc": "Lincoln Hall Auditorium",
-        "time": "",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
-    "2025-12-17": [
+    "2025-12-16": [
       {
-        "date": "2025-12-17",
+        "date": "2025-12-16",
         "sport": "District Calendar",
         "type": "noschool",
         "match": "Lincoln Hall Holiday Concert",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "school"
-      },
+      }
+    ],
+    "2025-12-17": [
       {
         "date": "2025-12-17",
         "sport": "Girls Varsity Basketball",
@@ -6251,14 +5937,14 @@
         "cat": "school"
       }
     ],
-    "2026-01-09": [
+    "2026-01-08": [
       {
-        "date": "2026-01-09",
+        "date": "2026-01-08",
         "sport": "District Event",
         "type": "district",
         "match": "Board of Education meeting",
         "loc": "",
-        "time": "1:30 AM",
+        "time": "7:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6269,33 +5955,20 @@
         "date": "2026-01-12",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS Restaurant Giveback: Jollibee",
-        "loc": "",
-        "time": "3:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2026-01-13": [
-      {
-        "date": "2026-01-13",
-        "sport": "District Event",
-        "type": "district",
         "match": "PALS meeting at Rutledge Hall library",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       },
       {
-        "date": "2026-01-13",
+        "date": "2026-01-12",
         "sport": "District Event",
         "type": "district",
         "match": "PALS Restaurant Giveback: Jollibee",
         "loc": "",
-        "time": "3:00 PM",
+        "time": "9:00 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6325,20 +5998,20 @@
         "note": "44-11 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-01-21": [
+      },
       {
-        "date": "2026-01-21",
+        "date": "2026-01-20",
         "sport": "District Event",
         "type": "district",
-        "match": "Niles West Young Creatives Art Show",
-        "loc": "Niles West High School, 5701 Oakton St, Skokie, IL 60077, USA",
-        "time": "11:00 PM",
+        "match": "Facilities Committee meeting",
+        "loc": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-01-21": [
       {
         "date": "2026-01-21",
         "sport": "Boys Varsity Basketball",
@@ -6354,26 +6027,15 @@
         "date": "2026-01-21",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee meeting",
-        "loc": "",
-        "time": "",
+        "match": "Niles West Young Creatives Art Show",
+        "loc": "Niles West High School, 5701 Oakton St, Skokie, IL 60077, USA",
+        "time": "5:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2026-01-22": [
-      {
-        "date": "2026-01-22",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Niles West Young Creatives Art Show",
-        "loc": "Niles West High School, 5701 Oakton St, Skokie, IL 60077, USA",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-01-22",
         "sport": "Boys Jr. Varsity Basketball",
@@ -6384,6 +6046,28 @@
         "note": "28-36 (Loss)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-01-22",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Rutledge Hall Family Read Night",
+        "loc": "Rutledge Hall",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-01-22",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-01-23": [
@@ -6391,31 +6075,9 @@
         "date": "2026-01-23",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee meeting",
-        "loc": "",
-        "time": "12:30 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-01-23",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee meeting",
         "loc": "",
-        "time": "2:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-01-23",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Rutledge Hall Family Read Night",
-        "loc": "Rutledge Hall",
-        "time": "",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6432,20 +6094,20 @@
         "note": "36-27 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-01-28": [
+      },
       {
-        "date": "2026-01-28",
+        "date": "2026-01-27",
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall Beginner Band Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-01-28": [
       {
         "date": "2026-01-28",
         "sport": "Boys Varsity Basketball",
@@ -6456,20 +6118,20 @@
         "note": "49-24 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-01-29": [
+      },
       {
-        "date": "2026-01-29",
+        "date": "2026-01-28",
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall Beginner Orchestra Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-01-29": [
       {
         "date": "2026-01-29",
         "sport": "Boys Jr. Varsity Basketball",
@@ -6480,20 +6142,20 @@
         "note": "26-24 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-01-30": [
+      },
       {
-        "date": "2026-01-30",
+        "date": "2026-01-29",
         "sport": "District Event",
         "type": "district",
         "match": "Growing Up in Public: Milestones of Growing Up in the Digital Age",
         "loc": "Lincoln Hall Auditorium",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-01-30": [
       {
         "date": "2026-01-30",
         "sport": "Boys Varsity Basketball",
@@ -6545,18 +6207,20 @@
         "cat": "sports"
       }
     ],
-    "2026-02-10": [
+    "2026-02-09": [
       {
-        "date": "2026-02-10",
+        "date": "2026-02-09",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting at Lincoln Hall library",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-02-10": [
       {
         "date": "2026-02-10",
         "sport": "Boys Jr. Varsity Basketball",
@@ -6656,20 +6320,20 @@
         "note": "52-39 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-02-20": [
+      },
       {
-        "date": "2026-02-20",
+        "date": "2026-02-19",
         "sport": "District Event",
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-02-20": [
       {
         "date": "2026-02-20",
         "sport": "Boys Varsity Basketball",
@@ -6802,14 +6466,14 @@
         "cat": "school"
       }
     ],
-    "2026-03-10": [
+    "2026-03-09": [
       {
-        "date": "2026-03-10",
+        "date": "2026-03-09",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting at Todd Hall library",
         "loc": "",
-        "time": "",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6833,9 +6497,9 @@
         "date": "2026-03-24",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee Meeting",
+        "match": "Spring Parent-Teacher Conferences/Portfolio Night",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "3:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6844,9 +6508,9 @@
         "date": "2026-03-24",
         "sport": "District Event",
         "type": "district",
-        "match": "Spring Parent-Teacher Conferences/Portfolio Night",
+        "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "8:30 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6863,17 +6527,6 @@
         "note": "2-1 (Win)",
         "ref": "Nathan",
         "cat": "sports"
-      },
-      {
-        "date": "2026-03-25",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Parent-Teacher Conferences/Portfolio Night",
-        "loc": "",
-        "time": "8:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2026-03-26": [
@@ -6881,9 +6534,9 @@
         "date": "2026-03-26",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee Meeting",
+        "match": "Spring Parent-Teacher Conferences/Portfolio Night",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "3:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6892,9 +6545,9 @@
         "date": "2026-03-26",
         "sport": "District Event",
         "type": "district",
-        "match": "Spring Parent-Teacher Conferences/Portfolio Night",
+        "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "8:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -6907,18 +6560,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-03-27",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Parent-Teacher Conferences/Portfolio Night",
-        "loc": "",
-        "time": "8:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7079,6 +6721,17 @@
         "date": "2026-04-13",
         "sport": "District Event",
         "type": "district",
+        "match": "PALS meeting at Rutledge Hall library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-04-13",
+        "sport": "District Event",
+        "type": "district",
         "match": "Spring Musical Ticket Sales Open",
         "loc": "",
         "time": "",
@@ -7098,14 +6751,16 @@
         "note": "3-0 (Win)",
         "ref": "",
         "cat": "sports"
-      },
+      }
+    ],
+    "2026-04-15": [
       {
-        "date": "2026-04-14",
+        "date": "2026-04-15",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting at Rutledge Hall library",
+        "match": "2026 Cahill Scholarship Reception",
         "loc": "",
-        "time": "",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7122,31 +6777,9 @@
         "note": "0-2 (Loss)",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2026-04-16",
-        "sport": "District Event",
-        "type": "district",
-        "match": "2026 Cahill Scholarship Reception",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2026-04-17": [
-      {
-        "date": "2026-04-17",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Family Bingo Night",
-        "loc": "Rutledge Hall",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-04-17",
         "sport": "Girls Varsity Soccer",
@@ -7157,16 +6790,14 @@
         "note": "4-0 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-04-18": [
+      },
       {
-        "date": "2026-04-18",
+        "date": "2026-04-17",
         "sport": "District Event",
         "type": "district",
         "match": "Family Bingo Night",
         "loc": "Rutledge Hall",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7188,17 +6819,6 @@
     "2026-04-21": [
       {
         "date": "2026-04-21",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee Meeting",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-04-21",
         "sport": "Girls Varsity Soccer",
         "type": "soccer",
         "match": "Fairview vs Lincoln Hall",
@@ -7218,6 +6838,17 @@
         "note": "1-1 (Tie)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-04-21",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee Meeting",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-04-22": [
@@ -7247,17 +6878,6 @@
     "2026-04-23": [
       {
         "date": "2026-04-23",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee Meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-04-23",
         "sport": "Girls Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Lincoln",
@@ -7277,6 +6897,17 @@
         "note": "0-5 (Loss)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-04-23",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee Meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-04-24": [
@@ -7286,7 +6917,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7319,17 +6950,6 @@
     "2026-04-29": [
       {
         "date": "2026-04-29",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Chorale Concert",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-04-29",
         "sport": "Girls Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Park View",
@@ -7349,6 +6969,17 @@
         "note": "2-1 (Win)",
         "ref": "Moy",
         "cat": "sports"
+      },
+      {
+        "date": "2026-04-29",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Spring Chorale Concert",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-04-30": [
@@ -7402,17 +7033,6 @@
     "2026-05-05": [
       {
         "date": "2026-05-05",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Orchestra Concert",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-05-05",
         "sport": "Girls Jr. Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs McCracken",
@@ -7421,20 +7041,20 @@
         "note": "2-1 (Win)",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-05-06": [
+      },
       {
-        "date": "2026-05-06",
+        "date": "2026-05-05",
         "sport": "District Event",
         "type": "district",
-        "match": "Spring Band Concert",
+        "match": "Spring Orchestra Concert",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-05-06": [
       {
         "date": "2026-05-06",
         "sport": "Girls Varsity Soccer",
@@ -7461,6 +7081,17 @@
         "date": "2026-05-06",
         "sport": "District Event",
         "type": "district",
+        "match": "Spring Band Concert",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-05-06",
+        "sport": "District Event",
+        "type": "district",
         "match": "District Art Show at the Village of Lincolnwood",
         "loc": "Village of Lincolnwood, 6900 Lincoln Ave, Lincolnwood, IL 60712, USA",
         "time": "",
@@ -7470,28 +7101,6 @@
       }
     ],
     "2026-05-07": [
-      {
-        "date": "2026-05-07",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Kindergarten Family Fitness Night",
-        "loc": "Todd Hall",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-05-07",
-        "sport": "District Event",
-        "type": "district",
-        "match": "District Art Show Reception",
-        "loc": "Village of Lincolnwood, 6900 Lincoln Ave, Lincolnwood, IL 60712, USA",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-05-07",
         "sport": "Girls Varsity Soccer",
@@ -7507,6 +7116,28 @@
         "date": "2026-05-07",
         "sport": "District Event",
         "type": "district",
+        "match": "Kindergarten Family Fitness Night",
+        "loc": "Todd Hall",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-05-07",
+        "sport": "District Event",
+        "type": "district",
+        "match": "District Art Show Reception",
+        "loc": "Village of Lincolnwood, 6900 Lincoln Ave, Lincolnwood, IL 60712, USA",
+        "time": "5:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-05-07",
+        "sport": "District Event",
+        "type": "district",
         "match": "District Art Show at the Village of Lincolnwood",
         "loc": "Village of Lincolnwood, 6900 Lincoln Ave, Lincolnwood, IL 60712, USA",
         "time": "",
@@ -7516,17 +7147,6 @@
       }
     ],
     "2026-05-08": [
-      {
-        "date": "2026-05-08",
-        "sport": "District Event",
-        "type": "district",
-        "match": "District Art Show Reception",
-        "loc": "Village of Lincolnwood, 6900 Lincoln Ave, Lincolnwood, IL 60712, USA",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-05-08",
         "sport": "Boys Varsity Volleyball",
@@ -7614,6 +7234,17 @@
         "date": "2026-05-11",
         "sport": "District Event",
         "type": "district",
+        "match": "PALS meeting at Lincoln Hall Library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-05-11",
+        "sport": "District Event",
+        "type": "district",
         "match": "District Art Show at the Village of Lincolnwood",
         "loc": "Village of Lincolnwood, 6900 Lincoln Ave, Lincolnwood, IL 60712, USA",
         "time": "",
@@ -7633,17 +7264,6 @@
         "note": "12-1 (Win)",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2026-05-12",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS meeting at Lincoln Hall Library",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       },
       {
         "date": "2026-05-12",
@@ -7673,11 +7293,22 @@
     "2026-05-14": [
       {
         "date": "2026-05-14",
+        "sport": "Girls Jr. Varsity Soccer",
+        "type": "soccer",
+        "match": "Old Orchard vs Lincoln Hall",
+        "loc": "Old Orchard",
+        "time": "4:00 PM",
+        "note": "1-4 (Loss)",
+        "ref": "",
+        "cat": "sports"
+      },
+      {
+        "date": "2026-05-14",
         "sport": "District Event",
         "type": "district",
         "match": "Incoming Kindergartener Orientation",
         "loc": "",
-        "time": "10:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7688,21 +7319,10 @@
         "type": "district",
         "match": "5th Grade General Music Concert",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "date": "2026-05-14",
-        "sport": "Girls Jr. Varsity Soccer",
-        "type": "soccer",
-        "match": "Old Orchard vs Lincoln Hall",
-        "loc": "Old Orchard",
-        "time": "4:00 PM",
-        "note": "1-4 (Loss)",
-        "ref": "",
-        "cat": "sports"
       },
       {
         "date": "2026-05-14",
@@ -7721,9 +7341,9 @@
         "date": "2026-05-15",
         "sport": "District Event",
         "type": "district",
-        "match": "5th Grade General Music Concert",
+        "match": "Spring Musical: Lincoln Hall presents Cinderella",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7747,7 +7367,7 @@
         "type": "district",
         "match": "Spring Musical: Lincoln Hall presents Cinderella",
         "loc": "",
-        "time": "8:00 PM",
+        "time": "3:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7765,17 +7385,6 @@
       }
     ],
     "2026-05-17": [
-      {
-        "date": "2026-05-17",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Spring Musical: Lincoln Hall presents Cinderella",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-05-17",
         "sport": "District Event",
@@ -7808,7 +7417,7 @@
         "type": "district",
         "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7843,31 +7452,9 @@
         "date": "2026-05-21",
         "sport": "District Event",
         "type": "district",
-        "match": "3rd Grade General Music Concert",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-05-21",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee Meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-05-21",
-        "sport": "District Event",
-        "type": "district",
         "match": "Pre-K Spring Sing - AM",
         "loc": "Todd Hall",
-        "time": "3:15 PM",
+        "time": "10:15 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7878,7 +7465,29 @@
         "type": "district",
         "match": "Pre-K Spring Sing - PM",
         "loc": "",
-        "time": "6:45 PM",
+        "time": "1:45 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-05-21",
+        "sport": "District Event",
+        "type": "district",
+        "match": "3rd Grade General Music Concert",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-05-21",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee Meeting",
+        "loc": "",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7900,20 +7509,9 @@
         "date": "2026-05-22",
         "sport": "District Event",
         "type": "district",
-        "match": "3rd Grade General Music Concert",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-05-22",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -7959,17 +7557,6 @@
     "2026-05-25": [
       {
         "date": "2026-05-25",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Memorial Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "school"
-      },
-      {
-        "date": "2026-05-25",
         "sport": "District Event",
         "type": "district",
         "match": "District Art Show at the Village of Lincolnwood",
@@ -7978,6 +7565,17 @@
         "note": "",
         "ref": "",
         "cat": "district"
+      },
+      {
+        "date": "2026-05-25",
+        "sport": "District Calendar",
+        "type": "noschool",
+        "match": "Memorial Day - No School",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "school"
       }
     ],
     "2026-05-26": [
@@ -8019,14 +7617,14 @@
         "cat": "district"
       }
     ],
-    "2026-06-05": [
+    "2026-06-04": [
       {
-        "date": "2026-06-05",
+        "date": "2026-06-04",
         "sport": "District Event",
         "type": "district",
         "match": "Lincoln Hall Graduation Ceremony",
         "loc": "Niles West High School, 5701 Oakton St, Skokie, IL 60077, USA",
-        "time": "",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8052,7 +7650,7 @@
         "type": "district",
         "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8076,7 +7674,7 @@
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8089,7 +7687,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8102,7 +7700,7 @@
         "type": "district",
         "match": "SD74 Summer Adventures parent meeting",
         "loc": "",
-        "time": "4:00 PM",
+        "time": "11:00 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8206,7 +7804,7 @@
         "type": "district",
         "match": "Pre-K Pop-In",
         "loc": "",
-        "time": "6:30 PM",
+        "time": "1:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8219,7 +7817,7 @@
         "type": "district",
         "match": "Kindergarten Playdate",
         "loc": "",
-        "time": "10:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8230,7 +7828,7 @@
         "type": "district",
         "match": "6th Grade Orientation",
         "loc": "",
-        "time": "2:30 PM",
+        "time": "9:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8243,7 +7841,7 @@
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8256,7 +7854,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8269,7 +7867,7 @@
         "type": "district",
         "match": "3rd Grade Orientation",
         "loc": "",
-        "time": "8:30 PM",
+        "time": "3:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8363,7 +7961,7 @@
         "type": "district",
         "match": "Ice Cream Social",
         "loc": "",
-        "time": "10:30 PM",
+        "time": "5:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8380,19 +7978,6 @@
         "cat": "district"
       }
     ],
-    "2026-08-29": [
-      {
-        "date": "2026-08-29",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Ice Cream Social",
-        "loc": "",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
     "2026-09-01": [
       {
         "date": "2026-09-01",
@@ -8400,7 +7985,7 @@
         "type": "district",
         "match": "PALS' Annual Back-to-School Giveback",
         "loc": "Une Ann\u00e9e | Hubbard's Cave Brewery & Barbecue, 6343 W Gross Point Rd, Niles, IL 60714, USA",
-        "time": "10:00 PM",
+        "time": "5:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8411,31 +7996,7 @@
         "type": "district",
         "match": "Lincoln Hall Curriculum Night",
         "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      }
-    ],
-    "2026-09-02": [
-      {
-        "date": "2026-09-02",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS' Annual Back-to-School Giveback",
-        "loc": "Une Ann\u00e9e | Hubbard's Cave Brewery & Barbecue, 6343 W Gross Point Rd, Niles, IL 60714, USA",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-09-02",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Lincoln Hall Curriculum Night",
-        "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8448,7 +8009,7 @@
         "type": "district",
         "match": "Todd Hall Curriculum Night",
         "loc": "",
-        "time": "10:00 PM",
+        "time": "5:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8505,17 +8066,6 @@
     "2026-09-09": [
       {
         "date": "2026-09-09",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Rutledge Hall Curriculum Night",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-09-09",
         "sport": "Boys Varsity Soccer",
         "type": "soccer",
         "match": "Fairview vs Lincoln Hall",
@@ -8524,6 +8074,17 @@
         "note": "5-3 (Win)",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-09-09",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Rutledge Hall Curriculum Night",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       },
       {
         "date": "2026-09-09",
@@ -8538,17 +8099,6 @@
       }
     ],
     "2026-09-10": [
-      {
-        "date": "2026-09-10",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Rutledge Hall Curriculum Night",
-        "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-09-10",
         "sport": "Boys Jr. Varsity Soccer",
@@ -8607,20 +8157,20 @@
         "note": "2-0 (Win)",
         "ref": "Szewczyk",
         "cat": "sports"
-      }
-    ],
-    "2026-09-15": [
+      },
       {
-        "date": "2026-09-15",
+        "date": "2026-09-14",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee Meeting",
+        "match": "PALS meeting at Todd Hall library",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2026-09-15": [
       {
         "date": "2026-09-15",
         "sport": "Boys Jr. Varsity Soccer",
@@ -8636,9 +8186,9 @@
         "date": "2026-09-15",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting at Todd Hall library",
+        "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -8682,17 +8232,6 @@
     "2026-09-17": [
       {
         "date": "2026-09-17",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee Meeting",
-        "loc": "",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-09-17",
         "sport": "Boys Varsity Soccer",
         "type": "soccer",
         "match": "Park View vs Lincoln Hall",
@@ -8723,6 +8262,17 @@
         "note": "2-0 (Win)",
         "ref": "Moy",
         "cat": "sports"
+      },
+      {
+        "date": "2026-09-17",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee Meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       },
       {
         "date": "2026-09-17",
@@ -8776,6 +8326,17 @@
     "2026-09-22": [
       {
         "date": "2026-09-22",
+        "sport": "District Event",
+        "type": "district",
+        "match": "RED OUT for Girls Varsity Volleyball",
+        "loc": "",
+        "time": "4:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-09-22",
         "sport": "Boys Jr. Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Lincoln",
@@ -8800,17 +8361,6 @@
         "date": "2026-09-22",
         "sport": "District Event",
         "type": "district",
-        "match": "RED OUT for Girls Varsity Volleyball",
-        "loc": "",
-        "time": "9:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-09-22",
-        "sport": "District Event",
-        "type": "district",
         "match": "Safety Week",
         "loc": "",
         "time": "",
@@ -8820,28 +8370,6 @@
       }
     ],
     "2026-09-23": [
-      {
-        "date": "2026-09-23",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Mr. Segreti and Ms. Schreck at Teddy\u2019s Ice Cream",
-        "loc": "Teddy's Ice Cream, 3910 W Touhy Ave, Lincolnwood, IL 60712, USA",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-09-23",
-        "sport": "District Event",
-        "type": "district",
-        "match": "4th Grade Band/Orchestra Parent Night",
-        "loc": "Lincoln Hall Auditorium",
-        "time": "11:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-09-23",
         "sport": "Boys Varsity Soccer",
@@ -8868,6 +8396,28 @@
         "date": "2026-09-23",
         "sport": "District Event",
         "type": "district",
+        "match": "Mr. Segreti and Ms. Schreck at Teddy\u2019s Ice Cream",
+        "loc": "Teddy's Ice Cream, 3910 W Touhy Ave, Lincolnwood, IL 60712, USA",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-09-23",
+        "sport": "District Event",
+        "type": "district",
+        "match": "4th Grade Band/Orchestra Parent Night",
+        "loc": "Lincoln Hall Auditorium",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-09-23",
+        "sport": "District Event",
+        "type": "district",
         "match": "Safety Week",
         "loc": "",
         "time": "",
@@ -8877,17 +8427,6 @@
       }
     ],
     "2026-09-24": [
-      {
-        "date": "2026-09-24",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Mr. Segreti and Ms. Schreck at Teddy\u2019s Ice Cream",
-        "loc": "Teddy's Ice Cream, 3910 W Touhy Ave, Lincolnwood, IL 60712, USA",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-09-24",
         "sport": "District Event",
@@ -9060,17 +8599,6 @@
     "2026-10-08": [
       {
         "date": "2026-10-08",
-        "sport": "District Event",
-        "type": "district",
-        "match": "1st Grade STEM/Story Walk Night",
-        "loc": "",
-        "time": "10:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-10-08",
         "sport": "Boys Jr. Varsity Soccer",
         "type": "soccer",
         "match": "Lincoln Hall vs Culver",
@@ -9079,6 +8607,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-10-08",
+        "sport": "District Event",
+        "type": "district",
+        "match": "1st Grade STEM/Story Walk Night",
+        "loc": "",
+        "time": "5:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-10-12": [
@@ -9156,17 +8695,6 @@
     "2026-10-15": [
       {
         "date": "2026-10-15",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Pre-K Family Game Night",
-        "loc": "",
-        "time": "10:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-10-15",
         "sport": "Boys Jr. Varsity Soccer",
         "type": "soccer",
         "match": "Fairview vs Lincoln Hall",
@@ -9175,6 +8703,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-10-15",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Pre-K Family Game Night",
+        "loc": "",
+        "time": "5:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-10-16": [
@@ -9203,6 +8742,19 @@
         "cat": "sports"
       }
     ],
+    "2026-10-19": [
+      {
+        "date": "2026-10-19",
+        "sport": "District Event",
+        "type": "district",
+        "match": "PALS meeting at Rutledge Hall library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      }
+    ],
     "2026-10-20": [
       {
         "date": "2026-10-20",
@@ -9210,18 +8762,7 @@
         "type": "district",
         "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-10-20",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS meeting at Rutledge Hall library",
-        "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9234,7 +8775,7 @@
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9247,7 +8788,7 @@
         "type": "district",
         "match": "Lincoln Hall Halloween Party",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9258,7 +8799,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9282,7 +8823,7 @@
         "type": "district",
         "match": "Lincoln Hall Fall Music Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9452,7 +8993,7 @@
         "date": "2026-11-12",
         "sport": "District Event",
         "type": "district",
-        "match": "Scholastic Book Fair - Lincoln Hall",
+        "match": "Rutledge Hall Art Installation",
         "loc": "",
         "time": "",
         "note": "",
@@ -9463,7 +9004,7 @@
         "date": "2026-11-12",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall Art Installation",
+        "match": "Scholastic Book Fair - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -9478,7 +9019,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "2:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9506,6 +9047,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2026-11-16",
+        "sport": "District Event",
+        "type": "district",
+        "match": "PALS meeting at Lincoln Hall library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2026-11-17": [
@@ -9513,9 +9065,9 @@
         "date": "2026-11-17",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting at Lincoln Hall library",
+        "match": "Facilities Committee Meetings",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9532,31 +9084,22 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      },
+      }
+    ],
+    "2026-11-19": [
       {
-        "date": "2026-11-18",
+        "date": "2026-11-19",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee Meetings",
+        "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2026-11-20": [
-      {
-        "date": "2026-11-20",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Finance Committee Meeting",
-        "loc": "",
-        "time": "12:30 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2026-11-20",
         "sport": "Girls Jr. Varsity Basketball",
@@ -9750,16 +9293,14 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2026-12-05": [
+      },
       {
-        "date": "2026-12-05",
+        "date": "2026-12-04",
         "sport": "District Event",
         "type": "district",
         "match": "Lincoln Hall Variety Show",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -9794,17 +9335,6 @@
         "date": "2026-12-08",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall PE Night",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-12-08",
-        "sport": "District Event",
-        "type": "district",
         "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
@@ -9817,6 +9347,17 @@
         "sport": "District Event",
         "type": "district",
         "match": "MAP Testing - Lincoln Hall",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-12-08",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Rutledge Hall PE Night",
         "loc": "",
         "time": "",
         "note": "",
@@ -9840,17 +9381,6 @@
         "date": "2026-12-09",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Todd Hall",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-12-09",
-        "sport": "District Event",
-        "type": "district",
         "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
@@ -9863,6 +9393,17 @@
         "sport": "District Event",
         "type": "district",
         "match": "MAP Testing - Lincoln Hall",
+        "loc": "",
+        "time": "",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-12-09",
+        "sport": "District Event",
+        "type": "district",
+        "match": "MAP Testing - Todd Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -9908,6 +9449,17 @@
     "2026-12-14": [
       {
         "date": "2026-12-14",
+        "sport": "District Event",
+        "type": "district",
+        "match": "PALS meeting at Todd Hall library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2026-12-14",
         "sport": "Girls Varsity Basketball",
         "type": "basketball",
         "match": "BB Tourney Rd. 1 & 2 @ Lincoln or O.O. 4:15 & 5:30",
@@ -9934,26 +9486,26 @@
         "date": "2026-12-15",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting at Todd Hall library",
+        "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      }
-    ],
-    "2026-12-16": [
+      },
       {
-        "date": "2026-12-16",
+        "date": "2026-12-15",
         "sport": "District Calendar",
         "type": "noschool",
         "match": "Lincoln Hall Holiday Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "school"
-      },
+      }
+    ],
+    "2026-12-16": [
       {
         "date": "2026-12-16",
         "sport": "Girls Jr. Varsity Basketball",
@@ -9964,20 +9516,20 @@
         "note": "Tournament/placeholder - confirm on QuickScores",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2026-12-16",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee Meeting",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2026-12-17": [
+      {
+        "date": "2026-12-17",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Finance Committee Meeting",
+        "loc": "",
+        "time": "6:30 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      },
       {
         "date": "2026-12-17",
         "sport": "Girls Varsity Basketball",
@@ -9995,20 +9547,9 @@
         "date": "2026-12-18",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee Meeting",
-        "loc": "",
-        "time": "12:30 AM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2026-12-18",
-        "sport": "District Event",
-        "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "2:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -10291,14 +9832,14 @@
         "date": "2027-01-01"
       }
     ],
-    "2027-01-12": [
+    "2027-01-11": [
       {
-        "date": "2027-01-12",
+        "date": "2027-01-11",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting at Rutledge Hall library",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -10352,6 +9893,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2027-01-19",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee Meeting",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2027-01-20": [
@@ -10365,17 +9917,6 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2027-01-20",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee Meeting",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2027-01-21": [
@@ -10389,31 +9930,20 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2027-01-22": [
+      },
       {
-        "date": "2027-01-22",
+        "date": "2027-01-21",
         "sport": "District Event",
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "date": "2027-01-22",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Policy Committee Meeting",
-        "loc": "",
-        "time": "2:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
+      }
+    ],
+    "2027-01-22": [
       {
         "date": "2027-01-22",
         "sport": "Boys Varsity Basketball",
@@ -10424,6 +9954,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2027-01-22",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Policy Committee Meeting",
+        "loc": "",
+        "time": "8:30 AM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2027-01-26": [
@@ -10450,20 +9991,20 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2027-01-28": [
+      },
       {
-        "date": "2027-01-28",
+        "date": "2027-01-27",
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall Orchestra Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2027-01-28": [
       {
         "date": "2027-01-28",
         "sport": "Boys Jr. Varsity basketball",
@@ -10474,20 +10015,20 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2027-01-29": [
+      },
       {
-        "date": "2027-01-29",
+        "date": "2027-01-28",
         "sport": "District Event",
         "type": "district",
         "match": "Rutledge Hall Band Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2027-01-29": [
       {
         "date": "2027-01-29",
         "sport": "Boys Varsity Basketball",
@@ -10539,18 +10080,20 @@
         "cat": "sports"
       }
     ],
-    "2027-02-09": [
+    "2027-02-08": [
       {
-        "date": "2027-02-09",
+        "date": "2027-02-08",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting at Lincoln Hall library",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2027-02-09": [
       {
         "date": "2027-02-09",
         "sport": "Boys Jr. Varsity basketball",
@@ -10648,6 +10191,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2027-02-16",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Facilities Committee Meeting",
+        "loc": "",
+        "time": "6:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2027-02-17": [
@@ -10661,17 +10215,6 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      },
-      {
-        "date": "2027-02-17",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Facilities Committee Meeting",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
       }
     ],
     "2027-02-18": [
@@ -10685,31 +10228,20 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2027-02-19": [
+      },
       {
-        "date": "2027-02-19",
+        "date": "2027-02-18",
         "sport": "District Event",
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "12:30 AM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "date": "2027-02-19",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Policy Committee Meeting",
-        "loc": "",
-        "time": "2:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
+      }
+    ],
+    "2027-02-19": [
       {
         "date": "2027-02-19",
         "sport": "Boys Varsity Basketball",
@@ -10720,6 +10252,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2027-02-19",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Policy Committee Meeting",
+        "loc": "",
+        "time": "8:30 AM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2027-02-23": [
@@ -10857,14 +10400,14 @@
         "cat": "sports"
       }
     ],
-    "2027-03-09": [
+    "2027-03-08": [
       {
-        "date": "2027-03-09",
+        "date": "2027-03-08",
         "sport": "District Event",
         "type": "district",
         "match": "PALS meeting at Todd Hall library",
         "loc": "",
-        "time": "1:00 AM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -10890,7 +10433,7 @@
         "type": "district",
         "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -10949,7 +10492,7 @@
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -10962,7 +10505,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11291,20 +10834,20 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2027-04-13": [
+      },
       {
-        "date": "2027-04-13",
+        "date": "2027-04-12",
         "sport": "District Event",
         "type": "district",
-        "match": "Facilities Committee Meeting",
+        "match": "PALS meeting at Rutledge Hall library",
         "loc": "",
-        "time": "11:00 PM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2027-04-13": [
       {
         "date": "2027-04-13",
         "sport": "Girls Jr. Varsity Soccer",
@@ -11320,9 +10863,9 @@
         "date": "2027-04-13",
         "sport": "District Event",
         "type": "district",
-        "match": "PALS meeting at Rutledge Hall library",
+        "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11339,20 +10882,20 @@
         "note": "",
         "ref": "",
         "cat": "sports"
-      }
-    ],
-    "2027-04-15": [
+      },
       {
-        "date": "2027-04-15",
+        "date": "2027-04-14",
         "sport": "District Event",
         "type": "district",
-        "match": "Finance Committee Meeting",
+        "match": "Cahill Scholarship Reception",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2027-04-15": [
       {
         "date": "2027-04-15",
         "sport": "Girls Jr. Varsity Soccer",
@@ -11368,26 +10911,15 @@
         "date": "2027-04-15",
         "sport": "District Event",
         "type": "district",
-        "match": "Cahill Scholarship Reception",
+        "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
       }
     ],
     "2027-04-16": [
-      {
-        "date": "2027-04-16",
-        "sport": "District Event",
-        "type": "district",
-        "match": "Policy Committee Meeting",
-        "loc": "",
-        "time": "1:30 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
       {
         "date": "2027-04-16",
         "sport": "Girls Varsity Soccer",
@@ -11398,6 +10930,17 @@
         "note": "",
         "ref": "",
         "cat": "sports"
+      },
+      {
+        "date": "2027-04-16",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Policy Committee Meeting",
+        "loc": "",
+        "time": "8:30 AM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2027-04-20": [
@@ -11625,7 +11168,7 @@
         "type": "district",
         "match": "Rutledge Hall and Lincoln Hall Spring Chorale/Choir Concert",
         "loc": "Lincoln Hall Auditorium",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11684,7 +11227,7 @@
         "date": "2027-05-11",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11695,7 +11238,7 @@
         "date": "2027-05-11",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11708,7 +11251,7 @@
         "date": "2027-05-12",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Rutledge Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11719,7 +11262,7 @@
         "date": "2027-05-12",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11762,6 +11305,19 @@
         "cat": "district"
       }
     ],
+    "2027-05-17": [
+      {
+        "date": "2027-05-17",
+        "sport": "District Event",
+        "type": "district",
+        "match": "PALS meeting at Lincoln Hall library",
+        "loc": "",
+        "time": "7:00 PM",
+        "note": "",
+        "ref": "",
+        "cat": "district"
+      }
+    ],
     "2027-05-18": [
       {
         "date": "2027-05-18",
@@ -11769,18 +11325,7 @@
         "type": "district",
         "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "11:00 PM",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2027-05-18",
-        "sport": "District Event",
-        "type": "district",
-        "match": "PALS meeting at Lincoln Hall library",
-        "loc": "",
-        "time": "",
+        "time": "6:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11793,7 +11338,7 @@
         "type": "district",
         "match": "Spring Orchestra Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11806,7 +11351,7 @@
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11817,7 +11362,7 @@
         "type": "district",
         "match": "Spring Band Concert",
         "loc": "Lincoln Hall Gym",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11830,7 +11375,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11873,18 +11418,20 @@
         "date": "2027-05-31"
       }
     ],
-    "2027-06-09": [
+    "2027-06-08": [
       {
-        "date": "2027-06-09",
+        "date": "2027-06-08",
         "sport": "District Event",
         "type": "district",
         "match": "Class of 2027 Graduation Ceremony",
         "loc": "Niles West High School, 5701 Oakton St, Skokie, IL 60077, USA",
-        "time": "",
+        "time": "7:00 PM",
         "note": "",
         "ref": "",
         "cat": "district"
-      },
+      }
+    ],
+    "2027-06-09": [
       {
         "date": "2027-06-09",
         "sport": "District Event",
@@ -11904,7 +11451,7 @@
         "type": "district",
         "match": "Facilities Committee Meeting",
         "loc": "",
-        "time": "10:45 PM",
+        "time": "5:45 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11915,7 +11462,7 @@
         "type": "district",
         "match": "Finance Committee Meeting",
         "loc": "",
-        "time": "11:30 PM",
+        "time": "6:30 PM",
         "note": "",
         "ref": "",
         "cat": "district"
@@ -11950,7 +11497,7 @@
         "type": "district",
         "match": "Policy Committee Meeting",
         "loc": "",
-        "time": "1:30 PM",
+        "time": "8:30 AM",
         "note": "",
         "ref": "",
         "cat": "district"
