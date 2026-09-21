@@ -175,6 +175,8 @@ def ics_unescape(value):
 
 
 DTSTART_RE = re.compile(r'^DTSTART[^:]*:(\d{8})(?:T(\d{2})(\d{2})(\d{2}))?', re.IGNORECASE)
+DTEND_RE = re.compile(r'^DTEND[^:]*:(\d{8})(?:T(\d{2})(\d{2})(\d{2}))?', re.IGNORECASE)
+MAX_EVENT_SPAN_DAYS = 30   # guard against a runaway multi-year entry
 
 
 def parse_ics_events(text):
@@ -208,6 +210,15 @@ def parse_ics_events(text):
                 # All-day entries are recorded as having no specific time.
                 if not (hh == 0 and mm == 0):
                     cur["time"] = f"{hour12}:{mm:02d} {suffix}"
+            continue
+
+        m = DTEND_RE.match(line)
+        if m:
+            stamp = m.group(1)
+            try:
+                cur["end"] = date(int(stamp[0:4]), int(stamp[4:6]), int(stamp[6:8]))
+            except ValueError:
+                pass
             continue
 
         for field, key in (("SUMMARY", "summary"), ("LOCATION", "location"),
@@ -288,6 +299,112 @@ def games_from_feed(league, diag):
             "ref": "",
             "_source": "feed",
         })
+    return out
+
+
+# =========================================================================
+# DISTRICT-WIDE EVENTS (Lincolnwood SD74)
+# =========================================================================
+#
+# The district's calendar page publishes a public iCal feed intended for
+# calendar apps to subscribe to -- the same structured format used above,
+# so the same parser handles it. This covers concerts, curriculum nights,
+# board meetings, picture day, spirit days and so on.
+
+DISTRICT_ICS_URL = (
+    "https://calendar.google.com/calendar/ical/"
+    "c_434d10cea58b170a51434a2f6e2b051def420ade92c062309647605353d7c139"
+    "%40group.calendar.google.com/public/basic.ics"
+)
+ACADEMIC_FILE = "academic_calendar.json"
+
+# Titles matching these are treated as no-school/half-day entries so the
+# page can colour and filter them differently from ordinary events.
+NOSCHOOL_RE = re.compile(
+    r'no school|district closed|holiday|break|institute day|non-attendance',
+    re.IGNORECASE)
+HALFDAY_RE = re.compile(r'am[- ]only|half day|early dismissal|am only', re.IGNORECASE)
+
+
+def classify_district(title):
+    if HALFDAY_RE.search(title):
+        return "halfday"
+    if NOSCHOOL_RE.search(title):
+        return "noschool"
+    return "district"
+
+
+def expand_span(ev):
+    """All dates an event covers. All-day iCal events use an EXCLUSIVE end
+    date, so a one-day event has end = start + 1; subtract it back off.
+    Multi-day entries (e.g. 'Safety Week') become one entry per day."""
+    start = ev["date"]
+    end = ev.get("end")
+    if not end or end <= start:
+        return [start]
+    if not ev.get("time"):        # all-day -> end is exclusive
+        end = end - timedelta(days=1)
+    if end <= start:
+        return [start]
+    span = (end - start).days
+    if span > MAX_EVENT_SPAN_DAYS:
+        return [start]
+    return [start + timedelta(days=i) for i in range(span + 1)]
+
+
+def district_events():
+    """Every event on the district calendar feed."""
+    print(f"\nFetching district calendar feed")
+    try:
+        body = fetch(DISTRICT_ICS_URL)
+    except Exception as e:
+        print(f"  ERROR: could not fetch district feed: {e}", file=sys.stderr)
+        return [], 0
+    if "BEGIN:VCALENDAR" not in body.upper():
+        print("  ERROR: district feed was not a calendar file", file=sys.stderr)
+        return [], 0
+
+    raw = parse_ics_events(body)
+    out = []
+    for ev in raw:
+        title = (ev.get("summary") or "").strip()
+        if not title:
+            continue
+        kind = classify_district(title)
+        for day in expand_span(ev):
+            out.append({
+                "date": day.isoformat(),
+                "sport": "District Event" if kind == "district" else "District Calendar",
+                "type": kind,
+                "match": title,
+                "loc": ev.get("location", "") or "",
+                "time": ev.get("time", "") or "",
+                "note": "",
+                "ref": "",
+                "cat": "district" if kind == "district" else "school",
+            })
+    print(f"  {len(raw)} feed entries -> {len(out)} dated events")
+    return out, len(raw)
+
+
+def academic_events():
+    """The school-year calendar transcribed from the district's PDF."""
+    if not os.path.exists(ACADEMIC_FILE):
+        print(f"\n(no {ACADEMIC_FILE} -- skipping academic calendar)")
+        return []
+    try:
+        data = json.load(open(ACADEMIC_FILE, encoding="utf-8"))
+    except Exception as e:
+        print(f"\nERROR reading {ACADEMIC_FILE}: {e}", file=sys.stderr)
+        return []
+    out = []
+    for day, evs in (data.get("events") or {}).items():
+        for ev in evs:
+            item = dict(ev)
+            item["date"] = day
+            item.setdefault("cat", "school")
+            out.append(item)
+    print(f"\nAcademic calendar: {len(out)} events ({data.get('source','')})")
     return out
 
 
@@ -574,27 +691,63 @@ def main():
         summaries.append((label, len(events), source))
         time.sleep(REQUEST_DELAY_SECONDS)
 
-    # Deduplicate: same sport, date and matchup from both sources.
+    sports_count = len(all_events)
+    for ev in all_events:
+        ev.setdefault("cat", "sports")
+
+    # --- District-wide events + the school-year calendar -----------------
+    district, feed_raw = district_events()
+    all_events.extend(district)
+    academic = academic_events()
+    all_events.extend(academic)
+
+    # Deduplicate: same date, sport and title from any source. The district
+    # feed and the PDF calendar overlap on things like holidays, so this
+    # keeps one copy rather than showing each twice.
+    def dedup_key(ev):
+        # Compare on letters/digits only, so "Labor Day - District Closed"
+        # and "Labor Day – District Closed" (en dash) count as one event.
+        title = re.sub(r'[^a-z0-9]+', '', (ev.get("match") or "").lower())
+        return (ev["date"], ev.get("cat", ""), title)
+
+    # Sort so timed events come before all-day ones within a date, and the
+    # richer source wins when two copies of the same event collide.
+    def sort_key(e):
+        return (e["date"], e.get("time", "") == "", e.get("time", ""))
+
     unique, seen = [], set()
-    for ev in sorted(all_events, key=lambda e: (e["date"], e.get("time", ""))):
-        key = (ev["date"], ev["sport"], ev["match"])
-        if key in seen:
+    for ev in sorted(all_events, key=sort_key):
+        k = dedup_key(ev)
+        if k in seen:
             continue
-        seen.add(key)
-        unique.append({k: v for k, v in ev.items() if not k.startswith("_")})
+        seen.add(k)
+        unique.append({kk: vv for kk, vv in ev.items() if not kk.startswith("_")})
 
     by_date = {}
     for ev in unique:
         by_date.setdefault(ev["date"], []).append(ev)
 
-    print("\n--- Per-league summary ---")
+    print("\n--- Per-league summary (athletics) ---")
     for label, count, source in summaries:
         print(f"  FAILED     {label}" if count is None
               else f"  {count:>3} via {source:<5} {label}")
 
+    cats = {}
+    for ev in unique:
+        cats[ev.get("cat", "?")] = cats.get(ev.get("cat", "?"), 0) + 1
+    print("\n--- Totals by category ---")
+    for c, n in sorted(cats.items()):
+        print(f"  {n:>4}  {c}")
+
     years_found = sorted({d[:4] for d in by_date})
     print(f"\nTotal: {len(unique)} events across {len(by_date)} dates")
+    print(f"  (athletics found: {sports_count}, district feed: {len(district)}, "
+          f"academic calendar: {len(academic)}, after dedupe: {len(unique)})")
     print(f"Years represented: {', '.join(years_found) if years_found else '(none)'}")
+
+    if not district:
+        print("\nWARNING: the district calendar feed returned nothing -- "
+              "district events will be missing from the calendar.", file=sys.stderr)
 
     this_year = str(date.today().year)
     if years_found and this_year not in years_found:
