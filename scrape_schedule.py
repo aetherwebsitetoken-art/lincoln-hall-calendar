@@ -422,10 +422,10 @@ def district_events():
         body = fetch(DISTRICT_ICS_URL)
     except Exception as e:
         print(f"  ERROR: could not fetch district feed: {e}", file=sys.stderr)
-        return [], 0
+        return None, 0
     if "BEGIN:VCALENDAR" not in body.upper():
         print("  ERROR: district feed was not a calendar file", file=sys.stderr)
-        return [], 0
+        return None, 0
 
     raw = parse_ics_events(body)
     out = []
@@ -792,12 +792,43 @@ def update_index_html(by_date):
 
 # --- Main -----------------------------------------------------------------
 
+def load_previous_events():
+    """Last successful run's events, flattened -- used to carry a source
+    forward when it's temporarily unreachable, instead of dropping it."""
+    try:
+        data = json.load(open("events.json")).get("events", {})
+    except Exception:
+        return []
+    out = []
+    for day, evs in data.items():
+        for ev in evs:
+            item = dict(ev)
+            item["date"] = day
+            out.append(item)
+    return out
+
+
 def main():
+    previous = load_previous_events()
+    carried = []
+
     print(f"Fetching league list: {SCHEDULES_URL}")
-    leagues = discover_leagues(html_to_lines(fetch(SCHEDULES_URL)))
-    print(f"Discovered {len(leagues)} league(s)\n")
+    try:
+        leagues = discover_leagues(html_to_lines(fetch(SCHEDULES_URL)))
+        print(f"Discovered {len(leagues)} league(s)\n")
+    except Exception as e:
+        # QuickScores being down must not take the district calendar down
+        # with it. Keep last run's games and carry on.
+        print(f"ERROR: could not load the league list: {e}", file=sys.stderr)
+        leagues = []
+        kept = [ev for ev in previous if ev.get("cat") == "sports"]
+        carried.append(f"athletics ({len(kept)} events from the last good run)")
+        print(f"Keeping {len(kept)} athletics events from the last good run.\n")
+    else:
+        kept = []
 
     all_events, summaries, failures = [], [], []
+    all_events.extend(kept)
 
     for lg in leagues:
         label = f"{lg['season']} / {lg['name']}".strip(" /")
@@ -835,6 +866,13 @@ def main():
 
     # --- District-wide events + the school-year calendar -----------------
     district, feed_raw = district_events()
+    if district is None:
+        # Feed unreachable: keep last run's district-side events rather than
+        # letting them vanish. (Any overlap with the PDF calendar below is
+        # removed by the de-duplication step.)
+        district = [ev for ev in previous if ev.get("cat") == "district"]
+        carried.append(f"district events ({len(district)} from the last good run)")
+        print(f"  Keeping {len(district)} district events from the last good run.")
     all_events.extend(district)
     academic = academic_events()
     all_events.extend(academic)
@@ -886,6 +924,11 @@ def main():
     print(f"  (athletics found: {sports_count}, district feed: {len(district)}, "
           f"academic calendar: {len(academic)}, after dedupe: {len(unique)})")
     print(f"Years represented: {', '.join(years_found) if years_found else '(none)'}")
+    if carried:
+        print("\nNOTE: a source was unreachable this run, so its last good data was kept:",
+              file=sys.stderr)
+        for c in carried:
+            print(f"  - {c}", file=sys.stderr)
 
     if not district:
         print("\nWARNING: the district calendar feed returned nothing -- "
@@ -907,6 +950,12 @@ def main():
         print("\nERROR: no events found at all.", file=sys.stderr)
         if os.path.exists("events.json"):
             print("Keeping the existing events.json rather than emptying it.", file=sys.stderr)
+            # Still fill in index.html from the last good schedule, so a
+            # freshly uploaded page isn't left blank by one failed run.
+            try:
+                update_index_html(json.load(open("events.json")).get("events", {}))
+            except Exception as e:
+                print(f"Could not refresh index.html from events.json: {e}", file=sys.stderr)
             sys.exit(1)
 
     with open("events.json", "w") as f:
