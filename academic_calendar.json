@@ -1,30 +1,30 @@
 {
   "source": "SD74 2026-2027 School Calendar (REVISED 10/25)",
   "source_url": "https://resources.finalsite.net/images/v1761684573/sd74org/qlc6ydrvcu8zflcmmxph/2026-2027SD74REVISEDCalendar_1025Edit.pdf",
-  "note": "Transcribed from the district's published PDF. Parent-teacher conference dates are intentionally omitted -- the PDF only says 'two dates in November' and 'two dates in March' without listing them. Regenerate this file when a new school-year PDF is posted.",
+  "note": "Transcribed from the district's published PDF. Parent-teacher conference dates are intentionally omitted -- the PDF only says 'two dates in November' and 'two dates in March' without listing them. Half days and no-school days are filed under the District category. Regenerate this file when a new school-year PDF is posted.",
   "events": {
     "2026-08-24": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Teacher Institute Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-08-25": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Teacher Institute Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-08-26": [
@@ -36,427 +36,427 @@
         "note": "",
         "ref": "",
         "type": "school",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-09-07": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Labor Day - District Closed",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-09-18": [
       {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "Half Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "type": "halfday",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-10-12": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Columbus Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-10-13": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Teacher Institute Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-10-30": [
       {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "Half Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "type": "halfday",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-11-03": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Election Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-11-23": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-11-24": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-11-25": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-11-26": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Thanksgiving - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-11-27": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-18": [
       {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "Half Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "type": "halfday",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-21": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-22": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-23": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-24": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-25": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-28": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-29": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-30": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2026-12-31": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-01-01": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-01-18": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Martin Luther King, Jr. Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-02-12": [
       {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "Half Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "type": "halfday",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-02-15": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Presidents' Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-01": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Casimir Pulaski Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-22": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-23": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-24": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-25": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-26": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-03-29": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-04-30": [
       {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
+        "sport": "Half Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "type": "halfday",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-05-03": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Teacher Institute Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-05-31": [
       {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Memorial Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-06-10": [
@@ -468,7 +468,7 @@
         "note": "Pending no emergency days used",
         "ref": "",
         "type": "school",
-        "cat": "school"
+        "cat": "district"
       }
     ],
     "2027-06-17": [
@@ -480,7 +480,7 @@
         "note": "If emergency days are used",
         "ref": "",
         "type": "school",
-        "cat": "school"
+        "cat": "district"
       }
     ]
   }
