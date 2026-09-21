@@ -25,7 +25,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4 tzdata   # tzdata: converts feed times to Central
 
       - name: Run scraper
         run: python3 scrape_schedule.py
@@ -69,3 +69,4 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           projectId: "${{ vars.FIREBASE_PROJECT_ID }}"
           channelId: live
+
