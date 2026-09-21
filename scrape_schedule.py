@@ -174,9 +174,56 @@ def ics_unescape(value):
                  .replace("\\\\", "\\").strip())
 
 
-DTSTART_RE = re.compile(r'^DTSTART[^:]*:(\d{8})(?:T(\d{2})(\d{2})(\d{2}))?', re.IGNORECASE)
-DTEND_RE = re.compile(r'^DTEND[^:]*:(\d{8})(?:T(\d{2})(\d{2})(\d{2}))?', re.IGNORECASE)
+DTSTART_RE = re.compile(
+    r'^DTSTART([^:]*):(\d{8})(?:T(\d{2})(\d{2})(\d{2}))?(Z?)', re.IGNORECASE)
+DTEND_RE = re.compile(
+    r'^DTEND([^:]*):(\d{8})(?:T(\d{2})(\d{2})(\d{2}))?(Z?)', re.IGNORECASE)
 MAX_EVENT_SPAN_DAYS = 30   # guard against a runaway multi-year entry
+
+# Calendar feeds commonly publish times in UTC (a trailing "Z"). Reading the
+# raw digits then shows a 5:00 PM event as 10:00 PM -- and can roll an
+# evening event onto the following day -- so UTC stamps are converted to
+# local school time before anything else looks at them.
+LOCAL_TZ_NAME = "America/Chicago"
+
+try:
+    from zoneinfo import ZoneInfo
+    LOCAL_TZ = ZoneInfo(LOCAL_TZ_NAME)
+except Exception:          # pragma: no cover - only if tzdata is unavailable
+    LOCAL_TZ = None
+    print(f"WARNING: timezone data for {LOCAL_TZ_NAME} unavailable; "
+          f"UTC times will not be converted.", file=sys.stderr)
+
+
+def ics_datetime(params, ymd, hh, mm, ss, zulu):
+    """Turn an iCal DTSTART/DTEND into (date, 'H:MM AM/PM' or '').
+
+    - VALUE=DATE or no time part  -> an all-day entry (no time)
+    - a trailing Z                -> UTC, converted to local time
+    - a TZID= parameter or bare   -> already local, used as-is
+    """
+    try:
+        y, mo, d = int(ymd[0:4]), int(ymd[4:6]), int(ymd[6:8])
+    except ValueError:
+        return None, ""
+
+    if hh is None or "VALUE=DATE" in (params or "").upper():
+        return date(y, mo, d), ""          # all-day
+
+    hour, minute = int(hh), int(mm or 0)
+    if zulu and LOCAL_TZ is not None:
+        dt = datetime(y, mo, d, hour, minute, int(ss or 0), tzinfo=timezone.utc)
+        dt = dt.astimezone(LOCAL_TZ)       # date may shift here -- intentional
+        day, hour, minute = dt.date(), dt.hour, dt.minute
+    else:
+        day = date(y, mo, d)
+
+    # Midnight with no offset is how many feeds encode an all-day event.
+    if hour == 0 and minute == 0 and not zulu:
+        return day, ""
+
+    suffix = "AM" if hour < 12 else "PM"
+    return day, f"{hour % 12 or 12}:{minute:02d} {suffix}"
 
 
 def parse_ics_events(text):
@@ -198,27 +245,20 @@ def parse_ics_events(text):
 
         m = DTSTART_RE.match(line)
         if m:
-            stamp = m.group(1)
-            try:
-                cur["date"] = date(int(stamp[0:4]), int(stamp[4:6]), int(stamp[6:8]))
-            except ValueError:
-                pass
-            if m.group(2) is not None:
-                hh, mm = int(m.group(2)), int(m.group(3))
-                suffix = "AM" if hh < 12 else "PM"
-                hour12 = hh % 12 or 12
-                # All-day entries are recorded as having no specific time.
-                if not (hh == 0 and mm == 0):
-                    cur["time"] = f"{hour12}:{mm:02d} {suffix}"
+            day, tm = ics_datetime(m.group(1), m.group(2), m.group(3),
+                                   m.group(4), m.group(5), m.group(6))
+            if day:
+                cur["date"] = day
+            if tm:
+                cur["time"] = tm
             continue
 
         m = DTEND_RE.match(line)
         if m:
-            stamp = m.group(1)
-            try:
-                cur["end"] = date(int(stamp[0:4]), int(stamp[4:6]), int(stamp[6:8]))
-            except ValueError:
-                pass
+            day, _ = ics_datetime(m.group(1), m.group(2), m.group(3),
+                                  m.group(4), m.group(5), m.group(6))
+            if day:
+                cur["end"] = day
             continue
 
         for field, key in (("SUMMARY", "summary"), ("LOCATION", "location"),
