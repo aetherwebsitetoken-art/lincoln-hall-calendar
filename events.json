@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T05:34:14.957577+00:00",
+  "generated_at": "2026-09-21T05:47:23.127916+00:00",
   "team": "Lincoln Hall",
   "events": {
     "2023-09-05": [
@@ -2234,7 +2234,7 @@
         "date": "2025-01-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP Testing",
+        "match": "Todd Hall FastBridge Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2245,7 +2245,7 @@
         "date": "2025-01-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall FastBridge Testing",
+        "match": "Rutledge Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -2291,7 +2291,7 @@
     "2025-01-20": [
       {
         "date": "2025-01-20",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Martin Luther King, Jr. Day - No School",
         "loc": "",
@@ -2315,7 +2315,7 @@
       },
       {
         "date": "2025-01-21",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Day - No Student Attendance",
         "loc": "",
@@ -2552,12 +2552,12 @@
     "2025-02-14": [
       {
         "date": "2025-02-14",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
       }
@@ -2565,7 +2565,7 @@
     "2025-02-17": [
       {
         "date": "2025-02-17",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Presidents' Day - No School",
         "loc": "",
@@ -2746,7 +2746,7 @@
     "2025-03-03": [
       {
         "date": "2025-03-03",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Pulaski Day - No School",
         "loc": "",
@@ -2894,17 +2894,6 @@
       },
       {
         "date": "2025-03-21",
-        "sport": "District Calendar",
-        "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-03-21",
         "sport": "District Event",
         "type": "district",
         "match": "SD74 Summer Adventures registration opens for out-of-district families",
@@ -2913,12 +2902,23 @@
         "note": "",
         "ref": "",
         "cat": "district"
+      },
+      {
+        "date": "2025-03-21",
+        "sport": "Half Day",
+        "type": "halfday",
+        "match": "Half Day - AM-Only Student Attendance",
+        "loc": "",
+        "time": "",
+        "note": "AM-Only Student Attendance Day",
+        "ref": "",
+        "cat": "district"
       }
     ],
     "2025-03-24": [
       {
         "date": "2025-03-24",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -2931,7 +2931,7 @@
     "2025-03-25": [
       {
         "date": "2025-03-25",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -2944,7 +2944,7 @@
     "2025-03-26": [
       {
         "date": "2025-03-26",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -2957,7 +2957,7 @@
     "2025-03-27": [
       {
         "date": "2025-03-27",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -2970,7 +2970,7 @@
     "2025-03-28": [
       {
         "date": "2025-03-28",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -3234,7 +3234,7 @@
     "2025-04-18": [
       {
         "date": "2025-04-18",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Non-Attendance Day for Students",
         "loc": "",
@@ -3607,7 +3607,7 @@
         "date": "2025-05-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall FastBridge Testing",
+        "match": "Lincoln Hall MAP Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -3618,7 +3618,7 @@
         "date": "2025-05-13",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall MAP Testing",
+        "match": "Rutledge Hall FastBridge Testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -3790,7 +3790,7 @@
     "2025-05-26": [
       {
         "date": "2025-05-26",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Memorial Day - No School",
         "loc": "",
@@ -3929,7 +3929,7 @@
     "2025-06-19": [
       {
         "date": "2025-06-19",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Juneteenth - District Closed",
         "loc": "",
@@ -4031,7 +4031,7 @@
       },
       {
         "date": "2025-07-04",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Independence Day - District Closed",
         "loc": "",
@@ -4146,7 +4146,7 @@
     "2025-08-25": [
       {
         "date": "2025-08-25",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Days",
         "loc": "",
@@ -4159,7 +4159,7 @@
     "2025-08-26": [
       {
         "date": "2025-08-26",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Days",
         "loc": "",
@@ -4207,12 +4207,12 @@
       },
       {
         "date": "2025-08-28",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "Half Day of Pre-K and Kindergarten, A-M",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "Half Day of Pre-K and Kindergarten, A-M",
         "ref": "",
         "cat": "district"
       }
@@ -4220,12 +4220,12 @@
     "2025-08-29": [
       {
         "date": "2025-08-29",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "Half Day of Pre-K and Kindergarten, N-Z",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "Half Day of Pre-K and Kindergarten, N-Z",
         "ref": "",
         "cat": "district"
       }
@@ -4233,7 +4233,7 @@
     "2025-09-01": [
       {
         "date": "2025-09-01",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Labor Day - No School",
         "loc": "",
@@ -4600,12 +4600,12 @@
       },
       {
         "date": "2025-09-19",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
       }
@@ -4925,7 +4925,7 @@
     "2025-10-13": [
       {
         "date": "2025-10-13",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Columbus Day - No School",
         "loc": "",
@@ -4938,7 +4938,7 @@
     "2025-10-14": [
       {
         "date": "2025-10-14",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Day - No School for Students",
         "loc": "",
@@ -5075,17 +5075,6 @@
         "date": "2025-10-31",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall and Rutledge Hall Halloween Parties",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "date": "2025-10-31",
-        "sport": "District Event",
-        "type": "district",
         "match": "Lincoln Hall Wellness Day",
         "loc": "",
         "time": "",
@@ -5095,9 +5084,20 @@
       },
       {
         "date": "2025-10-31",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
+        "loc": "",
+        "time": "",
+        "note": "AM-Only Student Attendance Day",
+        "ref": "",
+        "cat": "district"
+      },
+      {
+        "date": "2025-10-31",
+        "sport": "District Event",
+        "type": "district",
+        "match": "Todd Hall and Rutledge Hall Halloween Parties",
         "loc": "",
         "time": "",
         "note": "",
@@ -5313,8 +5313,8 @@
         "date": "2025-11-14",
         "sport": "District Event",
         "type": "district",
-        "match": "Scholastic Book Fair - Lincoln Hall",
-        "loc": "Lincoln Hall Library",
+        "match": "Sign-ups close for Parent-Teacher Conferences",
+        "loc": "",
         "time": "",
         "note": "",
         "ref": "",
@@ -5324,8 +5324,8 @@
         "date": "2025-11-14",
         "sport": "District Event",
         "type": "district",
-        "match": "Sign-ups close for Parent-Teacher Conferences",
-        "loc": "",
+        "match": "Scholastic Book Fair - Lincoln Hall",
+        "loc": "Lincoln Hall Library",
         "time": "",
         "note": "",
         "ref": "",
@@ -5420,7 +5420,7 @@
     "2025-11-24": [
       {
         "date": "2025-11-24",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -5433,7 +5433,7 @@
     "2025-11-25": [
       {
         "date": "2025-11-25",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -5446,7 +5446,7 @@
     "2025-11-26": [
       {
         "date": "2025-11-26",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -5459,7 +5459,7 @@
     "2025-11-27": [
       {
         "date": "2025-11-27",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -5472,7 +5472,7 @@
     "2025-11-28": [
       {
         "date": "2025-11-28",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -5631,7 +5631,7 @@
         "date": "2025-12-09",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP testing",
+        "match": "Todd Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5653,7 +5653,7 @@
         "date": "2025-12-09",
         "sport": "District Event",
         "type": "district",
-        "match": "Todd Hall MAP testing",
+        "match": "Rutledge Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5699,7 +5699,7 @@
         "date": "2025-12-10",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall MAP testing",
+        "match": "Lincoln Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5710,7 +5710,7 @@
         "date": "2025-12-10",
         "sport": "District Event",
         "type": "district",
-        "match": "Lincoln Hall MAP testing",
+        "match": "Rutledge Hall MAP testing",
         "loc": "",
         "time": "",
         "note": "",
@@ -5758,7 +5758,7 @@
     "2025-12-16": [
       {
         "date": "2025-12-16",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Lincoln Hall Holiday Concert",
         "loc": "",
@@ -5797,12 +5797,12 @@
     "2025-12-19": [
       {
         "date": "2025-12-19",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
       }
@@ -5810,7 +5810,7 @@
     "2025-12-22": [
       {
         "date": "2025-12-22",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5823,7 +5823,7 @@
     "2025-12-23": [
       {
         "date": "2025-12-23",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5836,7 +5836,7 @@
     "2025-12-24": [
       {
         "date": "2025-12-24",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5849,7 +5849,7 @@
     "2025-12-25": [
       {
         "date": "2025-12-25",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5862,7 +5862,7 @@
     "2025-12-26": [
       {
         "date": "2025-12-26",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5875,7 +5875,7 @@
     "2025-12-29": [
       {
         "date": "2025-12-29",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5888,7 +5888,7 @@
     "2025-12-30": [
       {
         "date": "2025-12-30",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5901,7 +5901,7 @@
     "2025-12-31": [
       {
         "date": "2025-12-31",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5914,7 +5914,7 @@
     "2026-01-01": [
       {
         "date": "2026-01-01",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5927,7 +5927,7 @@
     "2026-01-02": [
       {
         "date": "2026-01-02",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -5977,7 +5977,7 @@
     "2026-01-19": [
       {
         "date": "2026-01-19",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Martin Luther King, Jr. Day - No School",
         "loc": "",
@@ -6260,12 +6260,12 @@
     "2026-02-13": [
       {
         "date": "2026-02-13",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
       }
@@ -6273,7 +6273,7 @@
     "2026-02-16": [
       {
         "date": "2026-02-16",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Presidents' Day - No School",
         "loc": "",
@@ -6456,7 +6456,7 @@
       },
       {
         "date": "2026-03-02",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Pulaski Day - No School",
         "loc": "",
@@ -6567,12 +6567,12 @@
       },
       {
         "date": "2026-03-27",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
       }
@@ -6580,7 +6580,7 @@
     "2026-03-30": [
       {
         "date": "2026-03-30",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -6593,7 +6593,7 @@
     "2026-03-31": [
       {
         "date": "2026-03-31",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -6606,7 +6606,7 @@
     "2026-04-01": [
       {
         "date": "2026-04-01",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -6619,7 +6619,7 @@
     "2026-04-02": [
       {
         "date": "2026-04-02",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -6632,7 +6632,7 @@
     "2026-04-03": [
       {
         "date": "2026-04-03",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Spring Break",
         "loc": "",
@@ -6924,7 +6924,7 @@
       },
       {
         "date": "2026-04-24",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Day",
         "loc": "",
@@ -7568,7 +7568,7 @@
       },
       {
         "date": "2026-05-25",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Memorial Day - No School",
         "loc": "",
@@ -7774,7 +7774,7 @@
     "2026-07-03": [
       {
         "date": "2026-07-03",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Independence Day - District Closed",
         "loc": "",
@@ -7873,49 +7873,27 @@
         "cat": "district"
       },
       {
-        "date": "2026-08-24",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Teacher Institute Days",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Teacher Institute Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-08-24"
       }
     ],
     "2026-08-25": [
       {
-        "date": "2026-08-25",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Teacher Institute Days",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Teacher Institute Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-08-25"
       }
     ],
@@ -7950,7 +7928,7 @@
         "note": "",
         "ref": "",
         "type": "school",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-08-26"
       }
     ],
@@ -8018,7 +7996,7 @@
     "2026-09-07": [
       {
         "date": "2026-09-07",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Labor Day - District Closed",
         "loc": "",
@@ -8026,17 +8004,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Labor Day - District Closed",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-09-07"
       }
     ],
     "2026-09-08": [
@@ -8311,25 +8278,14 @@
     "2026-09-18": [
       {
         "date": "2026-09-18",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "halfday",
-        "cat": "school",
-        "date": "2026-09-18"
       }
     ],
     "2026-09-21": [
@@ -8645,7 +8601,7 @@
     "2026-10-12": [
       {
         "date": "2026-10-12",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Columbus Day - District Closed",
         "loc": "",
@@ -8653,23 +8609,12 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Columbus Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-10-12"
       }
     ],
     "2026-10-13": [
       {
         "date": "2026-10-13",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Day - No School for Students",
         "loc": "",
@@ -8677,17 +8622,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Teacher Institute Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-10-13"
       }
     ],
     "2026-10-14": [
@@ -8854,31 +8788,20 @@
     "2026-10-30": [
       {
         "date": "2026-10-30",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "halfday",
-        "cat": "school",
-        "date": "2026-10-30"
       }
     ],
     "2026-11-03": [
       {
         "date": "2026-11-03",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Election Day - No School for Students or Teachers",
         "loc": "",
@@ -8886,17 +8809,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Election Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-11-03"
       }
     ],
     "2026-11-04": [
@@ -9148,7 +9060,7 @@
     "2026-11-23": [
       {
         "date": "2026-11-23",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -9156,23 +9068,12 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-11-23"
       }
     ],
     "2026-11-24": [
       {
         "date": "2026-11-24",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -9180,23 +9081,12 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-11-24"
       }
     ],
     "2026-11-25": [
       {
         "date": "2026-11-25",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -9204,47 +9094,25 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-11-25"
       }
     ],
     "2026-11-26": [
       {
-        "date": "2026-11-26",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Thanksgiving Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Thanksgiving - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-11-26"
       }
     ],
     "2026-11-27": [
       {
         "date": "2026-11-27",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Thanksgiving Break",
         "loc": "",
@@ -9252,17 +9120,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2026-11-27"
       }
     ],
     "2026-11-30": [
@@ -9368,7 +9225,7 @@
         "date": "2026-12-08",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "Rutledge Hall PE Night",
         "loc": "",
         "time": "",
         "note": "",
@@ -9379,7 +9236,7 @@
         "date": "2026-12-08",
         "sport": "District Event",
         "type": "district",
-        "match": "Rutledge Hall PE Night",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -9528,7 +9385,7 @@
       },
       {
         "date": "2026-12-15",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Lincoln Hall Holiday Concert",
         "loc": "Lincoln Hall Gym",
@@ -9589,151 +9446,85 @@
       },
       {
         "date": "2026-12-18",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "halfday",
-        "cat": "school",
-        "date": "2026-12-18"
       }
     ],
     "2026-12-21": [
       {
-        "date": "2026-12-21",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-21"
       }
     ],
     "2026-12-22": [
       {
-        "date": "2026-12-22",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-22"
       }
     ],
     "2026-12-23": [
       {
-        "date": "2026-12-23",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-23"
       }
     ],
     "2026-12-24": [
       {
-        "date": "2026-12-24",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-24"
       }
     ],
     "2026-12-25": [
       {
-        "date": "2026-12-25",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-25"
       }
     ],
     "2026-12-26": [
       {
         "date": "2026-12-26",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -9746,7 +9537,7 @@
     "2026-12-27": [
       {
         "date": "2026-12-27",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Winter Break",
         "loc": "",
@@ -9758,121 +9549,66 @@
     ],
     "2026-12-28": [
       {
-        "date": "2026-12-28",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-28"
       }
     ],
     "2026-12-29": [
       {
-        "date": "2026-12-29",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-29"
       }
     ],
     "2026-12-30": [
       {
-        "date": "2026-12-30",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-30"
       }
     ],
     "2026-12-31": [
       {
-        "date": "2026-12-31",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2026-12-31"
       }
     ],
     "2027-01-01": [
       {
-        "date": "2027-01-01",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Winter Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Winter Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-01-01"
       }
     ],
@@ -9905,7 +9641,7 @@
     "2027-01-18": [
       {
         "date": "2027-01-18",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Martin Luther King, Jr. Day - District Closed",
         "loc": "",
@@ -9913,17 +9649,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Martin Luther King, Jr. Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2027-01-18"
       }
     ],
     "2027-01-19": [
@@ -10190,31 +9915,20 @@
     "2027-02-12": [
       {
         "date": "2027-02-12",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "halfday",
-        "cat": "school",
-        "date": "2027-02-12"
       }
     ],
     "2027-02-15": [
       {
         "date": "2027-02-15",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Presidents' Day - District Closed",
         "loc": "",
@@ -10222,17 +9936,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Presidents' Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2027-02-15"
       }
     ],
     "2027-02-16": [
@@ -10372,25 +10075,14 @@
     ],
     "2027-03-01": [
       {
-        "date": "2027-03-01",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Pulaski Day - District Closed",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Casimir Pulaski Day - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-03-01"
       }
     ],
@@ -10497,7 +10189,7 @@
         "date": "2027-03-16",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Lincoln Hall",
+        "match": "IAR ELA Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10508,7 +10200,7 @@
         "date": "2027-03-16",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Rutledge Hall",
+        "match": "IAR ELA Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10521,7 +10213,7 @@
         "date": "2027-03-17",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Lincoln Hall",
+        "match": "IAR ELA Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10532,7 +10224,7 @@
         "date": "2027-03-17",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR ELA Testing - Rutledge Hall",
+        "match": "IAR ELA Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10568,128 +10260,73 @@
     ],
     "2027-03-22": [
       {
-        "date": "2027-03-22",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Spring Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-03-22"
       }
     ],
     "2027-03-23": [
       {
-        "date": "2027-03-23",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Spring Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-03-23"
       }
     ],
     "2027-03-24": [
       {
-        "date": "2027-03-24",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Spring Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-03-24"
       }
     ],
     "2027-03-25": [
       {
-        "date": "2027-03-25",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Spring Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-03-25"
       }
     ],
     "2027-03-26": [
       {
-        "date": "2027-03-26",
-        "sport": "District Calendar",
-        "type": "noschool",
-        "match": "Spring Break",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
+        "sport": "No School",
         "match": "Spring Break - No School",
         "loc": "",
         "time": "",
         "note": "",
         "ref": "",
         "type": "noschool",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-03-26"
       }
     ],
     "2027-03-29": [
       {
         "date": "2027-03-29",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "No School for Students or Teachers",
         "loc": "",
@@ -10697,17 +10334,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2027-03-29"
       }
     ],
     "2027-03-30": [
@@ -10765,7 +10391,7 @@
         "date": "2027-04-06",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Math Testing - Lincoln Hall",
+        "match": "IAR Math Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10776,7 +10402,7 @@
         "date": "2027-04-06",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Math Testing - Rutledge Hall",
+        "match": "IAR Math Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10811,7 +10437,7 @@
         "date": "2027-04-07",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Math Testing - Lincoln Hall",
+        "match": "IAR Math Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10822,7 +10448,7 @@
         "date": "2027-04-07",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Math Testing - Rutledge Hall",
+        "match": "IAR Math Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10846,7 +10472,7 @@
         "date": "2027-04-08",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Math Testing - Lincoln Hall",
+        "match": "IAR Math Testing - Rutledge Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -10857,7 +10483,7 @@
         "date": "2027-04-08",
         "sport": "District Event",
         "type": "district",
-        "match": "IAR Math Testing - Rutledge Hall",
+        "match": "IAR Math Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11136,25 +10762,14 @@
     "2027-04-30": [
       {
         "date": "2027-04-30",
-        "sport": "District Calendar",
+        "sport": "Half Day",
         "type": "halfday",
-        "match": "AM-Only Student Attendance Day",
+        "match": "Half Day - AM-Only Student Attendance",
         "loc": "",
         "time": "",
-        "note": "",
+        "note": "AM-Only Student Attendance Day",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "AM-Only Student Attendance Day",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "halfday",
-        "cat": "school",
-        "date": "2027-04-30"
       }
     ],
     "2027-05-03": [
@@ -11182,7 +10797,7 @@
       },
       {
         "date": "2027-05-03",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Teacher Institute Day - No School for Students",
         "loc": "",
@@ -11190,17 +10805,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Teacher Institute Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2027-05-03"
       }
     ],
     "2027-05-04": [
@@ -11328,7 +10932,7 @@
         "date": "2027-05-12",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Lincoln Hall",
+        "match": "MAP Testing - Todd Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11339,7 +10943,7 @@
         "date": "2027-05-12",
         "sport": "District Event",
         "type": "district",
-        "match": "MAP Testing - Todd Hall",
+        "match": "MAP Testing - Lincoln Hall",
         "loc": "",
         "time": "",
         "note": "",
@@ -11463,7 +11067,7 @@
     "2027-05-31": [
       {
         "date": "2027-05-31",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Memorial Day - District Closed",
         "loc": "",
@@ -11471,17 +11075,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Memorial Day - No School",
-        "loc": "",
-        "time": "",
-        "note": "",
-        "ref": "",
-        "type": "noschool",
-        "cat": "school",
-        "date": "2027-05-31"
       }
     ],
     "2027-06-08": [
@@ -11543,17 +11136,6 @@
         "note": "",
         "ref": "",
         "cat": "district"
-      },
-      {
-        "sport": "District Calendar",
-        "match": "Last day of school",
-        "loc": "",
-        "time": "",
-        "note": "Pending no emergency days used",
-        "ref": "",
-        "type": "school",
-        "cat": "school",
-        "date": "2027-06-10"
       }
     ],
     "2027-06-11": [
@@ -11578,14 +11160,14 @@
         "note": "If emergency days are used",
         "ref": "",
         "type": "school",
-        "cat": "school",
+        "cat": "district",
         "date": "2027-06-17"
       }
     ],
     "2027-06-18": [
       {
         "date": "2027-06-18",
-        "sport": "District Calendar",
+        "sport": "No School",
         "type": "noschool",
         "match": "Juneteenth - District Closed",
         "loc": "",
