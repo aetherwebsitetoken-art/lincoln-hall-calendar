@@ -37,7 +37,7 @@ jobs:
           git config user.email "schedule-bot@users.noreply.github.com"
           # index.html is included because the scraper refreshes the page's
           # built-in "saved schedule" and its live-data URL on every run.
-          git add events.json index.html
+          git add events.json index.html academic_calendar.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes"
@@ -69,4 +69,3 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           projectId: "${{ vars.FIREBASE_PROJECT_ID }}"
           channelId: live
-
