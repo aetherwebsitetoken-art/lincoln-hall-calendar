@@ -654,6 +654,75 @@ def games_from_html(league, diag):
     return events
 
 
+# --- De-duplication ---------------------------------------------------------
+
+STATUS_TYPES = ("noschool", "halfday")
+STATUS_LABELS = {"noschool": "No School", "halfday": "Half Day"}
+HALFDAY_TITLE = "Half Day - AM-Only Student Attendance"
+
+
+def _norm_title(s):
+    """Letters and digits only, so dash/spacing/case differences don't matter."""
+    return re.sub(r'[^a-z0-9]+', '', (s or "").lower())
+
+
+def dedupe(events):
+    """Collapse duplicates that arrive from more than one source.
+
+    Rules, in order:
+      1. Same date + same title (ignoring punctuation/case) -> one event,
+         regardless of which category each source assigned.
+      2. At most ONE no-school entry and ONE half-day entry per date, even if
+         the sources word them differently ("Labor Day - District Closed" vs
+         "Labor Day - No School"). The more specific title is kept.
+      3. Within district events on the same date, a title fully contained in
+         another ("Columbus Day" inside "Columbus Day - No School") is the
+         same event and is dropped in favour of the fuller one.
+    When copies collide, a timed version beats an all-day one.
+    """
+    def key(ev):
+        if ev.get("type") in STATUS_TYPES:
+            return (ev["date"], "status", ev["type"])
+        return (ev["date"], _norm_title(ev.get("match")))
+
+    def better(new, cur):
+        if ev_is_status(new):
+            return len(new.get("match") or "") > len(cur.get("match") or "")
+        return bool(new.get("time")) and not cur.get("time")
+
+    def ev_is_status(ev):
+        return ev.get("type") in STATUS_TYPES
+
+    best, order = {}, []
+    for ev in sorted(events, key=lambda e: (e["date"], e.get("time", "") == "", e.get("time", ""))):
+        k = key(ev)
+        if k not in best:
+            best[k] = ev
+            order.append(k)
+        elif better(ev, best[k]):
+            best[k] = ev
+
+    kept = [best[k] for k in order]
+
+    # Rule 3: drop district titles swallowed by a fuller one on the same day.
+    by_day = {}
+    for ev in kept:
+        by_day.setdefault(ev["date"], []).append(ev)
+    result = []
+    for day, evs in by_day.items():
+        district = [e for e in evs if e.get("cat") == "district"]
+        for ev in evs:
+            if ev.get("cat") == "district":
+                me = _norm_title(ev.get("match"))
+                if len(me) >= 5 and any(
+                        other is not ev and me != _norm_title(other.get("match"))
+                        and me in _norm_title(other.get("match"))
+                        for other in district):
+                    continue
+            result.append({k: v for k, v in ev.items() if not k.startswith("_")})
+    return sorted(result, key=lambda e: (e["date"], e.get("time", "") == "", e.get("time", "")))
+
+
 # --- Keeping index.html in sync -------------------------------------------
 #
 # The calendar page carries two things the scraper can fill in automatically,
@@ -773,24 +842,28 @@ def main():
     # Deduplicate: same date, sport and title from any source. The district
     # feed and the PDF calendar overlap on things like holidays, so this
     # keeps one copy rather than showing each twice.
-    def dedup_key(ev):
-        # Compare on letters/digits only, so "Labor Day - District Closed"
-        # and "Labor Day – District Closed" (en dash) count as one event.
-        title = re.sub(r'[^a-z0-9]+', '', (ev.get("match") or "").lower())
-        return (ev["date"], ev.get("cat", ""), title)
+    # --- Normalise school-status entries -----------------------------------
+    # Half days and no-school days arrive from two sources (the live feed and
+    # the PDF calendar file) that may disagree on category or wording. Settle
+    # them to one consistent form BEFORE de-duplicating, and give half days a
+    # title that actually says "Half Day".
+    for ev in all_events:
+        t = ev.get("type")
+        # Only two categories exist now. Anything else (e.g. the retired
+        # "school" category from an older academic_calendar.json) is
+        # district-side, not athletics.
+        if ev.get("cat") not in ("sports", "district"):
+            ev["cat"] = "district"
+        if t in STATUS_TYPES:
+            ev["cat"] = "district"
+            ev["sport"] = STATUS_LABELS[t]
+        if t == "halfday":
+            original = (ev.get("match") or "").strip()
+            ev["match"] = HALFDAY_TITLE
+            if original and _norm_title(original) != _norm_title(HALFDAY_TITLE):
+                ev["note"] = ev.get("note") or original
 
-    # Sort so timed events come before all-day ones within a date, and the
-    # richer source wins when two copies of the same event collide.
-    def sort_key(e):
-        return (e["date"], e.get("time", "") == "", e.get("time", ""))
-
-    unique, seen = [], set()
-    for ev in sorted(all_events, key=sort_key):
-        k = dedup_key(ev)
-        if k in seen:
-            continue
-        seen.add(k)
-        unique.append({kk: vv for kk, vv in ev.items() if not kk.startswith("_")})
+    unique = dedupe(all_events)
 
     by_date = {}
     for ev in unique:
