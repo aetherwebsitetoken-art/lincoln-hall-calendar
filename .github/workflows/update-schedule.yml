@@ -31,13 +31,18 @@ jobs:
         run: python3 scrape_schedule.py
 
       - name: Commit updated schedule (if it changed)
+        # Runs even if the fetch step failed: the fetcher still refreshes
+        # index.html from the last good data, and that should be saved.
+        # (If nothing changed, nothing is committed.)
+        if: success() || failure()
         id: commit
         run: |
           git config user.name "schedule-bot"
           git config user.email "schedule-bot@users.noreply.github.com"
-          # index.html is included because the scraper refreshes the page's
-          # built-in "saved schedule" and its live-data URL on every run.
-          git add events.json index.html academic_calendar.json
+          # embed.html is the paste-ready page for Google Sites. The scraper
+          # builds it from the index.html template each run; index.html
+          # itself is never modified by the bot.
+          git add events.json embed.html academic_calendar.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes"
@@ -56,7 +61,7 @@ jobs:
         run: |
           REPO="${GITHUB_REPOSITORY}"
           curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/events.json" || true
-          curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/index.html" || true
+          curl -s "https://purge.jsdelivr.net/gh/${REPO}@main/embed.html" || true
 
       - name: Deploy to Firebase Hosting
         # OFF by default -- this step only runs once you've set the
@@ -69,4 +74,3 @@ jobs:
           firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
           projectId: "${{ vars.FIREBASE_PROJECT_ID }}"
           channelId: live
-
