@@ -736,7 +736,12 @@ def dedupe(events):
 #      complete (including sports added since, like basketball) rather than
 #      a stale hand-written snapshot.
 
-INDEX_FILE = "index.html"
+# index.html is the TEMPLATE (the design). embed.html is what goes into
+# Google Sites. Only this script writes embed.html, so the copy that gets
+# pasted is always filled in -- uploading a new template can never leave
+# Google Sites showing stale or saved-only data.
+TEMPLATE_FILE = "index.html"
+EMBED_FILE = "embed.html"
 URL_REGION_RE = re.compile(r'(/\*URL_START\*/).*?(/\*URL_END\*/)', re.DOTALL)
 FALLBACK_REGION_RE = re.compile(r'(/\*FALLBACK_START\*/).*?(/\*FALLBACK_END\*/)', re.DOTALL)
 
@@ -751,14 +756,14 @@ def build_fallback(by_date):
     return {d: evs for d, evs in sorted(by_date.items()) if d >= cutoff}
 
 
-def update_index_html(by_date):
-    """Write the fresh schedule and the live data URL into index.html."""
-    if not os.path.exists(INDEX_FILE):
-        print(f"(no {INDEX_FILE} beside the script -- skipping page sync)")
+def build_embed(by_date):
+    """Write embed.html: the template with the live-data link and a saved
+    copy of the schedule filled in. The template itself is never modified."""
+    if not os.path.exists(TEMPLATE_FILE):
+        print(f"(no {TEMPLATE_FILE} beside the script -- can't build {EMBED_FILE})")
         return
 
-    html = open(INDEX_FILE, encoding="utf-8").read()
-    original = html
+    html = open(TEMPLATE_FILE, encoding="utf-8").read()
     notes = []
 
     repo = os.environ.get("GITHUB_REPOSITORY", "").strip()
@@ -766,28 +771,28 @@ def update_index_html(by_date):
         live_url = f"https://cdn.jsdelivr.net/gh/{repo}@main/events.json"
         html = URL_REGION_RE.sub(
             lambda m: f"{m.group(1)}'{live_url}'{m.group(2)}", html, count=1)
-        notes.append(f"data URL -> {live_url}")
+        notes.append(f"live link -> {live_url}")
     elif not repo:
-        notes.append("data URL left alone (not running in GitHub Actions)")
+        notes.append("live link left as-is (not running in GitHub Actions)")
 
     if FALLBACK_REGION_RE.search(html):
         fallback = build_fallback(by_date)
-        payload = json.dumps(fallback, indent=2, sort_keys=True)
         # json.dumps output is valid JS object syntax, so it can be dropped
         # straight in. Escape any "</" so it can't terminate the <script> tag.
-        payload = payload.replace("</", "<\\/")
+        payload = json.dumps(fallback, indent=2, sort_keys=True).replace("</", "<\\/")
         html = FALLBACK_REGION_RE.sub(
             lambda m: f"{m.group(1)}{payload}{m.group(2)}", html, count=1)
-        notes.append(f"saved schedule -> {len(fallback)} dates")
+        notes.append(f"saved copy -> {len(fallback)} dates")
     else:
-        notes.append("WARNING: no FALLBACK markers found in index.html")
+        notes.append(f"WARNING: no saved-copy markers found in {TEMPLATE_FILE}")
 
-    if html != original:
-        with open(INDEX_FILE, "w", encoding="utf-8") as f:
+    before = open(EMBED_FILE, encoding="utf-8").read() if os.path.exists(EMBED_FILE) else None
+    if html != before:
+        with open(EMBED_FILE, "w", encoding="utf-8") as f:
             f.write(html)
-        print("Updated index.html: " + "; ".join(notes))
+        print(f"Wrote {EMBED_FILE}: " + "; ".join(notes))
     else:
-        print("index.html unchanged: " + "; ".join(notes))
+        print(f"{EMBED_FILE} unchanged: " + "; ".join(notes))
 
 
 # --- Main -----------------------------------------------------------------
@@ -950,12 +955,12 @@ def main():
         print("\nERROR: no events found at all.", file=sys.stderr)
         if os.path.exists("events.json"):
             print("Keeping the existing events.json rather than emptying it.", file=sys.stderr)
-            # Still fill in index.html from the last good schedule, so a
-            # freshly uploaded page isn't left blank by one failed run.
+            # Still rebuild embed.html from the last good schedule, so a
+            # failed run never leaves Google Sites without a working page.
             try:
-                update_index_html(json.load(open("events.json")).get("events", {}))
+                build_embed(json.load(open("events.json")).get("events", {}))
             except Exception as e:
-                print(f"Could not refresh index.html from events.json: {e}", file=sys.stderr)
+                print(f"Could not build {EMBED_FILE} from events.json: {e}", file=sys.stderr)
             sys.exit(1)
 
     with open("events.json", "w") as f:
@@ -966,7 +971,7 @@ def main():
         }, f, indent=2)
     print("\nWrote events.json")
 
-    update_index_html(by_date)
+    build_embed(by_date)
 
 
 if __name__ == "__main__":
