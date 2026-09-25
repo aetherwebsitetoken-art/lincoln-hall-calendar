@@ -97,16 +97,6 @@
   .chip.on.district{background:var(--panel-2);border-color:var(--muted);color:var(--ink);
     box-shadow:0 3px 0 var(--bg)}
 
-  /* Stat pills — fill the header with facts instead of empty space */
-  .top-row{padding-bottom:0}
-  .statpills{display:flex;gap:6px;flex-wrap:wrap;flex:1;min-width:0}
-  .spill{display:inline-flex;align-items:baseline;gap:6px;background:var(--panel);
-    border:1px solid var(--line);border-radius:7px;padding:5px 10px;
-    animation:slideUpIn .34s var(--ease) backwards}
-  .spill b{font-size:14px;font-weight:800;letter-spacing:-.3px;font-variant-numeric:tabular-nums}
-  .spill span{font-size:10.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted)}
-  .spill.hot b{color:var(--red)}
-
   /* "Next up" as a real card with a red edge, like the quiz question card */
   .hero-row{align-items:stretch;gap:9px;padding-top:7px;padding-bottom:9px}
   .next{position:relative;display:flex;flex-direction:column;justify-content:center;gap:1px;flex:1;min-width:0;
@@ -123,30 +113,14 @@
     color:var(--ink);white-space:nowrap}
   .next .cd b{color:var(--red);font-weight:800}
 
-  /* Month timeline with a marker for today, like the quiz progress timeline */
-  .timeline{flex:0 0 clamp(200px,26vw,330px);background:var(--panel);border:1px solid var(--line);
-    border-radius:8px;padding:8px 13px;display:flex;flex-direction:column;justify-content:center;
-    animation:rise .35s var(--ease) .05s both}
-  .tl-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:7px}
-  .tl-top .t{font-size:10.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
-  .tl-top .v{font-size:11.5px;font-weight:700;color:var(--ink)}
-  .tl-track{position:relative;height:8px;background:var(--panel-2);border:1px solid var(--line);
-    border-radius:5px;overflow:visible}
-  .tl-fill{position:absolute;left:0;top:0;bottom:0;background:var(--red);border-radius:4px 0 0 4px;
-    transition:width .5s var(--ease)}
-  .tl-mark{position:absolute;top:50%;width:11px;height:11px;margin:-6px 0 0 -5px;background:var(--ink);
-    border:2px solid var(--red);border-radius:3px;transition:left .5s var(--ease)}
-  .tl-days{display:none}
-  .tl-dots{display:flex;gap:3px;margin-top:7px}
-  .tl-dots i{flex:1;height:4px;border-radius:2px;background:var(--panel-2)}
-  .tl-dots i.has{background:var(--muted)}
-  .tl-dots i.today{background:var(--red)}
 
   main{flex:1;min-height:0;width:100%;position:relative}
   .panel{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;
     transition:opacity .32s var(--ease),transform .32s var(--ease)}
-  #pMonth{transform:translateX(-22px)}
-  #pAgenda{transform:translateX(22px)}
+  /* Offsets apply only while a panel is hidden -- scoped with :not(.on) so
+     the active panel is never shifted off-screen. */
+  #pMonth:not(.on){transform:translateX(-22px)}
+  #pAgenda:not(.on){transform:translateX(22px)}
   .panel.on{opacity:1;pointer-events:auto;transform:none}
   .wrap{max-width:1600px;margin:0 auto;width:100%;height:100%;display:flex;flex-direction:column}
 
@@ -156,7 +130,7 @@
   .dow div{text-align:center;font-size:11px;font-weight:700;color:var(--muted);
     text-transform:uppercase;letter-spacing:1.1px}
   .grid{display:grid;grid-template-columns:minmax(0,.62fr) repeat(5,minmax(0,1fr)) minmax(0,.62fr);
-    grid-auto-rows:minmax(96px,1fr);gap:7px;flex:1;overflow-y:auto;padding:0 12px 14px}
+    grid-auto-rows:minmax(0,1fr);gap:7px;flex:1;min-height:0;overflow:hidden;padding:0 12px 12px}
   .cell{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;
     overflow:hidden;display:flex;flex-direction:column;position:relative;
     transition:transform .18s var(--ease),background .18s,border-color .18s;
@@ -181,7 +155,8 @@
   .dots i{width:8px;height:8px;border-radius:2px;background:var(--c)}
 
   /* ---------- Agenda ---------- */
-  .agenda{flex:1;overflow-y:auto;padding:16px 16px 48px}
+  .agenda{flex:1;min-height:0;overflow:hidden;padding:14px 16px 8px}
+  .agenda-more{margin:4px 0 0;font-size:11.5px;font-weight:700;color:var(--muted);text-align:center}
   .grp{margin-bottom:20px}
   .grp.past{opacity:.5}
   .grp h3{font-size:13px;font-weight:700;margin:0 0 9px;padding-bottom:7px;
@@ -246,17 +221,8 @@
   }
 
   @media (max-width:640px){
-    /* Pills in a tidy grid, and the hero card gets the full width with the
-       timeline underneath instead of being squeezed beside it. */
-    .statpills{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:5px;width:100%}
-    .spill{justify-content:center;padding:6px 8px}
-    .spill b{font-size:13px}
-    .spill span{font-size:9.5px;letter-spacing:.8px}
-    .top-row{flex-direction:column;align-items:stretch;gap:7px}
-    .statpills{width:auto}
     .chips{width:100%}
     .hero-row{flex-direction:column;gap:7px}
-    .timeline{flex:auto;width:100%}
     .next{padding-right:13px}
     .next .cd{position:static;transform:none;margin-top:5px;align-self:flex-start}
     .next .m{white-space:normal}
@@ -277,11 +243,11 @@
     .next .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
     .chip{padding:7px 11px}
     .dow{padding:8px 8px 5px}
-    .grid{grid-auto-rows:minmax(66px,1fr);gap:5px;padding:0 8px 12px}
+    .grid{grid-auto-rows:minmax(0,1fr);gap:5px;padding:0 8px 10px}
     .cell{padding:6px;border-radius:7px}
     .pill,.more{display:none}
     .dots{display:flex;gap:4px}
-    .agenda{padding:14px 12px 40px}
+    .agenda{padding:12px 12px 8px}
   }
   @media (min-width:641px){.dots{display:none}}
   @media (max-height:500px) and (orientation:landscape){
@@ -291,7 +257,7 @@
     .strip-in{padding:6px 14px}
     .next .d{display:none}
     .dow{padding:6px 10px 4px}
-    .grid{grid-auto-rows:minmax(84px,1fr)}
+    .grid{grid-auto-rows:minmax(0,1fr)}
   }
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -321,13 +287,9 @@
   </header>
 
   <section class="strip">
-    <div class="strip-in top-row">
-      <div class="statpills" id="statPills"></div>
-      <div class="chips" id="chips"></div>
-    </div>
     <div class="strip-in hero-row">
       <div class="next" id="next-up"><span class="lab">Loading schedule…</span></div>
-      <div class="timeline" id="timeline"></div>
+      <div class="chips" id="chips"></div>
     </div>
   </section>
 
@@ -427,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const $ = id => document.getElementById(id);
   const grid=$('grid'), agenda=$('agenda'), monthEl=$('month'), statusEl=$('status'),
-        statPills=$('statPills'), timeline=$('timeline'),
+
         nextUp=$('next-up'), chips=$('chips'), modal=$('modal'),
         mTitle=$('mTitle'), mBody=$('mBody');
 
@@ -569,12 +531,43 @@ document.addEventListener('DOMContentLoaded', () => {
       agenda.appendChild(g);
     });
 
-    if(!agendaScrolled){
-      agendaScrolled=true;
-      requestAnimationFrame(()=>{
-        const t = divider || agenda.lastElementChild;
-        if(t) agenda.scrollTop = Math.max(0, t.offsetTop-8);
-      });
+    requestAnimationFrame(fitAgenda);
+  }
+
+  // No scrollbar: start at today, keep whole days that fit, and note the rest.
+  function fitAgenda(){
+    if(!agenda.getBoundingClientRect) return;
+    const old=agenda.querySelector('.agenda-more'); if(old) old.remove();
+    const groups=[...agenda.children];
+    groups.forEach(g=>g.style.display='');
+    const divider=agenda.querySelector('.divider');
+    // Drop past days first so today is always visible.
+    let start=divider?groups.indexOf(divider):0;
+    for(let i=0;i<start;i++) groups[i].style.display='none';
+    const fits=()=>agenda.scrollHeight<=agenda.clientHeight+1;
+    let hidden=0;
+    for(let i=groups.length-1;i>start && !fits();i--){
+      if(groups[i].style.display!=='none'){ groups[i].style.display='none'; if(groups[i].classList.contains('grp')) hidden++; }
+    }
+    // If there's room left over, bring back recent past days, nearest first.
+    if(!hidden){
+      while(start>0){
+        groups[start-1].style.display='';
+        if(fits()) start--; else { groups[start-1].style.display='none'; break; }
+      }
+    }
+    if(hidden){
+      const more=document.createElement('p'); more.className='agenda-more';
+      more.textContent=`+ ${hidden} more day${hidden===1?'':'s'} — switch to Month view`;
+      agenda.appendChild(more);
+      // make room for the note itself
+      let guard=0;
+      while(!fits() && guard++<40){
+        for(let i=groups.length-1;i>start;i--){
+          if(groups[i].style.display!=='none'){ groups[i].style.display='none'; hidden++;
+            more.textContent=`+ ${hidden} more day${hidden===1?'':'s'} — switch to Month view`; break; }
+        }
+      }
     }
   }
 
@@ -652,80 +645,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return Math.round((Date.UTC(y2,m2-1,d2)-Date.UTC(y1,m1-1,d1))/86400000);
   }
 
-  // ── Stat pills: what's actually in the month being viewed ──────────
-  function renderStats(){
-    const y=cursor.getFullYear(), mo=cursor.getMonth();
-    const prefix=`${y}-${pad(mo+1)}`;
-    let total=0, sports=0, district=0, daysWith=0;
-    Object.keys(DATA).filter(k=>k.startsWith(prefix)).forEach(k=>{
-      const evs=eventsOn(k); if(!evs.length) return;
-      daysWith++; total+=evs.length;
-      evs.forEach(e=>catOf(e)==='sports'?sports++:district++);
-    });
-    const keys=datesWithEvents(); const nk=keys.find(x=>x>=TODAY);
-    const away=nk?daysBetween(TODAY,nk):null;
-    statPills.innerHTML='';
-    let idx=0;
-    const pill=(n,label,hot)=>{
-      const el=document.createElement('div'); el.className='spill'+(hot?' hot':'');
-      el.style.animationDelay=(idx++*55)+'ms';
-      const b=document.createElement('b');
-      if(typeof n==='number') countUp(b,n); else b.textContent=n;
-      const sp=document.createElement('span'); sp.textContent=label;
-      el.append(b,sp); statPills.appendChild(el);
-    };
-    pill(total, total===1?'event':'events');
-    pill(sports,'sports');
-    pill(district,'district');
-    pill(daysWith, daysWith===1?'day':'days with events');
-    if(away!==null) pill(away===0?'Today':away, away===0?'next event':away===1?'day away':'days away', true);
-  }
-
-  // ── Month timeline: where today sits in the month being viewed ──────
-  function renderTimeline(){
-    const y=cursor.getFullYear(), mo=cursor.getMonth();
-    const days=new Date(y,mo+1,0).getDate();
-    const prefix=`${y}-${pad(mo+1)}`;
-    const isThisMonth = TODAY.startsWith(prefix);
-    const todayNum = isThisMonth ? +TODAY.slice(8,10) : null;
-    const pct = isThisMonth ? ((todayNum-0.5)/days)*100 : 0;
-
-    timeline.innerHTML='';
-    const top=document.createElement('div'); top.className='tl-top';
-    const t=document.createElement('span'); t.className='t'; t.textContent='Month progress';
-    const v=document.createElement('span'); v.className='v';
-    v.textContent = isThisMonth ? `Day ${todayNum} of ${days}` : `${MONTHS[mo].slice(0,3)} 1 – ${days}`;
-    top.append(t,v);
-
-    const track=document.createElement('div'); track.className='tl-track';
-    const fill=document.createElement('i'); fill.className='tl-fill';
-    fill.style.width = reduceMotion ? pct+'%' : '0%';
-    track.appendChild(fill);
-    let mk=null;
-    if(isThisMonth){
-      mk=document.createElement('i'); mk.className='tl-mark';
-      mk.style.left = reduceMotion ? pct+'%' : '0%';
-      track.appendChild(mk);
-    }
-    if(!reduceMotion) requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      fill.style.width=pct+'%'; if(mk) mk.style.left=pct+'%';
-    }));
-    const labs=document.createElement('div'); labs.className='tl-days';
-    const a=document.createElement('span'); a.textContent='1';
-    const b=document.createElement('span'); b.textContent=String(days);
-    labs.append(a,b);
-
-    const dots=document.createElement('div'); dots.className='tl-dots';
-    for(let d=1;d<=days;d++){
-      const k=`${prefix}-${pad(d)}`;
-      const i=document.createElement('i');
-      if(eventsOn(k).length) i.classList.add('has');
-      if(k===TODAY) i.classList.add('today');
-      dots.appendChild(i);
-    }
-    timeline.append(top,track,labs,dots);
-  }
-
   // ── Sport filter chips ─────────────────────────────────────────────
   function renderChips(){
     const all = Object.values(DATA).flat();
@@ -774,9 +693,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   let fitTimer=null;
-  window.addEventListener('resize',()=>{ clearTimeout(fitTimer); fitTimer=setTimeout(fitPills,120); });
+  window.addEventListener('resize',()=>{ clearTimeout(fitTimer);
+    fitTimer=setTimeout(()=>{ fitPills(); fitAgenda(); },120); });
 
-  function renderAll(){ renderChips(); renderMonth(); renderAgenda(); renderNext(); renderStats(); renderTimeline(); }
+  function renderAll(){ renderChips(); renderMonth(); renderAgenda(); renderNext(); }
 
   // ── Modal ──────────────────────────────────────────────────────────
   function openModal(k,evs){
@@ -803,9 +723,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   $('vMonth').addEventListener('click',()=>setView('month'));
   $('vAgenda').addEventListener('click',()=>setView('agenda'));
-  $('prev').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()-1);renderMonth();renderStats();renderTimeline();replay(grid,'nav-prev');});
-  $('next').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()+1);renderMonth();renderStats();renderTimeline();replay(grid,'nav-next');});
-  $('todayBtn').addEventListener('click',()=>{ cursor=new Date(); renderMonth(); renderStats(); renderTimeline(); });
+  $('prev').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()-1);renderMonth();replay(grid,'nav-prev');});
+  $('next').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()+1);renderMonth();replay(grid,'nav-next');});
+  $('todayBtn').addEventListener('click',()=>{ cursor=new Date(); renderMonth();  });
   setView(view);
 
   // Open on the most useful month: the one holding the next upcoming
