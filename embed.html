@@ -35,6 +35,14 @@
     opacity:0;animation:fade .4s var(--ease) forwards}
   @keyframes fade{to{opacity:1}}
   @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @keyframes pop{0%{opacity:0;transform:translateY(10px) scale(.97)}
+                 60%{opacity:1;transform:translateY(-2px) scale(1.005)}
+                 100%{opacity:1;transform:none}}
+  @keyframes inFromRight{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:none}}
+  @keyframes inFromLeft{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
+  @keyframes slideUpIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+  @keyframes pulseRed{0%{box-shadow:0 0 0 0 var(--red)}70%{box-shadow:0 0 0 7px transparent}
+                      100%{box-shadow:0 0 0 0 transparent}}
 
   /* ---------- Header ---------- */
   .top{flex-shrink:0;background:var(--panel);border-bottom:1px solid var(--line)}
@@ -93,7 +101,8 @@
   .top-row{padding-bottom:0}
   .statpills{display:flex;gap:6px;flex-wrap:wrap;flex:1;min-width:0}
   .spill{display:inline-flex;align-items:baseline;gap:6px;background:var(--panel);
-    border:1px solid var(--line);border-radius:7px;padding:5px 10px}
+    border:1px solid var(--line);border-radius:7px;padding:5px 10px;
+    animation:slideUpIn .34s var(--ease) backwards}
   .spill b{font-size:14px;font-weight:800;letter-spacing:-.3px;font-variant-numeric:tabular-nums}
   .spill span{font-size:10.5px;font-weight:700;letter-spacing:1.1px;text-transform:uppercase;color:var(--muted)}
   .spill.hot b{color:var(--red)}
@@ -135,7 +144,9 @@
 
   main{flex:1;min-height:0;width:100%;position:relative}
   .panel{position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;pointer-events:none;
-    transform:translateY(6px);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+    transition:opacity .32s var(--ease),transform .32s var(--ease)}
+  #pMonth{transform:translateX(-22px)}
+  #pAgenda{transform:translateX(22px)}
   .panel.on{opacity:1;pointer-events:auto;transform:none}
   .wrap{max-width:1600px;margin:0 auto;width:100%;height:100%;display:flex;flex-direction:column}
 
@@ -149,10 +160,13 @@
   .cell{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px;
     overflow:hidden;display:flex;flex-direction:column;position:relative;
     transition:transform .18s var(--ease),background .18s,border-color .18s;
-    opacity:0;animation:rise .3s var(--ease) forwards}
+    animation:pop .38s var(--ease) backwards}
   .cell.has{cursor:pointer}
   .cell.pad{background:transparent;border-style:dashed}
   .cell.today{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red)}
+  .cell.today .num{animation:pulseRed 2.6s ease-out .5s 2}
+  .grid.nav-next{animation:inFromRight .34s var(--ease)}
+  .grid.nav-prev{animation:inFromLeft .34s var(--ease)}
   .num{font-size:clamp(12.5px,.85vw,14px);font-weight:700;color:var(--muted);width:24px;height:24px;
     flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:5px;margin-bottom:4px}
   .cell.today .num{background:var(--red);color:var(--ink)}
@@ -177,9 +191,12 @@
   .divider span{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
   .card{display:flex;gap:13px;padding:13px 15px;margin-bottom:8px;background:var(--panel);
     border:1px solid var(--line);border-left:4px solid var(--c);border-radius:8px;
-    opacity:0;transform:translateX(-5px);animation:cardin .3s var(--ease) forwards;
+    animation:cardinPop .4s var(--ease) backwards;
     transition:background .18s,transform .18s}
   @keyframes cardin{to{opacity:1;transform:none}}
+  @keyframes cardinPop{0%{opacity:0;transform:translateX(-14px)}
+                       70%{opacity:1;transform:translateX(2px)}
+                       100%{opacity:1;transform:none}}
   .card .ico{font-size:21px;flex-shrink:0;line-height:1.3}
   .card .bd{flex:1;min-width:0}
   .card .sp{font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.3px}
@@ -204,7 +221,7 @@
   .back.on{display:flex;opacity:1}
   .box{width:100%;max-width:560px;max-height:88vh;display:flex;flex-direction:column;overflow:hidden;
     background:var(--panel);border:1px solid var(--line);border-radius:10px;
-    transform:scale(.96) translateY(8px);opacity:0;
+    transform:scale(.94) translateY(12px);opacity:0;
     transition:transform .26s var(--ease),opacity .26s var(--ease)}
   .back.on .box{transform:none;opacity:1}
   .hd{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 18px;
@@ -971,7 +988,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-16",
       "loc": "",
-      "match": "MAP Testing - Rutledge Hall",
+      "match": "MAP Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -982,7 +999,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-16",
       "loc": "",
-      "match": "MAP Testing - Lincoln Hall",
+      "match": "MAP Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -1039,7 +1056,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-17",
       "loc": "",
-      "match": "MAP Testing - Rutledge Hall",
+      "match": "MAP Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -1050,7 +1067,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-17",
       "loc": "",
-      "match": "MAP Testing - Lincoln Hall",
+      "match": "MAP Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2065,7 +2082,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-12-09",
       "loc": "",
-      "match": "MAP Testing - Rutledge Hall",
+      "match": "MAP Testing - Todd Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2076,7 +2093,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-12-09",
       "loc": "",
-      "match": "MAP Testing - Todd Hall",
+      "match": "MAP Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2994,7 +3011,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-16",
       "loc": "",
-      "match": "IAR ELA Testing - Rutledge Hall",
+      "match": "IAR ELA Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3005,7 +3022,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-16",
       "loc": "",
-      "match": "IAR ELA Testing - Lincoln Hall",
+      "match": "IAR ELA Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3018,7 +3035,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-17",
       "loc": "",
-      "match": "IAR ELA Testing - Rutledge Hall",
+      "match": "IAR ELA Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3029,7 +3046,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-17",
       "loc": "",
-      "match": "IAR ELA Testing - Lincoln Hall",
+      "match": "IAR ELA Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3748,7 +3765,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-05-12",
       "loc": "",
-      "match": "MAP Testing - Lincoln Hall",
+      "match": "MAP Testing - Todd Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3759,7 +3776,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-05-12",
       "loc": "",
-      "match": "MAP Testing - Todd Hall",
+      "match": "MAP Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -4078,7 +4095,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const evs = eventsOn(k);
       const c = document.createElement('div');
       c.className = 'cell' + (evs.length?' has':'') + (k===TODAY?' today':'');
-      c.style.animationDelay = `${Math.min(d,20)*12}ms`;
+      c.style.animationDelay = reduceMotion ? '0ms' : `${Math.min(d,24)*16}ms`;
 
       const num=document.createElement('div'); num.className='num'; num.textContent=d;
       c.appendChild(num);
@@ -4202,6 +4219,28 @@ document.addEventListener('DOMContentLoaded', () => {
     nextUp.appendChild(cd);
   }
 
+  const reduceMotion = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Count a number up to its value -- the same trick the quiz uses on its
+  // score, applied to the stat pills.
+  function countUp(el,to){
+    if(reduceMotion || to<=2){ el.textContent=to; return; }
+    const dur=520, t0=performance.now();
+    (function step(t){
+      const p=Math.min(1,(t-t0)/dur);
+      el.textContent = Math.round(to*(1-Math.pow(1-p,3)));   // ease-out
+      if(p<1) requestAnimationFrame(step); else el.textContent=to;
+    })(t0);
+  }
+
+  // Replay an entrance animation on an element.
+  function replay(el,cls){
+    if(reduceMotion) return;
+    el.classList.remove('nav-next','nav-prev');
+    void el.offsetWidth;
+    el.classList.add(cls);
+  }
+
   function daysBetween(a,b){
     const [y1,m1,d1]=a.split('-').map(Number), [y2,m2,d2]=b.split('-').map(Number);
     return Math.round((Date.UTC(y2,m2-1,d2)-Date.UTC(y1,m1-1,d1))/86400000);
@@ -4220,9 +4259,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const keys=datesWithEvents(); const nk=keys.find(x=>x>=TODAY);
     const away=nk?daysBetween(TODAY,nk):null;
     statPills.innerHTML='';
+    let idx=0;
     const pill=(n,label,hot)=>{
       const el=document.createElement('div'); el.className='spill'+(hot?' hot':'');
-      const b=document.createElement('b'); b.textContent=n;
+      el.style.animationDelay=(idx++*55)+'ms';
+      const b=document.createElement('b');
+      if(typeof n==='number') countUp(b,n); else b.textContent=n;
       const sp=document.createElement('span'); sp.textContent=label;
       el.append(b,sp); statPills.appendChild(el);
     };
@@ -4250,12 +4292,18 @@ document.addEventListener('DOMContentLoaded', () => {
     top.append(t,v);
 
     const track=document.createElement('div'); track.className='tl-track';
-    const fill=document.createElement('i'); fill.className='tl-fill'; fill.style.width=pct+'%';
+    const fill=document.createElement('i'); fill.className='tl-fill';
+    fill.style.width = reduceMotion ? pct+'%' : '0%';
     track.appendChild(fill);
+    let mk=null;
     if(isThisMonth){
-      const mk=document.createElement('i'); mk.className='tl-mark'; mk.style.left=pct+'%';
+      mk=document.createElement('i'); mk.className='tl-mark';
+      mk.style.left = reduceMotion ? pct+'%' : '0%';
       track.appendChild(mk);
     }
+    if(!reduceMotion) requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      fill.style.width=pct+'%'; if(mk) mk.style.left=pct+'%';
+    }));
     const labs=document.createElement('div'); labs.className='tl-days';
     const a=document.createElement('span'); a.textContent='1';
     const b=document.createElement('span'); b.textContent=String(days);
@@ -4349,8 +4397,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   $('vMonth').addEventListener('click',()=>setView('month'));
   $('vAgenda').addEventListener('click',()=>setView('agenda'));
-  $('prev').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()-1);renderMonth();renderStats();renderTimeline();});
-  $('next').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()+1);renderMonth();renderStats();renderTimeline();});
+  $('prev').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()-1);renderMonth();renderStats();renderTimeline();replay(grid,'nav-prev');});
+  $('next').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()+1);renderMonth();renderStats();renderTimeline();replay(grid,'nav-next');});
   $('todayBtn').addEventListener('click',()=>{ cursor=new Date(); renderMonth(); renderStats(); renderTimeline(); });
   setView(view);
 
