@@ -87,9 +87,10 @@
   .next .dot{width:9px;height:9px;border-radius:2px;flex-shrink:0;align-self:center}
   .next .m{font-weight:700;font-size:14px}
   .next .d{font-size:13px;color:var(--muted)}
-  .chips{display:flex;gap:7px;flex-wrap:wrap}
+  .chips{display:flex;flex-direction:column;align-items:flex-start;gap:5px;flex-shrink:0}
   .chip{border:1px solid var(--line);background:var(--panel-2);color:var(--muted);
-    font-size:12px;font-weight:700;padding:7px 13px;border-radius:7px;cursor:pointer;
+    font-size:11px;font-weight:700;padding:5px 10px;border-radius:6px;cursor:pointer;
+    text-align:left;white-space:nowrap;
     box-shadow:0 3px 0 var(--bg);transition:background .15s,color .15s,transform .08s linear,box-shadow .08s linear}
   .chip:active{transform:translateY(2px);box-shadow:0 1px 0 var(--bg)}
   .chip.on{background:var(--red);border-color:var(--red);color:var(--ink);box-shadow:0 3px 0 var(--red-dark)}
@@ -155,8 +156,7 @@
   .dots i{width:8px;height:8px;border-radius:2px;background:var(--c)}
 
   /* ---------- Agenda ---------- */
-  .agenda{flex:1;min-height:0;overflow:hidden;padding:14px 16px 8px}
-  .agenda-more{margin:4px 0 0;font-size:11.5px;font-weight:700;color:var(--muted);text-align:center}
+  .agenda{flex:1;min-height:0;overflow-y:auto;padding:14px 16px 28px}
   .grp{margin-bottom:20px}
   .grp.past{opacity:.5}
   .grp h3{font-size:13px;font-weight:700;margin:0 0 9px;padding-bottom:7px;
@@ -221,7 +221,7 @@
   }
 
   @media (max-width:640px){
-    .chips{width:100%}
+    .chips{width:auto}
     .hero-row{flex-direction:column;gap:7px}
     .next{padding-right:13px}
     .next .cd{position:static;transform:none;margin-top:5px;align-self:flex-start}
@@ -241,13 +241,13 @@
     .next{flex-wrap:nowrap;overflow:hidden}
     .next .d{display:none}
     .next .m{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
-    .chip{padding:7px 11px}
+    .chip{padding:5px 9px;font-size:10.5px}
     .dow{padding:8px 8px 5px}
     .grid{grid-auto-rows:minmax(0,1fr);gap:5px;padding:0 8px 10px}
     .cell{padding:6px;border-radius:7px}
     .pill,.more{display:none}
     .dots{display:flex;gap:4px}
-    .agenda{padding:12px 12px 8px}
+    .agenda{padding:12px 12px 24px}
   }
   @media (min-width:641px){.dots{display:none}}
   @media (max-height:500px) and (orientation:landscape){
@@ -950,7 +950,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-16",
       "loc": "",
-      "match": "MAP Testing - Rutledge Hall",
+      "match": "MAP Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -961,7 +961,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-16",
       "loc": "",
-      "match": "MAP Testing - Lincoln Hall",
+      "match": "MAP Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -1018,7 +1018,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-17",
       "loc": "",
-      "match": "MAP Testing - Rutledge Hall",
+      "match": "MAP Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -1029,7 +1029,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-09-17",
       "loc": "",
-      "match": "MAP Testing - Lincoln Hall",
+      "match": "MAP Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -1987,7 +1987,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-12-08",
       "loc": "",
-      "match": "MAP Testing - Rutledge Hall",
+      "match": "Rutledge Hall PE Night",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -1998,7 +1998,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2026-12-08",
       "loc": "",
-      "match": "Rutledge Hall PE Night",
+      "match": "MAP Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2477,7 +2477,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-01-21",
       "loc": "",
-      "match": "Rutledge Hall Family Reading Night",
+      "match": "Rutledge Hall Art Installation",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2488,7 +2488,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-01-21",
       "loc": "",
-      "match": "Rutledge Hall Art Installation",
+      "match": "Rutledge Hall Family Reading Night",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2973,7 +2973,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-16",
       "loc": "",
-      "match": "IAR ELA Testing - Lincoln Hall",
+      "match": "IAR ELA Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2984,7 +2984,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-16",
       "loc": "",
-      "match": "IAR ELA Testing - Rutledge Hall",
+      "match": "IAR ELA Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -2997,7 +2997,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-17",
       "loc": "",
-      "match": "IAR ELA Testing - Lincoln Hall",
+      "match": "IAR ELA Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3008,7 +3008,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-03-17",
       "loc": "",
-      "match": "IAR ELA Testing - Rutledge Hall",
+      "match": "IAR ELA Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3175,7 +3175,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-04-06",
       "loc": "",
-      "match": "IAR Math Testing - Rutledge Hall",
+      "match": "IAR Math Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3186,7 +3186,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-04-06",
       "loc": "",
-      "match": "IAR Math Testing - Lincoln Hall",
+      "match": "IAR Math Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3221,7 +3221,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-04-07",
       "loc": "",
-      "match": "IAR Math Testing - Rutledge Hall",
+      "match": "IAR Math Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3232,7 +3232,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-04-07",
       "loc": "",
-      "match": "IAR Math Testing - Lincoln Hall",
+      "match": "IAR Math Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3256,7 +3256,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-04-08",
       "loc": "",
-      "match": "IAR Math Testing - Rutledge Hall",
+      "match": "IAR Math Testing - Lincoln Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3267,7 +3267,7 @@ document.addEventListener('DOMContentLoaded', () => {
       "cat": "district",
       "date": "2027-04-08",
       "loc": "",
-      "match": "IAR Math Testing - Lincoln Hall",
+      "match": "IAR Math Testing - Rutledge Hall",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3813,8 +3813,8 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       "cat": "district",
       "date": "2027-05-20",
-      "loc": "Lincoln Hall Gym",
-      "match": "Spring Band Concert",
+      "loc": "",
+      "match": "Finance Committee Meeting",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -3824,8 +3824,8 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       "cat": "district",
       "date": "2027-05-20",
-      "loc": "",
-      "match": "Finance Committee Meeting",
+      "loc": "Lincoln Hall Gym",
+      "match": "Spring Band Concert",
       "note": "",
       "ref": "",
       "sport": "District Event",
@@ -4125,45 +4125,16 @@ document.addEventListener('DOMContentLoaded', () => {
       agenda.appendChild(g);
     });
 
-    requestAnimationFrame(fitAgenda);
+    // Start the list at today rather than at the oldest past event.
+    if(!agendaScrolled){
+      agendaScrolled=true;
+      requestAnimationFrame(()=>{
+        const t=agenda.querySelector('.divider')||agenda.lastElementChild;
+        if(t) agenda.scrollTop=Math.max(0,t.offsetTop-10);
+      });
+    }
   }
 
-  // No scrollbar: start at today, keep whole days that fit, and note the rest.
-  function fitAgenda(){
-    if(!agenda.getBoundingClientRect) return;
-    const old=agenda.querySelector('.agenda-more'); if(old) old.remove();
-    const groups=[...agenda.children];
-    groups.forEach(g=>g.style.display='');
-    const divider=agenda.querySelector('.divider');
-    // Drop past days first so today is always visible.
-    let start=divider?groups.indexOf(divider):0;
-    for(let i=0;i<start;i++) groups[i].style.display='none';
-    const fits=()=>agenda.scrollHeight<=agenda.clientHeight+1;
-    let hidden=0;
-    for(let i=groups.length-1;i>start && !fits();i--){
-      if(groups[i].style.display!=='none'){ groups[i].style.display='none'; if(groups[i].classList.contains('grp')) hidden++; }
-    }
-    // If there's room left over, bring back recent past days, nearest first.
-    if(!hidden){
-      while(start>0){
-        groups[start-1].style.display='';
-        if(fits()) start--; else { groups[start-1].style.display='none'; break; }
-      }
-    }
-    if(hidden){
-      const more=document.createElement('p'); more.className='agenda-more';
-      more.textContent=`+ ${hidden} more day${hidden===1?'':'s'} — switch to Month view`;
-      agenda.appendChild(more);
-      // make room for the note itself
-      let guard=0;
-      while(!fits() && guard++<40){
-        for(let i=groups.length-1;i>start;i--){
-          if(groups[i].style.display!=='none'){ groups[i].style.display='none'; hidden++;
-            more.textContent=`+ ${hidden} more day${hidden===1?'':'s'} — switch to Month view`; break; }
-        }
-      }
-    }
-  }
 
   function emptyState(){
     const d=document.createElement('div'); d.className='empty';
@@ -4288,7 +4259,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   let fitTimer=null;
   window.addEventListener('resize',()=>{ clearTimeout(fitTimer);
-    fitTimer=setTimeout(()=>{ fitPills(); fitAgenda(); },120); });
+    fitTimer=setTimeout(fitPills,120); });
 
   function renderAll(){ renderChips(); renderMonth(); renderAgenda(); renderNext(); }
 
