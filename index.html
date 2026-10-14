@@ -259,9 +259,106 @@
     .dow{padding:6px 10px 4px}
     .grid{grid-auto-rows:minmax(0,1fr)}
   }
+  /* ══════════════════════════════════════════════════════════════════
+     THEME — softer corners, warmer light, springier motion.
+     Shared with the lunch menu, countdowns and weather so the whole set
+     of embeds reads as one thing.
+     ══════════════════════════════════════════════════════════════════ */
+  :root{
+    --spring:cubic-bezier(.34,1.56,.64,1);
+    --red-glow:rgba(212,42,60,.34);
+    --green:#3fa860; --gold:#d9a52b; --blue:#3f7fd6;
+    --r-lg:16px; --r-md:11px; --r-sm:8px;
+  }
+
+  /* Ambient light. A red bloom at the top, a cool one low and opposite,
+     and hairline rules for texture. The drift is a transform on one fixed
+     layer, so it stays on the compositor and costs no layout. */
+  body::before{content:'';position:fixed;inset:-30%;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(640px 440px at 24% 8%,rgba(212,42,60,.14),transparent 70%),
+      radial-gradient(540px 440px at 84% 88%,rgba(63,127,214,.06),transparent 70%);
+    animation:drift 34s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(2.5%,-2%,0)}}
+  body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:repeating-linear-gradient(0deg,transparent 0 46px,rgba(255,255,255,.012) 46px 47px)}
+  .top,.strip{background-color:rgba(37,37,42,.86)}
+  .strip{background-color:rgba(28,28,31,.72)}
+
+  /* Brand mark: solid gradient tile with a soft red halo. */
+  .mark{border-radius:10px;border-color:transparent;position:relative;overflow:hidden;
+    background:linear-gradient(145deg,var(--red),var(--red-dark));
+    box-shadow:0 4px 14px var(--red-glow);
+    transition:transform .35s var(--spring)}
+  .mark::after{content:'';position:absolute;inset:0;   /* keeps the old stripes */
+    background:repeating-linear-gradient(135deg,rgba(255,255,255,.16) 0 6px,transparent 6px 12px)}
+  .brand:hover .mark{transform:rotate(-8deg) scale(1.08)}
+
+  /* Controls: rounder, with a spring on press and a lift on hover. */
+  .nav button.arrow,.today-btn,.chip{border-radius:var(--r-md);
+    transition:background .18s,color .18s,border-color .18s,
+               transform .22s var(--spring),box-shadow .18s}
+  .nav button.arrow:active,.today-btn:active,.chip:active{transform:translateY(2px) scale(.96)}
+  @media (hover:hover){
+    .nav button.arrow:hover,.today-btn:hover{background:var(--line);border-color:#55555e}
+    .chip:not(.on):hover{color:var(--ink);border-color:#55555e}
+  }
+
+  /* Month / Agenda switch, with a thumb that slides between them. */
+  .views{position:relative;border-radius:var(--r-md);overflow:hidden}
+  .views .thumb{position:absolute;top:3px;left:0;height:calc(100% - 6px);width:0;
+    border-radius:var(--r-sm);background:var(--red);box-shadow:0 2px 10px var(--red-glow);
+    transition:transform .42s var(--spring),width .42s var(--spring);z-index:0}
+  .views .thumb.init{transition:none}
+  .views button{position:relative;z-index:1;border-radius:var(--r-sm)}
+  .views button.on{background:transparent;box-shadow:none;color:var(--ink)}
+
+  /* "Next up" hero: rounder, with a glow in the corner and a slow sheen. */
+  .next{border-radius:var(--r-lg);overflow:hidden;
+    background:linear-gradient(150deg,#2a2a30,#232328 62%)}
+  .next::after{content:'';position:absolute;right:-70px;top:-90px;width:260px;height:260px;
+    border-radius:50%;pointer-events:none;
+    background:radial-gradient(circle,var(--red-glow),transparent 65%)}
+  .next::before{content:'';position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.07) 50%,transparent 65%);
+    transform:translateX(-120%);animation:sheen 7s ease-in-out 1.4s infinite}
+  @keyframes sheen{0%,62%{transform:translateX(-120%)}88%,100%{transform:translateX(120%)}}
+  .next .cd{border-radius:999px}
+
+  /* A live dot next to the status line: green and breathing when the
+     schedule came down fresh, flat grey when it's the saved copy. */
+  .status::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;
+    background:var(--muted);margin-right:5px;vertical-align:1px}
+  .status.live::before{background:var(--green);animation:livePulse 2.4s ease-out infinite}
+  @keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(63,168,96,.55)}
+                       70%{box-shadow:0 0 0 6px rgba(63,168,96,0)}
+                       100%{box-shadow:0 0 0 0 rgba(63,168,96,0)}}
+
+  /* Day cells and agenda cards. */
+  .cell{border-radius:var(--r-md);
+    transition:transform .22s var(--spring),background .18s,border-color .18s,box-shadow .22s}
+  .cell.today{box-shadow:inset 0 0 0 1px var(--red),0 0 18px -6px var(--red-glow)}
+  @media (hover:hover){
+    .cell.has:hover{transform:translateY(-3px);border-color:#55555e;
+      box-shadow:0 12px 26px rgba(0,0,0,.34)}
+  }
+  .pill{border-radius:6px}
+  .num{border-radius:7px}
+  .dots i{border-radius:3px}
+  .card{border-radius:var(--r-md);transition:transform .22s var(--spring),background .18s,box-shadow .22s}
+  @media (hover:hover){
+    .card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+  }
+
+  /* Modal: rounder, and it springs in rather than sliding. */
+  .modal .box,.modal .mbox,.modal > div{border-radius:var(--r-lg)}
+  .modal.on .box,.modal.on .mbox{transition:transform .4s var(--spring),opacity .26s}
+
   @media (prefers-reduced-motion:reduce){
     *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
     .page,.cell,.card{opacity:1!important;transform:none!important}
+    body::before{animation:none}
+    .next::before{display:none}
   }
 </style>
 </head>
@@ -446,17 +543,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Month grid ─────────────────────────────────────────────────────
+  // Months already built are kept, because people page back and forth through
+  // the same few. Re-inserting finished cells skips rebuilding ~250 nodes, so
+  // a revisit is near-instant. Cleared whenever the data or a filter changes.
+  const monthCache = new Map();
+
   function renderMonth(){
     const y = cursor.getFullYear(), mo = cursor.getMonth();
     monthEl.textContent = `${MONTHS[mo]} ${y}`;
     monthEl.classList.remove('flip'); void monthEl.offsetWidth; monthEl.classList.add('flip');
 
-    grid.innerHTML = '';
+    const ck = `${y}-${mo}`;
+    const hit = monthCache.get(ck);
+    if(hit){
+      grid.replaceChildren(...hit);
+      requestAnimationFrame(fitPills);
+      return;
+    }
+
+    // Built off-screen in a fragment and swapped in once, so the browser
+    // styles and lays out the month a single time instead of 35 times.
+    const frag = document.createDocumentFragment();
     const first = new Date(y,mo,1).getDay();
     const days  = new Date(y,mo+1,0).getDate();
 
     for(let i=0;i<first;i++){
-      const c=document.createElement('div'); c.className='cell pad'; grid.appendChild(c);
+      const c=document.createElement('div'); c.className='cell pad'; frag.appendChild(c);
     }
     for(let d=1; d<=days; d++){
       const k = `${y}-${pad(mo+1)}-${pad(d)}`;
@@ -507,29 +619,37 @@ document.addEventListener('DOMContentLoaded', () => {
         c.appendChild(dots);
         c.addEventListener('click',()=>openModal(k,evs));
       }
-      grid.appendChild(c);
+      frag.appendChild(c);
     }
+    // Capped: paging a long way ahead shouldn't pile up months nobody is
+    // going back to.
+    if(monthCache.size>=8) monthCache.delete(monthCache.keys().next().value);
+    monthCache.set(ck, [...frag.childNodes]);
+    grid.replaceChildren(frag);
     requestAnimationFrame(fitPills);
   }
 
   // ── Agenda ─────────────────────────────────────────────────────────
   function renderAgenda(){
-    agenda.innerHTML='';
     const keys = datesWithEvents();
-    if(!keys.length){ agenda.appendChild(emptyState()); return; }
+    if(!keys.length){ agenda.replaceChildren(emptyState()); return; }
 
+    // Whole list assembled off-screen, then swapped in with one write --
+    // a season's worth of cards is a lot of DOM to add one node at a time.
+    const frag = document.createDocumentFragment();
     let placed=false, divider=null, n=0;
     keys.forEach(k=>{
       if(!placed && k>=TODAY){
         divider=document.createElement('div'); divider.className='divider';
-        divider.innerHTML='<span>Today</span>'; agenda.appendChild(divider); placed=true;
+        divider.innerHTML='<span>Today</span>'; frag.appendChild(divider); placed=true;
       }
       const g=document.createElement('div');
       g.className='grp'+(k<TODAY?' past':'');
       const h=document.createElement('h3'); h.textContent=longDate(k); g.appendChild(h);
       eventsOn(k).forEach(ev=>{ g.appendChild(card(ev,n)); n++; });
-      agenda.appendChild(g);
+      frag.appendChild(g);
     });
+    agenda.replaceChildren(frag);
 
     // Start the list at today rather than at the oldest past event.
     if(!agendaScrolled){
@@ -642,32 +762,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Trim each day's event pills to the ones that fit, and add "+N more".
+  //
+  // This used to hide one pill, re-measure, hide another, re-measure -- every
+  // measurement after a style change forces the browser to lay the whole grid
+  // out again, so a single month change cost ~70 full layouts and the arrows
+  // felt sluggish on a slow machine. The work is the same; the order is what
+  // matters. Clear, then read EVERYTHING, then write everything -- the reads
+  // cost one layout between them because nothing changes in the middle.
   function fitPills(){
-    grid.querySelectorAll('.cell.has').forEach(cell=>{
-      const box=cell.querySelector('.pills'); if(!box||!box.getBoundingClientRect) return;
-      const pills=[...box.querySelectorAll('.pill')];
+    const cells=[...grid.querySelectorAll('.cell.has')];
+    if(!cells.length) return;
+
+    // -- write: reset to the full set, and park a probe to size "+N more".
+    const boxes=[];
+    cells.forEach(cell=>{
+      const box=cell.querySelector('.pills'); if(!box) return;
       const old=box.querySelector('.more'); if(old) old.remove();
+      const pills=[...box.querySelectorAll('.pill')];
       pills.forEach(p=>p.style.display='');
-      if(!pills.length || getComputedStyle(pills[0]).display==='none') return; // phones use dots
-      const limit=box.getBoundingClientRect().bottom+0.5;
-      if(pills[pills.length-1].getBoundingClientRect().bottom<=limit) return;   // all fit
-      const more=document.createElement('div'); more.className='more'; box.appendChild(more);
-      let shown=pills.length;
-      const update=()=>{ more.textContent=`+${pills.length-shown} more`; };
-      update();
-      while(shown>0 && more.getBoundingClientRect().bottom>limit){
-        pills[--shown].style.display='none'; update();
+      if(pills.length) boxes.push({box,pills});
+    });
+    if(!boxes.length) return;
+    const probe=document.createElement('div');
+    probe.className='more'; probe.textContent='+8 more';
+    boxes[0].box.appendChild(probe);
+
+    // -- read: no writes in here, so the browser lays out once for the lot.
+    const gap=parseFloat(getComputedStyle(boxes[0].box).rowGap)||3;
+    const moreH=probe.offsetHeight||14;
+    boxes.forEach(b=>{
+      b.boxH=b.box.clientHeight;
+      b.hs=b.pills.map(p=>p.offsetHeight);
+    });
+
+    // -- compute: plain arithmetic, nothing touches the DOM.
+    probe.remove();
+    boxes.forEach(b=>{
+      if(!b.boxH || !b.hs[0]){ b.show=b.pills.length; return; }   // phones show dots
+      let used=0, fits=0;
+      for(let i=0;i<b.hs.length;i++){
+        const next=used+(i?gap:0)+b.hs[i];
+        if(next>b.boxH) break;
+        used=next; fits++;
       }
-      // A single event that still doesn't fit is better shown clipped than
-      // replaced entirely by "+1 more".
-      if(shown===0){ pills[0].style.display=''; more.remove(); }
+      if(fits>=b.pills.length){ b.show=fits; return; }            // all of them fit
+      // One slot has to pay for the "+N more" line.
+      while(fits>1 && used+gap+moreH>b.boxH) used-=b.hs[--fits]+gap;
+      // A lone event is better clipped than replaced by "+1 more".
+      b.show=Math.max(1,fits);
+      b.hidden=b.pills.length-b.show;
+    });
+
+    // -- write: all the changes at once.
+    boxes.forEach(b=>{
+      for(let i=b.show;i<b.pills.length;i++) b.pills[i].style.display='none';
+      if(b.hidden>0){
+        const more=document.createElement('div');
+        more.className='more'; more.textContent=`+${b.hidden} more`;
+        b.box.appendChild(more);
+      }
     });
   }
   let fitTimer=null;
   window.addEventListener('resize',()=>{ clearTimeout(fitTimer);
     fitTimer=setTimeout(fitPills,120); });
 
-  function renderAll(){ renderChips(); renderMonth(); renderAgenda(); renderNext(); }
+  // New data or a changed filter invalidates every built month.
+  function renderAll(){ monthCache.clear(); renderChips(); renderMonth(); renderAgenda(); renderNext(); }
 
   // ── Modal ──────────────────────────────────────────────────────────
   function openModal(k,evs){
@@ -691,7 +853,26 @@ document.addEventListener('DOMContentLoaded', () => {
     $('vAgenda').classList.toggle('on',!isM);
     $('vMonth').setAttribute('aria-selected',String(isM));
     $('vAgenda').setAttribute('aria-selected',String(!isM));
+    moveThumb();
   }
+
+  // The red block behind the active view slides across instead of blinking
+  // from one button to the other.
+  const viewsEl=document.querySelector('.views');
+  const thumb=document.createElement('i');
+  thumb.className='thumb init';
+  if(viewsEl) viewsEl.insertBefore(thumb,viewsEl.firstChild);
+  function moveThumb(){
+    if(!viewsEl) return;
+    const on=viewsEl.querySelector('button.on'); if(!on) return;
+    thumb.style.width=on.offsetWidth+'px';
+    thumb.style.transform=`translateX(${on.offsetLeft}px)`;
+  }
+  // The first placement must not animate in from the left edge.
+  requestAnimationFrame(()=>{ moveThumb();
+    requestAnimationFrame(()=>thumb.classList.remove('init')); });
+  window.addEventListener('resize',()=>{ clearTimeout(thumb._t);
+    thumb._t=setTimeout(moveThumb,120); });
   $('vMonth').addEventListener('click',()=>setView('month'));
   $('vAgenda').addEventListener('click',()=>setView('agenda'));
   $('prev').addEventListener('click',()=>{cursor.setMonth(cursor.getMonth()-1);renderMonth();replay(grid,'nav-prev');});
@@ -728,12 +909,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if(count === 0) throw new Error('feed contained no dates');
       DATA = evs;
       const when = fmtWhen(data.generated_at);
+      statusEl.classList.add('live');          // breathing green dot
       statusEl.textContent = when ? `Updated ${when}` : 'Live schedule';
       statusEl.title = 'Loaded live from ' + EVENTS_JSON_URL;
     }catch(err){
       console.warn('Live schedule unavailable, using saved copy:', err);
       DATA = FALLBACK;
       const n = Object.keys(FALLBACK).length;
+      statusEl.classList.remove('live');
       statusEl.textContent = n ? 'Saved schedule' : 'Schedule unavailable';
       // Hovering the status shows the actual reason, which makes this
       // diagnosable without opening the browser console.
