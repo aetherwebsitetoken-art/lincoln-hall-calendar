@@ -316,9 +316,10 @@
   /* "Next up" hero: rounder, with a glow in the corner and a slow sheen. */
   .next{border-radius:var(--r-lg);overflow:hidden;
     background:linear-gradient(150deg,#2a2a30,#232328 62%)}
-  .next::after{content:'';position:absolute;right:-70px;top:-90px;width:260px;height:260px;
-    border-radius:50%;pointer-events:none;
-    background:radial-gradient(circle,var(--red-glow),transparent 65%)}
+  /* Full-bleed wash rather than a disc -- a sized circle inside a clipped
+     card shows up as a cut-off highlight. */
+  .next::after{content:'';position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(130% 200% at 100% 0%,rgba(212,42,60,.17),transparent 60%)}
   .next::before{content:'';position:absolute;inset:0;pointer-events:none;
     background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.07) 50%,transparent 65%);
     transform:translateX(-120%);animation:sheen 7s ease-in-out 1.4s infinite}
